@@ -6,7 +6,7 @@ Bluez is one of the bluetooth stack for linux. I was looking for a gatt client t
 Until know I was not successfull to get C code "easy" to understand with a simple architecture.
 I found that with the btgatt-client in bluez
 
-# how to compile
+# compile context
 The main file is in <bluez source rep>/tools/btgatt-client.c
 But now, what are the files needed to compile it? I figured out that, here is the list
 
@@ -32,3 +32,8 @@ But now, what are the files needed to compile it? I figured out that, here is th
    * util.c & util.h
    * uuid.c & uuid.h
    
+most of the files are in <bluez>/src/shared
+
+# project is under eclipse
+
+you can clone with git and there is an eclipse project
