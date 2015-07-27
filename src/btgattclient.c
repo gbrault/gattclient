@@ -1,11 +1,10 @@
-/*
- ============================================================================
- Name        : btgattclient.c
- Author      : Gilbert Brault
- Version     :
- Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
- ============================================================================
+/**
+ * @file bluetooth main gatt client: btgattclient.c
+ * @author Gilbert Brault
+ * @copyright Gilbert Brault 2015
+ * the original work comes from bluez v5.39
+ * value add: documenting main features
+ *
  */
 
 /*

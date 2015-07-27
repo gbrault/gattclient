@@ -1,3 +1,11 @@
+/**
+ * @file timeout-glib: timeout-glib.c
+ * @author Gilbert Brault
+ * @copyright Gilbert Brault 2015
+ * the original work comes from bluez v5.39
+ * value add: documenting main features
+ *
+ */
 /*
  *
  *  BlueZ - Bluetooth protocol stack for Linux
