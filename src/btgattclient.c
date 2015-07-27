@@ -1444,10 +1444,10 @@ static void signal_cb(int signum, void *user_data)
 }
 
 /**
- * create a bluetooth le l2cap socket and connect to dst
+ * create a bluetooth le l2cap socket and connect src to dst
  *
- * @param src	6 bytes source address
- * @param dst	6 bytes destination address
+ * @param src	6 bytes BD Address source address
+ * @param dst	6 bytes BD Address destination address
  * @param dst_type  destination type BDADDR_LE_PUBLIC or BDADDR_LE_RANDOM
  * @param sec   security level BT_SECURITY_LOW or BT_SECURITY_MEDIUM or BT_SECURITY_HIGH
  * @return socket or -1 if error
