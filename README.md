@@ -7,8 +7,8 @@ Until know I was not successfull to get C code "easy" to understand with a simpl
 I found that with the btgatt-client in bluez
 
 # compile context
-The main file is in <bluez source rep>/tools/btgatt-client.c
-But now, what are the files needed to compile it? I figured out that, here is the list
+The main file is in &lt;bluez source rep&gt;/tools/btgatt-client.c
+But now, what are the files needed to compile it? I figured that out, here is the list
 
    * att.c & att.h
    * att-types.h
@@ -32,7 +32,7 @@ But now, what are the files needed to compile it? I figured out that, here is th
    * util.c & util.h
    * uuid.c & uuid.h
    
-most of the files are in <bluez>/src/shared
+most of the files are in &lt;bluez&gt;/src/shared
 
 # project is under eclipse
 
