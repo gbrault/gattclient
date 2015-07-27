@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: gattclient
+all: btgattclient
 
 # Tool invocations
-gattclient: $(OBJS) $(USER_OBJS)
+btgattclient: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "gattclient" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "btgattclient" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) gattclient
+	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) btgattclient
 	-@echo ' '
 
 .PHONY: all clean dependents
