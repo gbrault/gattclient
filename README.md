@@ -4,7 +4,7 @@ A gatt client, based on bluez stack -- just using socket
 # context
 Bluez is one of the bluetooth stack for linux. I was looking for a gatt client to make some testing for ble.
 Until know I was not successfull to get C code "easy" to understand with a simple architecture.
-I found that with the btgatt-client in bluez
+I found that with the btgatt-client in bluez (based on version 5.32)
 
 # compile context
 The main file is in &lt;bluez source rep&gt;/tools/btgatt-client.c
