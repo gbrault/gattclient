@@ -79,7 +79,7 @@ do {						\
 #define PTR_TO_INT(p) ((int) ((intptr_t) (p)))
 #define INT_TO_PTR(u) ((void *) ((intptr_t) (u)))
 
-#define new0(t, n) ((t*) mycalloc((n), sizeof(t)))
+#define new0(t, n) ((t*) calloc((n), sizeof(t)))
 #define newa(t, n) ((t*) alloca(sizeof(t)*(n)))
 #define malloc0(n) (calloc((n), 1))
 
@@ -96,12 +96,6 @@ unsigned char util_get_dt(const char *parent, const char *name);
 
 uint8_t util_get_uid(unsigned int *bitmap, uint8_t max);
 void util_clear_uid(unsigned int *bitmap, uint8_t id);
-
-static void * mycalloc(int n, int size ){
-	void *p = calloc(n,size);
-	memset(p,0,n*size);
-	return p;
-}
 
 static inline uint16_t get_le16(const void *ptr)
 {
