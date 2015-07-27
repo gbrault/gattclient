@@ -15,15 +15,14 @@ But now, what are the files needed to compile it? I figured that out, here is th
    * bluetooth.c & bluetooth.h
    * btgatt-client.c (main)
    * config.h
-   * crypto.c
-   * crypto.h
+   * crypto.c & crypto.h
    * gatt-client.c & gatt-client.h
    * gatt-db.c & gatt-db.h
    * gatt-helpers.c & gatt-helpers.h
    * hci_lib.h
    * hci.c & hci.h
    * io.h
-   * io-mainloop.c
+   * io-mainloop.c (don't take io-glib.c)
    * l2cap.h
    * mainloop.c & mainloop.h
    * queue.c & queue.h
