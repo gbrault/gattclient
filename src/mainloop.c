@@ -81,6 +81,11 @@ struct signal_data {
 
 static struct signal_data *signal_data;
 
+/**
+ * create the epoll resource (epoll_fd global variable)
+ * initialize mainloop_list (global variable) event table
+ * set epoll_terminate to 0 (mainloop_run looping)
+ */
 void mainloop_init(void)
 {
 	unsigned int i;
@@ -93,23 +98,40 @@ void mainloop_init(void)
 	epoll_terminate = 0;
 }
 
+/**
+ * set epoll_terminate to 1 (mainloop_run exit looping)
+ */
 void mainloop_quit(void)
 {
 	epoll_terminate = 1;
 }
 
+/**
+ * set exit_status to EXIT_SUCCESS
+ * set epoll_terminate to 1 (mainloop_run exit looping)
+ */
 void mainloop_exit_success(void)
 {
 	exit_status = EXIT_SUCCESS;
 	epoll_terminate = 1;
 }
 
+/**
+ * set exit_status to EXIT_FAILURE
+ * set epoll_terminate to 1 (mainloop_run exit looping)
+ */
 void mainloop_exit_failure(void)
 {
 	exit_status = EXIT_FAILURE;
 	epoll_terminate = 1;
 }
 
+/**
+ *
+ * @param fd
+ * @param events
+ * @param user_data
+ */
 static void signal_callback(int fd, uint32_t events, void *user_data)
 {
 	struct signal_data *data = user_data;
@@ -401,6 +423,16 @@ int mainloop_remove_timeout(int id)
 	return mainloop_remove_fd(id);
 }
 
+/**
+ * set mainloop signal handler (signal_data) usally SIGINT and SIGTERM handler
+ * signal_data is a global variable
+ *
+ * @param mask		events to filter
+ * @param callback	function call triggered by filtered events prototype callback(int signum, void *user_data)
+ * @param user_data	user data to pass to callback
+ * @param destroy	user data storage management
+ * @return 0 success else <0 error
+ */
 int mainloop_set_signal(sigset_t *mask, mainloop_signal_func callback,
 				void *user_data, mainloop_destroy_func destroy)
 {

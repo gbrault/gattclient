@@ -80,12 +80,20 @@ struct client {
 	unsigned int reliable_session_id;
 };
 
+/**
+ * print prompt
+ */
 static void print_prompt(void)
 {
 	printf(COLOR_BLUE "[GATT client]" COLOR_OFF "# ");
 	fflush(stdout);
 }
 
+/**
+ *
+ * @param ecode	error code (BT_ATT mostly)
+ * @return 		ascii string full english ecode label
+ */
 static const char *ecode_to_string(uint8_t ecode)
 {
 	switch (ecode) {
@@ -134,6 +142,12 @@ static const char *ecode_to_string(uint8_t ecode)
 	}
 }
 
+/**
+ * disconnect callback, quit mainloop
+ *
+ * @param err		error code associated with disconnect
+ * @param user_data	user data pointer (not used)
+ */
 static void att_disconnect_cb(int err, void *user_data)
 {
 	printf("Device disconnected: %s\n", strerror(err));
@@ -141,13 +155,24 @@ static void att_disconnect_cb(int err, void *user_data)
 	mainloop_quit();
 }
 
+/**
+ * print a prefix (user_data) followed by a message (str)
+ * example att: ATT op 0x02 (att: is the prefix)
+ * @param str		message to print
+ * @param user_data pointer to prefix
+ */
 static void att_debug_cb(const char *str, void *user_data)
 {
 	const char *prefix = user_data;
-
 	PRLOG(COLOR_BOLDGRAY "%s" COLOR_BOLDWHITE "%s\n" COLOR_OFF, prefix, str);
 }
 
+/**
+ * print a prefix (user_data) followed by a message (str)
+ * example gatt: MTU exchange complete, with MTU: 23 (gatt: is the prefix)
+ * @param str		message to print
+ * @param user_data	pointer to prefix
+ */
 static void gatt_debug_cb(const char *str, void *user_data)
 {
 	const char *prefix = user_data;
@@ -184,6 +209,12 @@ static void service_removed_cb(struct gatt_db_attribute *attr, void *user_data)
 	log_service_event(attr, "Service Removed");
 }
 
+/**
+ * create an gatt client attached to the fd l2cap socket
+ * @param fd	socket
+ * @param mtu	selected pdu size
+ * @return gatt client structure
+ */
 static struct client *client_create(int fd, uint16_t mtu)
 {
 	struct client *cli;
@@ -1533,6 +1564,9 @@ static void usage(void)
 								"medium|high)\n"
 		"\t-v, --verbose\t\t\tEnable extra logging\n"
 		"\t-h, --help\t\t\tDisplay help\n");
+
+	printf("Example:\n"
+			"btgattclient -v -d C4:BE:84:70:29:04\n");
 }
 
 static struct option main_options[] = {
@@ -1546,6 +1580,14 @@ static struct option main_options[] = {
 	{ }
 };
 
+/**
+ * gatt client which browse ble device services and characteristics
+ * @see usage function for args definition
+ *
+ * @param argc	args count
+ * @param argv	args value
+ * @return EXIT_FAILURE or EXIT_SUCCESS
+ */
 int main(int argc, char *argv[])
 {
 	int opt;
@@ -1658,6 +1700,7 @@ int main(int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
+	/* create the mainloop resources */
 	mainloop_init();
 
 	fd = l2cap_le_att_connect(&src_addr, &dst_addr, dst_type, sec);
@@ -1670,6 +1713,7 @@ int main(int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
+	/* add input event from console */
 	if (mainloop_add_fd(fileno(stdin),
 				EPOLLIN | EPOLLRDHUP | EPOLLHUP | EPOLLERR,
 				prompt_read_cb, cli, NULL) < 0) {
@@ -1681,10 +1725,16 @@ int main(int argc, char *argv[])
 	sigaddset(&mask, SIGINT);
 	sigaddset(&mask, SIGTERM);
 
+	/* add handler for process interrupted (SIGINT) or terminated (SIGTERM)*/
 	mainloop_set_signal(&mask, signal_cb, NULL, NULL);
 
 	print_prompt();
 
+	/* epoll main loop call
+	 *
+	 * any further process is an epoll event processed in mainloop_run
+	 *
+	 */
 	mainloop_run();
 
 	printf("\n\nShutting down...\n");
