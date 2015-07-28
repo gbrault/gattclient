@@ -204,6 +204,16 @@ int mainloop_run(void)
 	return exit_status;
 }
 
+/**
+ * trigger an event to be processed by the mainloop_run function
+ *
+ * @param fd			"file descriptor" source of the event
+ * @param events		event flags
+ * @param callback		function to call back by the event processor
+ * @param user_data		associated data
+ * @param destroy		management function to unallocate user_data
+ * @return 0 success else <0 error
+ */
 int mainloop_add_fd(int fd, uint32_t events, mainloop_event_func callback,
 				void *user_data, mainloop_destroy_func destroy)
 {
