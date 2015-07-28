@@ -129,6 +129,14 @@ static void signal_callback(int fd, uint32_t events, void *user_data)
 		data->callback(si.ssi_signo, data->user_data);
 }
 
+/**
+ * main loop wait for epoll events
+ * to exit the loop, set epoll_terminate to a <>0 value
+ * @see mainloop_exit_failure
+ * @see mainloop_exit_success
+ *
+ * @return exit_status EXIT_SUCCESS or EXIT_FAILURE
+ */
 int mainloop_run(void)
 {
 	unsigned int i;

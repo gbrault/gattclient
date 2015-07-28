@@ -45,6 +45,13 @@
 
 #include "util.h"
 
+/**
+ * create a str debug message using format and then call function(str,user_data)
+ *
+ * @param function	function to call
+ * @param user_data	data for the "function"
+ * @param format	format string template of str string
+ */
 void util_debug(util_debug_func_t function, void *user_data,
 						const char *format, ...)
 {

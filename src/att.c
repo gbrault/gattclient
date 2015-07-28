@@ -1,3 +1,13 @@
+/**
+ * @file att: att.c
+ * @author Gilbert Brault
+ * @copyright Gilbert Brault 2015
+ * the original work comes from bluez v5.39
+ * value add: documenting main features
+ *
+ * @summary implements att protocol
+ * @see gatt-helpers.c for pdu creation
+ */
 /*
  *
  *  BlueZ - Bluetooth protocol stack for Linux
@@ -485,7 +495,6 @@ static bool can_write_data(struct io *io, void *user_data)
 	case ATT_OP_TYPE_RSP:
 		/* Set in_req to false to indicate that no request is pending */
 		att->in_req = false;
-
 		/* Fall through to the next case */
 	case ATT_OP_TYPE_CMD:
 	case ATT_OP_TYPE_NOT:
@@ -1165,7 +1174,7 @@ bool bt_att_unregister_disconnect(struct bt_att *att, unsigned int id)
 }
 
 /**
- * create & send an att message
+ * encode & send an att message
  * If (op-code type == ATT_OP_TYPE_REQ) process the response with callback function
  * see att_opcode_type_table (att.c) for opcode type definition
  *
