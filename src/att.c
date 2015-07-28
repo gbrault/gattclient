@@ -1164,6 +1164,21 @@ bool bt_att_unregister_disconnect(struct bt_att *att, unsigned int id)
 	return true;
 }
 
+/**
+ * create & send an att message
+ * If (op-code type == ATT_OP_TYPE_REQ) process the response with callback function
+ * see att_opcode_type_table (att.c) for opcode type definition
+ *
+ * @param att		structure of the communication channel
+ * @param opcode	att message op-code
+ * @param pdu		protocol data unit buffer
+ * @param length	size of pdu
+ * @param callback	callback function depending on opcode to process response
+ * @param user_data	request data when relevant
+ * @param destroy	function to manage user_data
+ *
+ * @return			att message sequence number or 0 if error
+ */
 unsigned int bt_att_send(struct bt_att *att, uint8_t opcode,
 				const void *pdu, uint16_t length,
 				bt_att_response_func_t callback, void *user_data,
