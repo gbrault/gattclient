@@ -90,6 +90,7 @@ static void print_prompt(void)
 }
 
 /**
+ * convert error code to string
  *
  * @param ecode	error code (BT_ATT mostly)
  * @return 		ascii string full english ecode label
@@ -332,9 +333,10 @@ static void print_uuid(const bt_uuid_t *uuid)
 }
 
 /**
+ * print included data
  *
- * @param attr
- * @param user_data
+ * @param attr			gatt_db_attribute to print
+ * @param user_data		client structure pointer
  */
 static void print_incl(struct gatt_db_attribute *attr, void *user_data)
 {
@@ -359,6 +361,7 @@ static void print_incl(struct gatt_db_attribute *attr, void *user_data)
 }
 
 /**
+ * print attribute uuid
  *
  * @param attr
  * @param user_data
@@ -372,6 +375,7 @@ static void print_desc(struct gatt_db_attribute *attr, void *user_data)
 }
 
 /**
+ * print characteristic
  *
  * @param attr
  * @param user_data
@@ -398,6 +402,7 @@ static void print_chrc(struct gatt_db_attribute *attr, void *user_data)
 }
 
 /**
+ * print service
  *
  * @param attr
  * @param user_data
@@ -1593,6 +1598,12 @@ static bool local_counter(uint32_t *sign_cnt, void *user_data)
 	return true;
 }
 
+/**
+ * set sign key command
+ *
+ * @param cli		pointer to client structure
+ * @param cmd_str	set sign key command string
+ */
 static void cmd_set_sign_key(struct client *cli, char *cmd_str)
 {
 	char *argv[3];
@@ -1661,6 +1672,12 @@ static struct {
 	{ }
 };
 
+/**
+ * help command
+ *
+ * @param cli		pointer to client structure
+ * @param cmd_str	help command string
+ */
 static void cmd_help(struct client *cli, char *cmd_str)
 {
 	int i;
@@ -1670,6 +1687,13 @@ static void cmd_help(struct client *cli, char *cmd_str)
 		printf("\t%-15s\t%s\n", command[i].cmd, command[i].doc);
 }
 
+/**
+ * prompt read call back
+ *
+ * @param fd		stdin
+ * @param events	epoll event
+ * @param user_data pointer to client structure
+ */
 static void prompt_read_cb(int fd, uint32_t events, void *user_data)
 {
 	ssize_t read;
@@ -1719,6 +1743,12 @@ failed:
 	free(line);
 }
 
+/**
+ * signal call back SIGINT and SIGTERM processing
+ *
+ * @param signum		SIGXXX
+ * @param user_data		unused
+ */
 static void signal_cb(int signum, void *user_data)
 {
 	switch (signum) {
@@ -1808,6 +1838,9 @@ static int l2cap_le_att_connect(bdaddr_t *src, bdaddr_t *dst, uint8_t dst_type,
 	return sock;
 }
 
+/**
+ * print usage
+ */
 static void usage(void)
 {
 	printf("btgatt-client\n");
