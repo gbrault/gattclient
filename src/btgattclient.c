@@ -486,6 +486,13 @@ static void ready_cb(bool success, uint8_t att_ecode, void *user_data)
 	print_prompt();
 }
 
+/**
+ * service changed call back
+ *
+ * @param start_handle
+ * @param end_handle
+ * @param user_data		client pointer
+ */
 static void service_changed_cb(uint16_t start_handle, uint16_t end_handle,
 								void *user_data)
 {
@@ -499,6 +506,9 @@ static void service_changed_cb(uint16_t start_handle, uint16_t end_handle,
 	print_prompt();
 }
 
+/**
+ * services usage (services --help to learn options)
+ */
 static void services_usage(void)
 {
 	printf("Usage: services [options]\nOptions:\n"
@@ -509,6 +519,15 @@ static void services_usage(void)
 		"\tservices\n\tservices -u 0x180d\n\tservices -a 0x0009\n");
 }
 
+/**
+ * parse command
+ *
+ * @param str			command to parse
+ * @param expected_argc	number of arguments expected
+ * @param argv			pointers to arguments separated by <space> or <tab>
+ * @param argc			argument counter (and actual count)
+ * @return				true = success false = error
+ */
 static bool parse_args(char *str, int expected_argc,  char **argv, int *argc)
 {
 	char **ap;
@@ -527,6 +546,13 @@ static bool parse_args(char *str, int expected_argc,  char **argv, int *argc)
 	return true;
 }
 
+/**
+ * command interpreter
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	one of the possible command (help to get a list)
+ * 					<command> --help to have a help on that command
+ */
 static void cmd_services(struct client *cli, char *cmd_str)
 {
 	char *argv[3];
@@ -578,11 +604,23 @@ static void cmd_services(struct client *cli, char *cmd_str)
 		services_usage();
 }
 
+/**
+ * read multiple usage
+ */
 static void read_multiple_usage(void)
 {
 	printf("Usage: read-multiple <handle_1> <handle_2> ...\n");
 }
 
+/**
+ * read multiple callback
+ *
+ * @param success		==0 => print error, <>0 print values
+ * @param att_ecode 	att error code
+ * @param value			vector of values
+ * @param length		number of values
+ * @param user_data		not used
+ */
 static void read_multiple_cb(bool success, uint8_t att_ecode,
 					const uint8_t *value, uint16_t length,
 					void *user_data)
@@ -602,6 +640,12 @@ static void read_multiple_cb(bool success, uint8_t att_ecode,
 	PRLOG("\n");
 }
 
+/**
+ * read multiple command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	command string for read multiple
+ */
 static void cmd_read_multiple(struct client *cli, char *cmd_str)
 {
 	int argc = 0;
@@ -642,11 +686,23 @@ static void cmd_read_multiple(struct client *cli, char *cmd_str)
 	free(value);
 }
 
+/**
+ * read value usage
+ */
 static void read_value_usage(void)
 {
 	printf("Usage: read-value <value_handle>\n");
 }
 
+/**
+ * read value callback
+ *
+ * @param success		==0 => print error, <>0 print value
+ * @param att_ecode		att error code
+ * @param value			vector of values
+ * @param length		size of vector
+ * @param user_data		not used
+ */
 static void read_cb(bool success, uint8_t att_ecode, const uint8_t *value,
 					uint16_t length, void *user_data)
 {
@@ -673,6 +729,12 @@ static void read_cb(bool success, uint8_t att_ecode, const uint8_t *value,
 	PRLOG("\n");
 }
 
+/**
+ * read value command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	command string for read value
+ */
 static void cmd_read_value(struct client *cli, char *cmd_str)
 {
 	char *argv[2];
@@ -701,11 +763,20 @@ static void cmd_read_value(struct client *cli, char *cmd_str)
 		printf("Failed to initiate read value procedure\n");
 }
 
+/**
+ *  read long value usage
+ */
 static void read_long_value_usage(void)
 {
 	printf("Usage: read-long-value <value_handle> <offset>\n");
 }
 
+/**
+ * read long value command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	command string for read long value
+ */
 static void cmd_read_long_value(struct client *cli, char *cmd_str)
 {
 	char *argv[3];
@@ -742,6 +813,9 @@ static void cmd_read_long_value(struct client *cli, char *cmd_str)
 		printf("Failed to initiate read long value procedure\n");
 }
 
+/**
+ * write value usage
+ */
 static void write_value_usage(void)
 {
 	printf("Usage: write-value [options] <value_handle> <value>\n"
@@ -758,6 +832,13 @@ static struct option write_value_options[] = {
 	{ }
 };
 
+/**
+ * write value call back
+ *
+ * @param success		==0 => print error, <>0 print value
+ * @param att_ecode		att error code
+ * @param user_data		not used
+ */
 static void write_cb(bool success, uint8_t att_ecode, void *user_data)
 {
 	if (success) {
@@ -768,6 +849,12 @@ static void write_cb(bool success, uint8_t att_ecode, void *user_data)
 	}
 }
 
+/**
+ * write value command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	command string for write value
+ */
 static void cmd_write_value(struct client *cli, char *cmd_str)
 {
 	int opt, i;
@@ -875,6 +962,9 @@ done:
 	free(value);
 }
 
+/**
+ * write long value usage
+ */
 static void write_long_value_usage(void)
 {
 	printf("Usage: write-long-value [options] <value_handle> <offset> "
@@ -890,6 +980,14 @@ static struct option write_long_value_options[] = {
 	{ }
 };
 
+/**
+ * write long call back
+ *
+ * @param success			==0 => print error, <>0 print value
+ * @param reliable_error	status of the write operation when failed
+ * @param att_ecode			att error code
+ * @param user_data			not used
+ */
 static void write_long_cb(bool success, bool reliable_error, uint8_t att_ecode,
 								void *user_data)
 {
@@ -903,6 +1001,12 @@ static void write_long_cb(bool success, bool reliable_error, uint8_t att_ecode,
 	}
 }
 
+/**
+ * write long value command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	command string for write long value
+ */
 static void cmd_write_long_value(struct client *cli, char *cmd_str)
 {
 	int opt, i;
@@ -1004,6 +1108,9 @@ static void cmd_write_long_value(struct client *cli, char *cmd_str)
 	free(value);
 }
 
+/**
+ * write prepare usage
+ */
 static void write_prepare_usage(void)
 {
 	printf("Usage: write-prepare [options] <value_handle> <offset> "
@@ -1019,6 +1126,12 @@ static struct option write_prepare_options[] = {
 	{ }
 };
 
+/**
+ * write prepare command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	write prepare command string
+ */
 static void cmd_write_prepare(struct client *cli, char *cmd_str)
 {
 	int opt, i;
@@ -1145,6 +1258,9 @@ done:
 	free(value);
 }
 
+/**
+ * write execute usage
+ */
 static void write_execute_usage(void)
 {
 	printf("Usage: write-execute <session_id> <execute>\n"
@@ -1152,6 +1268,12 @@ static void write_execute_usage(void)
 				"\twrite-execute 1 0\n");
 }
 
+/**
+ * write execute command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	write execute command string
+ */
 static void cmd_write_execute(struct client *cli, char *cmd_str)
 {
 	char *argvbuf[516];
@@ -1206,11 +1328,22 @@ static void cmd_write_execute(struct client *cli, char *cmd_str)
 	cli->reliable_session_id = 0;
 }
 
+/**
+ * register notify usage
+ */
 static void register_notify_usage(void)
 {
 	printf("Usage: register-notify <chrc value handle>\n");
 }
 
+/**
+ * notify call back
+ *
+ * @param value_handle	handle of the notifying object
+ * @param value			vector value of the object
+ * @param length		length of vector value
+ * @param user_data		not used
+ */
 static void notify_cb(uint16_t value_handle, const uint8_t *value,
 					uint16_t length, void *user_data)
 {
@@ -1231,6 +1364,12 @@ static void notify_cb(uint16_t value_handle, const uint8_t *value,
 	PRLOG("\n");
 }
 
+/**
+ *  register notify call back
+ *
+ * @param att_ecode		att error code
+ * @param user_data		not used
+ */
 static void register_notify_cb(uint16_t att_ecode, void *user_data)
 {
 	if (att_ecode) {
@@ -1242,6 +1381,12 @@ static void register_notify_cb(uint16_t att_ecode, void *user_data)
 	PRLOG("Registered notify handler!");
 }
 
+/**
+ * register notify command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	register notify command string
+ */
 static void cmd_register_notify(struct client *cli, char *cmd_str)
 {
 	char *argv[2];
@@ -1277,11 +1422,20 @@ static void cmd_register_notify(struct client *cli, char *cmd_str)
 	PRLOG("Registering notify handler with id: %u\n", id);
 }
 
+/**
+ * un-register notify usage
+ */
 static void unregister_notify_usage(void)
 {
 	printf("Usage: unregister-notify <notify id>\n");
 }
 
+/**
+ * un-register notify command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	un-register notify command string
+ */
 static void cmd_unregister_notify(struct client *cli, char *cmd_str)
 {
 	char *argv[2];
@@ -1313,6 +1467,9 @@ static void cmd_unregister_notify(struct client *cli, char *cmd_str)
 	printf("Unregistered notify handler with id: %u\n", id);
 }
 
+/**
+ * set security usage
+ */
 static void set_security_usage(void)
 {
 	printf("Usage: set_security <level>\n"
@@ -1321,6 +1478,12 @@ static void set_security_usage(void)
 		"\tset-sec-level 2\n");
 }
 
+/**
+ * set security command
+ *
+ * @param cli		pointer to the client structure
+ * @param cmd_str	set security command string
+ */
 static void cmd_set_security(struct client *cli, char *cmd_str)
 {
 	char *argvbuf[1];
@@ -1357,6 +1520,12 @@ static void cmd_set_security(struct client *cli, char *cmd_str)
 		printf("Setting security level %d success\n", level);
 }
 
+/**
+ * get security command
+ *
+ * @param cli		pointer to the client stricture
+ * @param cmd_str	get security command string
+ */
 static void cmd_get_security(struct client *cli, char *cmd_str)
 {
 	int level;
@@ -1373,6 +1542,13 @@ static void cmd_get_security(struct client *cli, char *cmd_str)
 		printf("Security level: %u\n", level);
 }
 
+/**
+ * convert sign key ascii to vector
+ *
+ * @param optarg	ascii key string
+ * @param key		returned parsed vector
+ * @return 			true if success else false
+ */
 static bool convert_sign_key(char *optarg, uint8_t key[16])
 {
 	int i;
@@ -1390,6 +1566,9 @@ static bool convert_sign_key(char *optarg, uint8_t key[16])
 	return true;
 }
 
+/**
+ * sign key usage
+ */
 static void set_sign_key_usage(void)
 {
 	printf("Usage: set-sign-key [options]\nOptions:\n"
@@ -1398,6 +1577,13 @@ static void set_sign_key_usage(void)
 		"\tset-sign-key -c D8515948451FEA320DC05A2E88308188\n");
 }
 
+/**
+ * counter increment sign_cnt by one
+ *
+ * @param sign_cnt		variable to increment
+ * @param user_data		not used
+ * @return				true
+ */
 static bool local_counter(uint32_t *sign_cnt, void *user_data)
 {
 	static uint32_t cnt = 0;
