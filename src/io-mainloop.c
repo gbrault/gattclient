@@ -1,5 +1,7 @@
 /**
- * @file io-mainloop: io-mainloop.c
+ * @file io-mainloop.c
+ * @brief set of function to manage io part of the mainloop feature
+ * @see mainloop.c
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

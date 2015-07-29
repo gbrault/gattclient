@@ -111,21 +111,25 @@ $(document).ready(function(){initNavTree('structclient.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aa9ee781ac58a0d10fa591a570e875473"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclient.html#aa9ee781ac58a0d10fa591a570e875473">fd</a></td></tr>
+<tr class="memdesc:aa9ee781ac58a0d10fa591a570e875473"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket  <a href="#aa9ee781ac58a0d10fa591a570e875473">More...</a><br /></td></tr>
 <tr class="separator:aa9ee781ac58a0d10fa591a570e875473"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a971ce0c9a8a60228ccd5fb0b991b96"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbt__att.html">bt_att</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclient.html#a3a971ce0c9a8a60228ccd5fb0b991b96">att</a></td></tr>
+<tr class="memdesc:a3a971ce0c9a8a60228ccd5fb0b991b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to a <a class="el" href="structbt__att.html">bt_att</a> structure  <a href="#a3a971ce0c9a8a60228ccd5fb0b991b96">More...</a><br /></td></tr>
 <tr class="separator:a3a971ce0c9a8a60228ccd5fb0b991b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ad386cb763cbdb731981abe3609c015"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structgatt__db.html">gatt_db</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclient.html#a3ad386cb763cbdb731981abe3609c015">db</a></td></tr>
+<tr class="memdesc:a3ad386cb763cbdb731981abe3609c015"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to a <a class="el" href="structgatt__db.html">gatt_db</a> structure  <a href="#a3ad386cb763cbdb731981abe3609c015">More...</a><br /></td></tr>
 <tr class="separator:a3ad386cb763cbdb731981abe3609c015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac3722c5be1a9291a8a674dd6d5a2bad"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbt__gatt__client.html">bt_gatt_client</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclient.html#aac3722c5be1a9291a8a674dd6d5a2bad">gatt</a></td></tr>
+<tr class="memdesc:aac3722c5be1a9291a8a674dd6d5a2bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to a <a class="el" href="structbt__gatt__client.html">bt_gatt_client</a> structure  <a href="#aac3722c5be1a9291a8a674dd6d5a2bad">More...</a><br /></td></tr>
 <tr class="separator:aac3722c5be1a9291a8a674dd6d5a2bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adac556786e6c58a2e7a2110113193ca1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structclient.html#adac556786e6c58a2e7a2110113193ca1">reliable_session_id</a></td></tr>
+<tr class="memdesc:adac556786e6c58a2e7a2110113193ca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">session id  <a href="#adac556786e6c58a2e7a2110113193ca1">More...</a><br /></td></tr>
 <tr class="separator:adac556786e6c58a2e7a2110113193ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>client structure</p>
-<p>fd socket  att pointer to a <a class="el" href="structbt__att.html">bt_att</a> structure  db pointer to a <a class="el" href="structgatt__db.html">gatt_db</a> structure  gatt pointer to a <a class="el" href="structbt__gatt__client.html">bt_gatt_client</a> structure  reliable_session_id session id </p>
+<div class="textblock"><p>client structure holds gatt client context </p>
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00084">84</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00078">78</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a3a971ce0c9a8a60228ccd5fb0b991b96"></a>
 <div class="memitem">
@@ -137,9 +141,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00086">86</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>pointer to a <a class="el" href="structbt__att.html">bt_att</a> structure </p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00250">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00325">client_destroy()</a>, and <a class="el" href="btgattclient_8c_source.html#l01620">cmd_set_sign_key()</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00082">82</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00323">client_destroy()</a>, and <a class="el" href="btgattclient_8c_source.html#l01618">cmd_set_sign_key()</a>.</p>
 
 </div>
 </div>
@@ -153,9 +159,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00087">87</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>pointer to a <a class="el" href="structgatt__db.html">gatt_db</a> structure </p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00250">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00354">print_incl()</a>, <a class="el" href="btgattclient_8c_source.html#l00450">print_services()</a>, <a class="el" href="btgattclient_8c_source.html#l00476">print_services_by_handle()</a>, <a class="el" href="btgattclient_8c_source.html#l00463">print_services_by_uuid()</a>, and <a class="el" href="btgattclient_8c_source.html#l00514">service_changed_cb()</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00084">84</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00352">print_incl()</a>, <a class="el" href="btgattclient_8c_source.html#l00448">print_services()</a>, <a class="el" href="btgattclient_8c_source.html#l00474">print_services_by_handle()</a>, <a class="el" href="btgattclient_8c_source.html#l00461">print_services_by_uuid()</a>, and <a class="el" href="btgattclient_8c_source.html#l00512">service_changed_cb()</a>.</p>
 
 </div>
 </div>
@@ -169,9 +177,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00085">85</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>socket </p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00250">client_create()</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00080">80</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>.</p>
 
 </div>
 </div>
@@ -185,9 +195,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00088">88</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>pointer to a <a class="el" href="structbt__gatt__client.html">bt_gatt_client</a> structure </p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00250">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00325">client_destroy()</a>, <a class="el" href="btgattclient_8c_source.html#l01547">cmd_get_security()</a>, <a class="el" href="btgattclient_8c_source.html#l00798">cmd_read_long_value()</a>, <a class="el" href="btgattclient_8c_source.html#l00667">cmd_read_multiple()</a>, <a class="el" href="btgattclient_8c_source.html#l00756">cmd_read_value()</a>, <a class="el" href="btgattclient_8c_source.html#l01408">cmd_register_notify()</a>, <a class="el" href="btgattclient_8c_source.html#l00574">cmd_services()</a>, <a class="el" href="btgattclient_8c_source.html#l01505">cmd_set_security()</a>, <a class="el" href="btgattclient_8c_source.html#l01457">cmd_unregister_notify()</a>, <a class="el" href="btgattclient_8c_source.html#l01295">cmd_write_execute()</a>, <a class="el" href="btgattclient_8c_source.html#l01028">cmd_write_long_value()</a>, <a class="el" href="btgattclient_8c_source.html#l01153">cmd_write_prepare()</a>, and <a class="el" href="btgattclient_8c_source.html#l00876">cmd_write_value()</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00086">86</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00323">client_destroy()</a>, <a class="el" href="btgattclient_8c_source.html#l01545">cmd_get_security()</a>, <a class="el" href="btgattclient_8c_source.html#l00796">cmd_read_long_value()</a>, <a class="el" href="btgattclient_8c_source.html#l00665">cmd_read_multiple()</a>, <a class="el" href="btgattclient_8c_source.html#l00754">cmd_read_value()</a>, <a class="el" href="btgattclient_8c_source.html#l01406">cmd_register_notify()</a>, <a class="el" href="btgattclient_8c_source.html#l00572">cmd_services()</a>, <a class="el" href="btgattclient_8c_source.html#l01503">cmd_set_security()</a>, <a class="el" href="btgattclient_8c_source.html#l01455">cmd_unregister_notify()</a>, <a class="el" href="btgattclient_8c_source.html#l01293">cmd_write_execute()</a>, <a class="el" href="btgattclient_8c_source.html#l01026">cmd_write_long_value()</a>, <a class="el" href="btgattclient_8c_source.html#l01151">cmd_write_prepare()</a>, and <a class="el" href="btgattclient_8c_source.html#l00874">cmd_write_value()</a>.</p>
 
 </div>
 </div>
@@ -201,9 +213,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00090">90</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+<p>session id </p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01295">cmd_write_execute()</a>, and <a class="el" href="btgattclient_8c_source.html#l01153">cmd_write_prepare()</a>.</p>
+<p>Definition at line <a class="el" href="btgattclient_8c_source.html#l00088">88</a> of file <a class="el" href="btgattclient_8c_source.html">btgattclient.c</a>.</p>
+
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01293">cmd_write_execute()</a>, and <a class="el" href="btgattclient_8c_source.html#l01151">cmd_write_prepare()</a>.</p>
 
 </div>
 </div>
@@ -216,7 +230,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structclient.html">client</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 15:53:17 for ble_gatt_client by
+    <li class="footer">Generated on Wed Jul 29 2015 18:44:30 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

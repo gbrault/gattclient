@@ -1,5 +1,6 @@
 /**
- * @file crypto: crypto.c
+ * @file crypto.c
+ * @brief crypting gatt messages
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

@@ -1,11 +1,11 @@
 /**
- * @file att: att.c
+ * @file att.c
+ * @brief att protocol implementation
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39
  * value add: documenting main features
  *
- * @summary implements att protocol
  * @see gatt-helpers.c for pdu creation
  */
 /*
@@ -58,43 +58,65 @@
 
 struct att_send_op;
 
+/**
+ * ATT structure (protocol context)
+ */
 struct bt_att {
+	/// reference counter incremented by bt_att_ref, decremented by bt_att_unref
 	int ref_count;
+	/// socket
 	int fd;
+	/// io structure for low level i/o (read and write)
 	struct io *io;
+	/// true if an l2cap socket
 	bool io_on_l2cap;
-	int io_sec_level;		/* Only used for non-L2CAP */
-
-	struct queue *req_queue;	/* Queued ATT protocol requests */
+	/// i/o seurity level: Only used for non-L2CAP
+	int io_sec_level;
+	/// Queued ATT protocol requests
+	struct queue *req_queue;
+	/// Pending request state
 	struct att_send_op *pending_req;
-	struct queue *ind_queue;	/* Queued ATT protocol indications */
+	/// Queued ATT protocol indications
+	struct queue *ind_queue;
+	/// Pending indication state
 	struct att_send_op *pending_ind;
-	struct queue *write_queue;	/* Queue of PDUs ready to send */
+	/// Queue of PDUs ready to send
+	struct queue *write_queue;
+	/// true if already engaged in write operation
 	bool writer_active;
-
-	struct queue *notify_list;	/* List of registered callbacks */
-	struct queue *disconn_list;	/* List of disconnect handlers */
-
-	bool in_req;			/* There's a pending incoming request */
-
+	/// List of registered callbacks
+	struct queue *notify_list;
+	/// List of disconnect handlers
+	struct queue *disconn_list;
+	/// There's a pending incoming request
+	bool in_req;
+	/// buffer pointer
 	uint8_t *buf;
+	/// actual number of bytes for pdu ATT exchange
 	uint16_t mtu;
-
-	unsigned int next_send_id;	/* IDs for "send" ops */
-	unsigned int next_reg_id;	/* IDs for registered callbacks */
-
+	/// IDs for "send" ops
+	unsigned int next_send_id;
+	/// IDs for registered callbacks
+	unsigned int next_reg_id;
+	/// timeout function for callback
 	bt_att_timeout_func_t timeout_callback;
+	/// timeout function to manage data context (house keeping)
 	bt_att_destroy_func_t timeout_destroy;
+	///
 	void *timeout_data;
-
+	/// debug callback
 	bt_att_debug_func_t debug_callback;
+	/// data management function for debug
 	bt_att_destroy_func_t debug_destroy;
+	/// user pointer for debug
 	void *debug_data;
-
+    /// crypto structure
 	struct bt_crypto *crypto;
+	/// true, requires key signature
 	bool ext_signed;
-
+	///	local key structure pointer
 	struct sign_info *local_sign;
+	/// remote key structure pointer
 	struct sign_info *remote_sign;
 };
 

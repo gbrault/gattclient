@@ -73,20 +73,18 @@
 static bool verbose = false;
 
 /**
- * client structure
- *
- * @parameter fd					socket
- * @parameter att					pointer to a bt_att structure
- * @parameter db					pointer to a gatt_db structure
- * @parameter gatt					pointer to a bt_gatt_client structure
- * @parameter reliable_session_id 	session id
+ * client structure holds gatt client context
  */
 struct client {
+	/// socket
 	int fd;
+	/// pointer to a bt_att structure
 	struct bt_att *att;
+	/// pointer to a gatt_db structure
 	struct gatt_db *db;
+	/// pointer to a bt_gatt_client structure
 	struct bt_gatt_client *gatt;
-
+	/// session id
 	unsigned int reliable_session_id;
 };
 

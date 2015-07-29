@@ -106,6 +106,9 @@ $(document).ready(function(){initNavTree('util_8c.html','');});
 <div class="title">util.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>set of utility functions  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &lt;stdarg.h&gt;</code><br />
@@ -132,7 +135,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a878f10cbb19788ca5731e05a54d58db7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8c.html#a878f10cbb19788ca5731e05a54d58db7">util_clear_uid</a> (unsigned int *bitmap, uint8_t id)</td></tr>
 <tr class="separator:a878f10cbb19788ca5731e05a54d58db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>set of utility functions </p>
+<dl class="section author"><dt>Author</dt><dd>Gilbert Brault </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Gilbert Brault 2015 the original work comes from bluez v5.39 value add: documenting main features </dd></dl>
+
+<p>Definition in file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a878f10cbb19788ca5731e05a54d58db7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +166,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00146">146</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00156">156</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -206,11 +215,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00055">55</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00056">56</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00071">timeout_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00072">timeout_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02814">bt_gatt_client_prepare_write()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00748">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00589">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00650">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00445">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00963">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00857">discover_secondary_cb()</a>, <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>, <a class="el" href="gatt-client_8c_source.html#l01064">exchange_mtu_cb()</a>, <a class="el" href="att_8c_source.html#l00697">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00608">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00636">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00751">handle_signed()</a>, <a class="el" href="gatt-client_8c_source.html#l01496">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01417">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01458">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01371">service_changed_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01319">service_changed_register_cb()</a>, and <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00749">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00590">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00651">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>, <a class="el" href="gatt-client_8c_source.html#l01497">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01459">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01320">service_changed_register_cb()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +247,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00114">114</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00124">124</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -266,7 +275,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00131">131</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00141">141</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -311,12 +320,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>hexadecimal dump utility</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td></td></tr>
+    <tr><td class="paramname">buf</td><td></td></tr>
+    <tr><td class="paramname">len</td><td></td></tr>
+    <tr><td class="paramname">function</td><td></td></tr>
+    <tr><td class="paramname">user_data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00071">71</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00081">81</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00071">timeout_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00072">timeout_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +346,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="util_8c.html">util.c</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 15:53:17 for ble_gatt_client by
+    <li class="footer">Generated on Wed Jul 29 2015 18:44:30 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

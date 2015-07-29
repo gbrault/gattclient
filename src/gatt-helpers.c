@@ -1,5 +1,6 @@
 /**
- * @file gatt-helpers: gatt-helpers.c
+ * @file gatt-helpers.c
+ * @brief collection of functions to facilitate gatt implementation
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

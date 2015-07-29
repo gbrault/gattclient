@@ -1,5 +1,6 @@
 /**
- * @file hci: hci.c
+ * @file hci.c
+ * @brief hci functions
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

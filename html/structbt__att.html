@@ -111,65 +111,93 @@ $(document).ready(function(){initNavTree('structbt__att.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a0648ff889c38496dd590018ca49d8b08"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a0648ff889c38496dd590018ca49d8b08">ref_count</a></td></tr>
+<tr class="memdesc:a0648ff889c38496dd590018ca49d8b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">reference counter incremented by bt_att_ref, decremented by bt_att_unref  <a href="#a0648ff889c38496dd590018ca49d8b08">More...</a><br /></td></tr>
 <tr class="separator:a0648ff889c38496dd590018ca49d8b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2e067b0088ed82c0b9fef6d151eb78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a4a2e067b0088ed82c0b9fef6d151eb78">fd</a></td></tr>
+<tr class="memdesc:a4a2e067b0088ed82c0b9fef6d151eb78"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket  <a href="#a4a2e067b0088ed82c0b9fef6d151eb78">More...</a><br /></td></tr>
 <tr class="separator:a4a2e067b0088ed82c0b9fef6d151eb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39ee933788e1a580c3b75a97c51b8caf"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structio.html">io</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a39ee933788e1a580c3b75a97c51b8caf">io</a></td></tr>
+<tr class="memdesc:a39ee933788e1a580c3b75a97c51b8caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">io structure for low level i/o (read and write)  <a href="#a39ee933788e1a580c3b75a97c51b8caf">More...</a><br /></td></tr>
 <tr class="separator:a39ee933788e1a580c3b75a97c51b8caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62ee2819456efa28bdd8557520250aa9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a62ee2819456efa28bdd8557520250aa9">io_on_l2cap</a></td></tr>
+<tr class="memdesc:a62ee2819456efa28bdd8557520250aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if an l2cap socket  <a href="#a62ee2819456efa28bdd8557520250aa9">More...</a><br /></td></tr>
 <tr class="separator:a62ee2819456efa28bdd8557520250aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd81d3019c05058b55ffb4ea02a08b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#acbd81d3019c05058b55ffb4ea02a08b8">io_sec_level</a></td></tr>
+<tr class="memdesc:acbd81d3019c05058b55ffb4ea02a08b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">i/o seurity level: Only used for non-L2CAP  <a href="#acbd81d3019c05058b55ffb4ea02a08b8">More...</a><br /></td></tr>
 <tr class="separator:acbd81d3019c05058b55ffb4ea02a08b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d42eeddb61f6a54fe781934b7f1e48e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structqueue.html">queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a5d42eeddb61f6a54fe781934b7f1e48e">req_queue</a></td></tr>
+<tr class="memdesc:a5d42eeddb61f6a54fe781934b7f1e48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queued ATT protocol requests.  <a href="#a5d42eeddb61f6a54fe781934b7f1e48e">More...</a><br /></td></tr>
 <tr class="separator:a5d42eeddb61f6a54fe781934b7f1e48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2dad9f95c829b58229b663f8b18ec80"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structatt__send__op.html">att_send_op</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#ad2dad9f95c829b58229b663f8b18ec80">pending_req</a></td></tr>
+<tr class="memdesc:ad2dad9f95c829b58229b663f8b18ec80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pending request state.  <a href="#ad2dad9f95c829b58229b663f8b18ec80">More...</a><br /></td></tr>
 <tr class="separator:ad2dad9f95c829b58229b663f8b18ec80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59b7add51f131442dc48834657602174"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structqueue.html">queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a59b7add51f131442dc48834657602174">ind_queue</a></td></tr>
+<tr class="memdesc:a59b7add51f131442dc48834657602174"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queued ATT protocol indications.  <a href="#a59b7add51f131442dc48834657602174">More...</a><br /></td></tr>
 <tr class="separator:a59b7add51f131442dc48834657602174"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adea1cd6fba57b5a924812c45cf365751"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structatt__send__op.html">att_send_op</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#adea1cd6fba57b5a924812c45cf365751">pending_ind</a></td></tr>
+<tr class="memdesc:adea1cd6fba57b5a924812c45cf365751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pending indication state.  <a href="#adea1cd6fba57b5a924812c45cf365751">More...</a><br /></td></tr>
 <tr class="separator:adea1cd6fba57b5a924812c45cf365751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a7ee55abeb1b4a4ca262722dc5200a9"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structqueue.html">queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a0a7ee55abeb1b4a4ca262722dc5200a9">write_queue</a></td></tr>
+<tr class="memdesc:a0a7ee55abeb1b4a4ca262722dc5200a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue of PDUs ready to send.  <a href="#a0a7ee55abeb1b4a4ca262722dc5200a9">More...</a><br /></td></tr>
 <tr class="separator:a0a7ee55abeb1b4a4ca262722dc5200a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac361b2c7a35bf34241835326ed1e3d51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#ac361b2c7a35bf34241835326ed1e3d51">writer_active</a></td></tr>
+<tr class="memdesc:ac361b2c7a35bf34241835326ed1e3d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">true if already engaged in write operation  <a href="#ac361b2c7a35bf34241835326ed1e3d51">More...</a><br /></td></tr>
 <tr class="separator:ac361b2c7a35bf34241835326ed1e3d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e022c3103099a6ee3a403e443177d6a"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structqueue.html">queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a6e022c3103099a6ee3a403e443177d6a">notify_list</a></td></tr>
+<tr class="memdesc:a6e022c3103099a6ee3a403e443177d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of registered callbacks.  <a href="#a6e022c3103099a6ee3a403e443177d6a">More...</a><br /></td></tr>
 <tr class="separator:a6e022c3103099a6ee3a403e443177d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a489e5038512390f7aa759345762fdb66"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structqueue.html">queue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a489e5038512390f7aa759345762fdb66">disconn_list</a></td></tr>
+<tr class="memdesc:a489e5038512390f7aa759345762fdb66"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of disconnect handlers.  <a href="#a489e5038512390f7aa759345762fdb66">More...</a><br /></td></tr>
 <tr class="separator:a489e5038512390f7aa759345762fdb66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08715fb3f0bd45b8a952e7cdd8bf7ee"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#aa08715fb3f0bd45b8a952e7cdd8bf7ee">in_req</a></td></tr>
+<tr class="memdesc:aa08715fb3f0bd45b8a952e7cdd8bf7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">There's a pending incoming request.  <a href="#aa08715fb3f0bd45b8a952e7cdd8bf7ee">More...</a><br /></td></tr>
 <tr class="separator:aa08715fb3f0bd45b8a952e7cdd8bf7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a096a864d3a957862ae19c6f217b1dc"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a8a096a864d3a957862ae19c6f217b1dc">buf</a></td></tr>
+<tr class="memdesc:a8a096a864d3a957862ae19c6f217b1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">buffer pointer  <a href="#a8a096a864d3a957862ae19c6f217b1dc">More...</a><br /></td></tr>
 <tr class="separator:a8a096a864d3a957862ae19c6f217b1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae2220a1a7304d3cb1db99bdf8b23593"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#aae2220a1a7304d3cb1db99bdf8b23593">mtu</a></td></tr>
+<tr class="memdesc:aae2220a1a7304d3cb1db99bdf8b23593"><td class="mdescLeft">&#160;</td><td class="mdescRight">actual number of bytes for pdu ATT exchange  <a href="#aae2220a1a7304d3cb1db99bdf8b23593">More...</a><br /></td></tr>
 <tr class="separator:aae2220a1a7304d3cb1db99bdf8b23593"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d26d0ceebafe0de307b6f09c88b6ad"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a00d26d0ceebafe0de307b6f09c88b6ad">next_send_id</a></td></tr>
+<tr class="memdesc:a00d26d0ceebafe0de307b6f09c88b6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs for "send" ops.  <a href="#a00d26d0ceebafe0de307b6f09c88b6ad">More...</a><br /></td></tr>
 <tr class="separator:a00d26d0ceebafe0de307b6f09c88b6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e33f531f5bea5bd543f9180054417a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a57e33f531f5bea5bd543f9180054417a">next_reg_id</a></td></tr>
+<tr class="memdesc:a57e33f531f5bea5bd543f9180054417a"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs for registered callbacks.  <a href="#a57e33f531f5bea5bd543f9180054417a">More...</a><br /></td></tr>
 <tr class="separator:a57e33f531f5bea5bd543f9180054417a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06890b29299684b02dd0ccea1ff34c51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="att_8h.html#ac32f52503838a2256bd228af94efebf1">bt_att_timeout_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a06890b29299684b02dd0ccea1ff34c51">timeout_callback</a></td></tr>
+<tr class="memdesc:a06890b29299684b02dd0ccea1ff34c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeout function for callback  <a href="#a06890b29299684b02dd0ccea1ff34c51">More...</a><br /></td></tr>
 <tr class="separator:a06890b29299684b02dd0ccea1ff34c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c74019788bb8e8b783ee0d51c1c5895"><td class="memItemLeft" align="right" valign="top"><a class="el" href="att_8h.html#a33a1860b00ff72d2d3d1a121b7831eb2">bt_att_destroy_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a1c74019788bb8e8b783ee0d51c1c5895">timeout_destroy</a></td></tr>
+<tr class="memdesc:a1c74019788bb8e8b783ee0d51c1c5895"><td class="mdescLeft">&#160;</td><td class="mdescRight">timeout function to manage data context (house keeping)  <a href="#a1c74019788bb8e8b783ee0d51c1c5895">More...</a><br /></td></tr>
 <tr class="separator:a1c74019788bb8e8b783ee0d51c1c5895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e33b9a6ae307d9b3d57b4bbd7b2bf14"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a8e33b9a6ae307d9b3d57b4bbd7b2bf14">timeout_data</a></td></tr>
 <tr class="separator:a8e33b9a6ae307d9b3d57b4bbd7b2bf14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad15e71be1d1fd1c864602e560d934ba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="att_8h.html#a67d7e48785bee8bb4e25e22ccf1e371d">bt_att_debug_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#ad15e71be1d1fd1c864602e560d934ba5">debug_callback</a></td></tr>
+<tr class="memdesc:ad15e71be1d1fd1c864602e560d934ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">debug callback  <a href="#ad15e71be1d1fd1c864602e560d934ba5">More...</a><br /></td></tr>
 <tr class="separator:ad15e71be1d1fd1c864602e560d934ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0796965f505f80dde361a2e150e2668a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="att_8h.html#a33a1860b00ff72d2d3d1a121b7831eb2">bt_att_destroy_func_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a0796965f505f80dde361a2e150e2668a">debug_destroy</a></td></tr>
+<tr class="memdesc:a0796965f505f80dde361a2e150e2668a"><td class="mdescLeft">&#160;</td><td class="mdescRight">data management function for debug  <a href="#a0796965f505f80dde361a2e150e2668a">More...</a><br /></td></tr>
 <tr class="separator:a0796965f505f80dde361a2e150e2668a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e65e3597ae9ab2fb28cb6d221bdfa5c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#a5e65e3597ae9ab2fb28cb6d221bdfa5c">debug_data</a></td></tr>
+<tr class="memdesc:a5e65e3597ae9ab2fb28cb6d221bdfa5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">user pointer for debug  <a href="#a5e65e3597ae9ab2fb28cb6d221bdfa5c">More...</a><br /></td></tr>
 <tr class="separator:a5e65e3597ae9ab2fb28cb6d221bdfa5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa37aee944f3ac0f8c0dfac1ebb439b73"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structbt__crypto.html">bt_crypto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#aa37aee944f3ac0f8c0dfac1ebb439b73">crypto</a></td></tr>
+<tr class="memdesc:aa37aee944f3ac0f8c0dfac1ebb439b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">crypto structure  <a href="#aa37aee944f3ac0f8c0dfac1ebb439b73">More...</a><br /></td></tr>
 <tr class="separator:aa37aee944f3ac0f8c0dfac1ebb439b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3554796e3d4519e7c53e0f1fda6b60b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#af3554796e3d4519e7c53e0f1fda6b60b">ext_signed</a></td></tr>
+<tr class="memdesc:af3554796e3d4519e7c53e0f1fda6b60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">true, requires key signature  <a href="#af3554796e3d4519e7c53e0f1fda6b60b">More...</a><br /></td></tr>
 <tr class="separator:af3554796e3d4519e7c53e0f1fda6b60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbf9f7f74f4792ce6eb896101d88bac8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsign__info.html">sign_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#acbf9f7f74f4792ce6eb896101d88bac8">local_sign</a></td></tr>
+<tr class="memdesc:acbf9f7f74f4792ce6eb896101d88bac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">local key structure pointer  <a href="#acbf9f7f74f4792ce6eb896101d88bac8">More...</a><br /></td></tr>
 <tr class="separator:acbf9f7f74f4792ce6eb896101d88bac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6b3368ae01d2624a641916f20a90f31"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsign__info.html">sign_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbt__att.html#ae6b3368ae01d2624a641916f20a90f31">remote_sign</a></td></tr>
+<tr class="memdesc:ae6b3368ae01d2624a641916f20a90f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">remote key structure pointer  <a href="#ae6b3368ae01d2624a641916f20a90f31">More...</a><br /></td></tr>
 <tr class="separator:ae6b3368ae01d2624a641916f20a90f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="att_8c_source.html#l00061">61</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<div class="textblock"><p>ATT structure (protocol context) </p>
+
+<p>Definition at line <a class="el" href="att_8c_source.html#l00064">64</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="a8a096a864d3a957862ae19c6f217b1dc"></a>
 <div class="memitem">
@@ -181,9 +209,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00080">80</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>buffer pointer </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01090">bt_att_set_mtu()</a>, and <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00094">94</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01112">bt_att_set_mtu()</a>, and <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>.</p>
 
 </div>
 </div>
@@ -197,9 +227,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00094">94</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>crypto structure </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01495">bt_att_has_crypto()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>, and <a class="el" href="att_8c_source.html#l00751">handle_signed()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00114">114</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01517">bt_att_has_crypto()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, and <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>.</p>
 
 </div>
 </div>
@@ -213,9 +245,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00090">90</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>debug callback </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01066">bt_att_set_debug()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00697">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00608">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00636">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00751">handle_signed()</a>, and <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00108">108</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01088">bt_att_set_debug()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -229,9 +263,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00092">92</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>user pointer for debug </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01066">bt_att_set_debug()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00697">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00608">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00636">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00751">handle_signed()</a>, and <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00112">112</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01088">bt_att_set_debug()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -245,9 +281,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00091">91</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>data management function for debug </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, and <a class="el" href="att_8c_source.html#l01066">bt_att_set_debug()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00110">110</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, and <a class="el" href="att_8c_source.html#l01088">bt_att_set_debug()</a>.</p>
 
 </div>
 </div>
@@ -261,9 +299,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00076">76</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>List of disconnect handlers. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01129">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01408">bt_att_unregister_all()</a>, <a class="el" href="att_8c_source.html#l01160">bt_att_unregister_disconnect()</a>, and <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00090">90</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01151">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, <a class="el" href="att_8c_source.html#l01182">bt_att_unregister_disconnect()</a>, and <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
 
 </div>
 </div>
@@ -277,9 +317,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00095">95</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>true, requires key signature </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l00788">handle_notify()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00116">116</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -293,9 +335,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00063">63</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>socket </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01058">bt_att_get_fd()</a>, <a class="el" href="att_8c_source.html#l01419">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01438">bt_att_set_security()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00068">68</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01080">bt_att_get_fd()</a>, <a class="el" href="att_8c_source.html#l01441">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01460">bt_att_set_security()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
 
 </div>
 </div>
@@ -309,9 +353,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00078">78</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>There's a pending incoming request. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00092">92</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +371,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00070">70</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Queued ATT protocol indications. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01249">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01291">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01191">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00374">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00080">80</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -341,9 +389,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00064">64</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>io structure for low level i/o (read and write) </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01360">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01129">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01191">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l01050">bt_att_set_close_on_unref()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00554">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00697">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00636">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00070">70</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01151">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l01072">bt_att_set_close_on_unref()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -357,9 +407,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00065">65</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>true if an l2cap socket </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01419">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01438">bt_att_set_security()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00072">72</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01441">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01460">bt_att_set_security()</a>.</p>
 
 </div>
 </div>
@@ -373,9 +425,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00066">66</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>i/o seurity level: Only used for non-L2CAP </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01419">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01438">bt_att_set_security()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00074">74</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01441">bt_att_get_security()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01460">bt_att_set_security()</a>.</p>
 
 </div>
 </div>
@@ -389,9 +443,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00097">97</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>local key structure pointer </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01477">bt_att_set_local_key()</a>, and <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00118">118</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01499">bt_att_set_local_key()</a>, and <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>.</p>
 
 </div>
 </div>
@@ -405,9 +461,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00081">81</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>actual number of bytes for pdu ATT exchange </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01082">bt_att_get_mtu()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01090">bt_att_set_mtu()</a>, <a class="el" href="att_8c_source.html#l00834">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00282">encode_pdu()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00096">96</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01104">bt_att_get_mtu()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01112">bt_att_set_mtu()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, and <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>.</p>
 
 </div>
 </div>
@@ -421,9 +479,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00084">84</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>IDs for registered callbacks. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01360">bt_att_register()</a>, and <a class="el" href="att_8c_source.html#l01129">bt_att_register_disconnect()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00100">100</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, and <a class="el" href="att_8c_source.html#l01151">bt_att_register_disconnect()</a>.</p>
 
 </div>
 </div>
@@ -437,9 +497,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00083">83</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>IDs for "send" ops. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01191">bt_att_send()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00098">98</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +515,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00075">75</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>List of registered callbacks. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01360">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01392">bt_att_unregister()</a>, <a class="el" href="att_8c_source.html#l01408">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l00788">handle_notify()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00088">88</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01414">bt_att_unregister()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -469,9 +533,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00071">71</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Pending indication state. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01249">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01291">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00697">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00374">pick_next_send_op()</a>, <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00082">82</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -485,9 +551,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00069">69</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Pending request state. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01249">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01291">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00452">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00608">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00636">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00374">pick_next_send_op()</a>, <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00078">78</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -501,9 +569,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00062">62</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>reference counter incremented by bt_att_ref, decremented by bt_att_unref </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01026">bt_att_ref()</a>, and <a class="el" href="att_8c_source.html#l01036">bt_att_unref()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00066">66</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01048">bt_att_ref()</a>, and <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>.</p>
 
 </div>
 </div>
@@ -517,9 +587,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00098">98</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>remote key structure pointer </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01486">bt_att_set_remote_key()</a>, and <a class="el" href="att_8c_source.html#l00751">handle_signed()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00120">120</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01508">bt_att_set_remote_key()</a>, and <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>.</p>
 
 </div>
 </div>
@@ -533,9 +605,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00068">68</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Queued ATT protocol requests. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01249">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01291">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01191">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00608">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00374">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00076">76</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -549,9 +623,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00086">86</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>timeout function for callback </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01112">bt_att_set_timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00102">102</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01134">bt_att_set_timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -565,9 +641,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00088">88</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00106">106</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01112">bt_att_set_timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00409">timeout_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01134">bt_att_set_timeout_cb()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -581,9 +657,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00087">87</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>timeout function to manage data context (house keeping) </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, and <a class="el" href="att_8c_source.html#l01112">bt_att_set_timeout_cb()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00104">104</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, and <a class="el" href="att_8c_source.html#l01134">bt_att_set_timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -597,9 +675,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00072">72</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Queue of PDUs ready to send. </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01249">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01291">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00931">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00962">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01191">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00374">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00084">84</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -613,9 +693,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00073">73</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>true if already engaged in write operation </p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00521">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00445">write_watch_destroy()</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00086">86</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+
+<p>Referenced by <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00467">write_watch_destroy()</a>.</p>
 
 </div>
 </div>
@@ -628,7 +710,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structbt__att.html">bt_att</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 15:53:17 for ble_gatt_client by
+    <li class="footer">Generated on Wed Jul 29 2015 18:44:30 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,5 +1,6 @@
 /**
- * @file uuid: uuid.c
+ * @file uuid.c
+ * @brief uuid collection of functions
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

@@ -1,5 +1,6 @@
 /**
- * @file bluetooth: bluetooth.c
+ * @file bluetooth.c
+ * @brief various bluetooth functions
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

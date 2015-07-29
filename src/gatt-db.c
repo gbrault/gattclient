@@ -1,5 +1,6 @@
 /**
- * @file bluetooth gatt db: gatt-db.c
+ * @file gatt-db.c
+ * @brief manage the services / characteristics data model
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

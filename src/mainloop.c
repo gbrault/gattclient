@@ -1,5 +1,6 @@
 /**
- * @file mainloop: mainloop.c
+ * @file mainloop.c
+ * @brief set of function to manage the epool loop
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39

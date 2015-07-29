@@ -1,5 +1,6 @@
 /**
- * @file util: util.c
+ * @file util.c
+ * @brief set of utility functions
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39
@@ -68,6 +69,15 @@ void util_debug(util_debug_func_t function, void *user_data,
 	function(str, user_data);
 }
 
+/**
+ * hexadecimal dump utility
+ *
+ * @param dir
+ * @param buf
+ * @param len
+ * @param function
+ * @param user_data
+ */
 void util_hexdump(const char dir, const unsigned char *buf, size_t len,
 				util_debug_func_t function, void *user_data)
 {
