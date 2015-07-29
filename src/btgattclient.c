@@ -1,5 +1,6 @@
 /**
- * @file bluetooth main gatt client: btgattclient.c
+ * @file btgattclient.c
+ * @brief bluetooth main gatt client
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39
@@ -71,6 +72,15 @@
 
 static bool verbose = false;
 
+/**
+ * client structure
+ *
+ * @parameter fd					socket
+ * @parameter att					pointer to a bt_att structure
+ * @parameter db					pointer to a gatt_db structure
+ * @parameter gatt					pointer to a bt_gatt_client structure
+ * @parameter reliable_session_id 	session id
+ */
 struct client {
 	int fd;
 	struct bt_att *att;
@@ -159,6 +169,7 @@ static void att_disconnect_cb(int err, void *user_data)
 /**
  * print a prefix (user_data) followed by a message (str)
  * example att: ATT op 0x02 (att: is the prefix)
+ *
  * @param str		message to print
  * @param user_data pointer to prefix
  */
@@ -171,6 +182,7 @@ static void att_debug_cb(const char *str, void *user_data)
 /**
  * print a prefix (user_data) followed by a message (str)
  * example gatt: MTU exchange complete, with MTU: 23 (gatt: is the prefix)
+ *
  * @param str		message to print
  * @param user_data	pointer to prefix
  */
@@ -230,6 +242,7 @@ static void service_removed_cb(struct gatt_db_attribute *attr, void *user_data)
 
 /**
  * create an gatt client attached to the fd l2cap socket
+ *
  * @param fd	socket
  * @param mtu	selected pdu size
  * @return gatt client structure
@@ -525,7 +538,7 @@ static void services_usage(void)
 }
 
 /**
- * parse command
+ * parse command string
  *
  * @param str			command to parse
  * @param expected_argc	number of arguments expected

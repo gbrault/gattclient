@@ -36,3 +36,7 @@ most of the files are in &lt;bluez&gt;/src/shared
 # project is under eclipse
 
 you can clone with git and there is an eclipse project
+
+# Documentation
+A doxygen documentation is provided, see the html directory (index.html file)
+This is a work in progress with the intent of documenting all important functions and data structures
