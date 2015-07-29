@@ -184,6 +184,12 @@ static void ready_cb(bool success, uint8_t att_ecode, void *user_data);
 static void service_changed_cb(uint16_t start_handle, uint16_t end_handle,
 							void *user_data);
 
+/**
+ * log discovered service
+ *
+ * @param attr	gatt_db_attribute structure (service data)
+ * @param str	comment about the logged service ("Service added", "Service removed"...)
+ */
 static void log_service_event(struct gatt_db_attribute *attr, const char *str)
 {
 	char uuid_str[MAX_LEN_UUID_STR];
@@ -199,11 +205,23 @@ static void log_service_event(struct gatt_db_attribute *attr, const char *str)
 								start, end);
 }
 
+/**
+ * service added callback
+ *
+ * @param attr
+ * @param user_data
+ */
 static void service_added_cb(struct gatt_db_attribute *attr, void *user_data)
 {
 	log_service_event(attr, "Service Added");
 }
 
+/**
+ * service removed callback
+ *
+ * @param attr
+ * @param user_data
+ */
 static void service_removed_cb(struct gatt_db_attribute *attr, void *user_data)
 {
 	log_service_event(attr, "Service Removed");
@@ -285,6 +303,11 @@ static struct client *client_create(int fd, uint16_t mtu)
 	return cli;
 }
 
+/**
+ * client structure cleanup
+ *
+ * @param cli client pointer to destroy
+ */
 static void client_destroy(struct client *cli)
 {
 	bt_gatt_client_unref(cli->gatt);
@@ -292,6 +315,11 @@ static void client_destroy(struct client *cli)
 	free(cli);
 }
 
+/**
+ * printing bt_uuid_t structure (uuid)
+ *
+ * @param uuid
+ */
 static void print_uuid(const bt_uuid_t *uuid)
 {
 	char uuid_str[MAX_LEN_UUID_STR];
@@ -303,6 +331,11 @@ static void print_uuid(const bt_uuid_t *uuid)
 	printf("%s\n", uuid_str);
 }
 
+/**
+ *
+ * @param attr
+ * @param user_data
+ */
 static void print_incl(struct gatt_db_attribute *attr, void *user_data)
 {
 	struct client *cli = user_data;
@@ -325,6 +358,11 @@ static void print_incl(struct gatt_db_attribute *attr, void *user_data)
 	print_uuid(&uuid);
 }
 
+/**
+ *
+ * @param attr
+ * @param user_data
+ */
 static void print_desc(struct gatt_db_attribute *attr, void *user_data)
 {
 	printf("\t\t  " COLOR_MAGENTA "descr" COLOR_OFF
@@ -333,6 +371,11 @@ static void print_desc(struct gatt_db_attribute *attr, void *user_data)
 	print_uuid(gatt_db_attribute_get_type(attr));
 }
 
+/**
+ *
+ * @param attr
+ * @param user_data
+ */
 static void print_chrc(struct gatt_db_attribute *attr, void *user_data)
 {
 	uint16_t handle, value_handle;
@@ -354,6 +397,11 @@ static void print_chrc(struct gatt_db_attribute *attr, void *user_data)
 	gatt_db_service_foreach_desc(attr, print_desc, NULL);
 }
 
+/**
+ *
+ * @param attr
+ * @param user_data
+ */
 static void print_service(struct gatt_db_attribute *attr, void *user_data)
 {
 	struct client *cli = user_data;
@@ -376,6 +424,11 @@ static void print_service(struct gatt_db_attribute *attr, void *user_data)
 	printf("\n");
 }
 
+/**
+ * print the list of services
+ *
+ * @param cli	client pointer
+ */
 static void print_services(struct client *cli)
 {
 	printf("\n");
@@ -383,6 +436,12 @@ static void print_services(struct client *cli)
 	gatt_db_foreach_service(cli->db, NULL, print_service, cli);
 }
 
+/**
+ * print services providing the uuid
+ *
+ * @param cli
+ * @param uuid
+ */
 static void print_services_by_uuid(struct client *cli, const bt_uuid_t *uuid)
 {
 	printf("\n");
@@ -390,6 +449,12 @@ static void print_services_by_uuid(struct client *cli, const bt_uuid_t *uuid)
 	gatt_db_foreach_service(cli->db, uuid, print_service, cli);
 }
 
+/**
+ * print services providing the handle
+ *
+ * @param cli
+ * @param handle
+ */
 static void print_services_by_handle(struct client *cli, uint16_t handle)
 {
 	printf("\n");
@@ -398,6 +463,13 @@ static void print_services_by_handle(struct client *cli, uint16_t handle)
 	gatt_db_foreach_service(cli->db, NULL, print_service, cli);
 }
 
+/**
+ * GATT discovery procedures call back
+ *
+ * @param success		if not 0 an error occured
+ * @param att_ecode		att error code
+ * @param user_data		pointer to client structure
+ */
 static void ready_cb(bool success, uint8_t att_ecode, void *user_data)
 {
 	struct client *cli = user_data;
