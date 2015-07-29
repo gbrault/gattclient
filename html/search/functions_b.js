@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['main',['main',['../btgattclient_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'btgattclient.c']]],
+  ['mainloop_5fadd_5ffd',['mainloop_add_fd',['../mainloop_8c.html#a28fc2a8a9fc2f5699af8cda114ed288c',1,'mainloop_add_fd(int fd, uint32_t events, mainloop_event_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c'],['../mainloop_8h.html#a28fc2a8a9fc2f5699af8cda114ed288c',1,'mainloop_add_fd(int fd, uint32_t events, mainloop_event_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c']]],
+  ['mainloop_5fadd_5ftimeout',['mainloop_add_timeout',['../mainloop_8c.html#a898041ac76512348efcfa124889aa3d6',1,'mainloop_add_timeout(unsigned int msec, mainloop_timeout_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c'],['../mainloop_8h.html#a898041ac76512348efcfa124889aa3d6',1,'mainloop_add_timeout(unsigned int msec, mainloop_timeout_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c']]],
+  ['mainloop_5fexit_5ffailure',['mainloop_exit_failure',['../mainloop_8c.html#af0fe5aeddf6b383af28c90b146191ae0',1,'mainloop_exit_failure(void):&#160;mainloop.c'],['../mainloop_8h.html#af0fe5aeddf6b383af28c90b146191ae0',1,'mainloop_exit_failure(void):&#160;mainloop.c']]],
+  ['mainloop_5fexit_5fsuccess',['mainloop_exit_success',['../mainloop_8c.html#a04caa8b5ab23f7240658bc09d1cd626c',1,'mainloop_exit_success(void):&#160;mainloop.c'],['../mainloop_8h.html#a04caa8b5ab23f7240658bc09d1cd626c',1,'mainloop_exit_success(void):&#160;mainloop.c']]],
+  ['mainloop_5finit',['mainloop_init',['../mainloop_8c.html#a3c350ab430543049a395cbb821ce05a7',1,'mainloop_init(void):&#160;mainloop.c'],['../mainloop_8h.html#a3c350ab430543049a395cbb821ce05a7',1,'mainloop_init(void):&#160;mainloop.c']]],
+  ['mainloop_5fmodify_5ffd',['mainloop_modify_fd',['../mainloop_8c.html#a9305fafee2f8cf38c6dc349168e3ce0f',1,'mainloop_modify_fd(int fd, uint32_t events):&#160;mainloop.c'],['../mainloop_8h.html#a9305fafee2f8cf38c6dc349168e3ce0f',1,'mainloop_modify_fd(int fd, uint32_t events):&#160;mainloop.c']]],
+  ['mainloop_5fmodify_5ftimeout',['mainloop_modify_timeout',['../mainloop_8c.html#aeb71f85b2ea1fd23d57a18c6aec18b3f',1,'mainloop_modify_timeout(int id, unsigned int msec):&#160;mainloop.c'],['../mainloop_8h.html#a01b30b12e9c4eb871f23b0a5464ec71d',1,'mainloop_modify_timeout(int fd, unsigned int msec):&#160;mainloop.c']]],
+  ['mainloop_5fquit',['mainloop_quit',['../mainloop_8c.html#a131504807b960e1a23074d9f7029ae13',1,'mainloop_quit(void):&#160;mainloop.c'],['../mainloop_8h.html#a131504807b960e1a23074d9f7029ae13',1,'mainloop_quit(void):&#160;mainloop.c']]],
+  ['mainloop_5fremove_5ffd',['mainloop_remove_fd',['../mainloop_8c.html#abdcc98d1655c0ccb0a336d7e10fb3614',1,'mainloop_remove_fd(int fd):&#160;mainloop.c'],['../mainloop_8h.html#abdcc98d1655c0ccb0a336d7e10fb3614',1,'mainloop_remove_fd(int fd):&#160;mainloop.c']]],
+  ['mainloop_5fremove_5ftimeout',['mainloop_remove_timeout',['../mainloop_8c.html#a59dff131381982a3afdf76df6bdae269',1,'mainloop_remove_timeout(int id):&#160;mainloop.c'],['../mainloop_8h.html#a59dff131381982a3afdf76df6bdae269',1,'mainloop_remove_timeout(int id):&#160;mainloop.c']]],
+  ['mainloop_5frun',['mainloop_run',['../mainloop_8c.html#a39779b8d56ff2d11bd7db2065bf39aa3',1,'mainloop_run(void):&#160;mainloop.c'],['../mainloop_8h.html#a39779b8d56ff2d11bd7db2065bf39aa3',1,'mainloop_run(void):&#160;mainloop.c']]],
+  ['mainloop_5fset_5fsignal',['mainloop_set_signal',['../mainloop_8c.html#aaa77d9d0581c9b48125f5c8d315a33d9',1,'mainloop_set_signal(sigset_t *mask, mainloop_signal_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c'],['../mainloop_8h.html#aaa77d9d0581c9b48125f5c8d315a33d9',1,'mainloop_set_signal(sigset_t *mask, mainloop_signal_func callback, void *user_data, mainloop_destroy_func destroy):&#160;mainloop.c']]],
+  ['match_5fdisconn_5fid',['match_disconn_id',['../att_8c.html#acd3749c63a8a0f5299633ef6af14b28b',1,'att.c']]],
+  ['match_5fnotify_5fchrc_5fhandle_5frange',['match_notify_chrc_handle_range',['../gatt-client_8c.html#a3bff1e1423a7250334a0faa81da8e47a',1,'gatt-client.c']]],
+  ['match_5fnotify_5fchrc_5fvalue_5fhandle',['match_notify_chrc_value_handle',['../gatt-client_8c.html#abc2bfc1e8a92ad782ca8beb33659904d',1,'gatt-client.c']]],
+  ['match_5fnotify_5fdata_5fhandle_5frange',['match_notify_data_handle_range',['../gatt-client_8c.html#a7c0a5914f75d9668add0a7e390ca901b',1,'gatt-client.c']]],
+  ['match_5fnotify_5fdata_5fid',['match_notify_data_id',['../gatt-client_8c.html#a9c1577b54da0fdd42eba825715d3aae8',1,'gatt-client.c']]],
+  ['match_5fnotify_5fid',['match_notify_id',['../att_8c.html#a6050f3d94333f8f8f28a96e2ff7aec59',1,'match_notify_id(const void *a, const void *b):&#160;att.c'],['../gatt-db_8c.html#a6050f3d94333f8f8f28a96e2ff7aec59',1,'match_notify_id(const void *a, const void *b):&#160;gatt-db.c']]],
+  ['match_5fop_5fid',['match_op_id',['../att_8c.html#a42936b2ea0b552dc8f2f2624df7f4488',1,'att.c']]],
+  ['match_5frange',['match_range',['../gatt-db_8c.html#a9135058ed67dc6a8b6d61b288b1c3f90',1,'gatt-db.c']]],
+  ['match_5freq_5fid',['match_req_id',['../gatt-client_8c.html#a91d8b5a77158a4f3e9e30b4a08534716',1,'gatt-client.c']]],
+  ['mtu_5fcb',['mtu_cb',['../gatt-helpers_8c.html#a11f00787794a1079b7819d63ff2d3e70',1,'gatt-helpers.c']]]
+];
