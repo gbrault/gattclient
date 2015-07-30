@@ -9,6 +9,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "config.h", "config_8h.html", "config_8h" ],
     [ "crypto.c", "crypto_8c.html", "crypto_8c" ],
     [ "crypto.h", "crypto_8h.html", "crypto_8h" ],
+    [ "design_notes.h", "design__notes_8h.html", "design__notes_8h" ],
     [ "gatt-client.c", "gatt-client_8c.html", "gatt-client_8c" ],
     [ "gatt-client.h", "gatt-client_8h.html", "gatt-client_8h" ],
     [ "gatt-db.c", "gatt-db_8c.html", "gatt-db_8c" ],

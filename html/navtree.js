@@ -29,17 +29,17 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "bluetooth_8h.html#a784cc723caa5f6e2bdc606431bbd6195",
-"functions_u.html",
-"gatt-db_8c.html#afa99ec4acc4ecb2dc3c2d05da15d0e3f",
-"hci_8c.html#a720574b9b81563a091cdd32c8c696bf6",
-"hci_8h.html#a3c7c677b7b0b8ae30fd31a339fa76612",
-"hci_8h.html#a8a035a066785f7fc170d57fef4a7dd25",
-"hci_8h.html#addebed2f7ced9df49916cfb6bf93c985",
-"io_8h.html",
-"struct____attribute____.html#a3ddd0091402d85a50cf9eb63ff2c7d71",
-"structbt__gatt__request.html#a2b4994fa721d36ed7662ca94cb69c0c8",
-"structnotify__chrc.html#aaa7ae065530cfe3a6019a8baf0a8e00e",
-"uuid_8h.html#a63eadba440c96c55f2a2393610a306c5"
+"functions_k.html",
+"gatt-db_8c.html#adc6ab0cbf361b5c2a5ae251262aab14e",
+"hci_8c.html#a5fbe03a55e70507d63db527076cdd50d",
+"hci_8h.html#a3ac9e61f49854744b43871d58194c240",
+"hci_8h.html#a8600366f1ecf8c801d4c30f0051cb998",
+"hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9fd4affca911337a5964927526bd7a43",
+"io-mainloop_8c.html#a7be060f450a2fa0d260d3ae9a98c983c",
+"struct____attribute____.html#a3b9a306c61dd10e85db00fc42055136d",
+"structbt__gatt__iter.html#a5594f37c36ff665c755cb59a9632f64c",
+"structnotify__chrc.html#a543b7ea025378c0ddd36adb745ca2461",
+"uuid_8h.html#a5ad6dcf578c5b21274fd0e4716df97d6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

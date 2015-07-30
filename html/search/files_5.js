@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['io_2dmainloop_2ec',['io-mainloop.c',['../io-mainloop_8c.html',1,'']]],
-  ['io_2eh',['io.h',['../io_8h.html',1,'']]]
+  ['hci_2ec',['hci.c',['../hci_8c.html',1,'']]],
+  ['hci_2eh',['hci.h',['../hci_8h.html',1,'']]],
+  ['hci_5flib_2eh',['hci_lib.h',['../hci__lib_8h.html',1,'']]]
 ];

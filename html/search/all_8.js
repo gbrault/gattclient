@@ -135,7 +135,7 @@ var searchData=
   ['hci_5fhv2',['HCI_HV2',['../hci_8h.html#aef044625c85b469797c4aa4a8e57f1ad',1,'hci.h']]],
   ['hci_5fhv3',['HCI_HV3',['../hci_8h.html#aa628ac1142bd6e687ed8423f0991a804',1,'hci.h']]],
   ['hci_5finit',['HCI_INIT',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06cab130541eeb02a0e3deba83456237bea4',1,'hci.h']]],
-  ['hci_5finquiry',['HCI_INQUIRY',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca2cfa4d3fb6f439bd8d598dcd2144a437',1,'HCI_INQUIRY():&#160;hci.h'],['../hci_8c.html#a2dd7de129cb20a3f3157093de315d80b',1,'hci_inquiry(int dev_id, int len, int nrsp, const uint8_t *lap, inquiry_info **ii, long flags):&#160;hci.c'],['../hci__lib_8h.html#a77df37974c94162d8c45ba1679789fd5',1,'hci_inquiry(int dev_id, int len, int num_rsp, const uint8_t *lap, inquiry_info **ii, long flags):&#160;hci.c']]],
+  ['hci_5finquiry',['hci_inquiry',['../hci_8c.html#a2dd7de129cb20a3f3157093de315d80b',1,'hci_inquiry(int dev_id, int len, int nrsp, const uint8_t *lap, inquiry_info **ii, long flags):&#160;hci.c'],['../hci__lib_8h.html#a77df37974c94162d8c45ba1679789fd5',1,'hci_inquiry(int dev_id, int len, int num_rsp, const uint8_t *lap, inquiry_info **ii, long flags):&#160;hci.c'],['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca2cfa4d3fb6f439bd8d598dcd2144a437',1,'HCI_INQUIRY():&#160;hci.h']]],
   ['hci_5finquiry_5freq',['hci_inquiry_req',['../structhci__inquiry__req.html',1,'']]],
   ['hci_5finstant_5fpassed',['HCI_INSTANT_PASSED',['../hci_8h.html#a854056aa9cdc8ba701fbaab3614f00b8',1,'hci.h']]],
   ['hci_5finsufficient_5fsecurity',['HCI_INSUFFICIENT_SECURITY',['../hci_8h.html#a2a321577751726b905fe015956f17e4c',1,'hci.h']]],

@@ -5,15 +5,6 @@ var mainloop_8c =
     [ "signal_data", "structsignal__data.html", "structsignal__data" ],
     [ "MAX_EPOLL_EVENTS", "mainloop_8c.html#afc006591e1289be0aef777083bf22b8a", null ],
     [ "MAX_MAINLOOP_ENTRIES", "mainloop_8c.html#ae55077ef9c427822b4a8981903d293ee", null ],
-    [ "EPOLL_EVENTS_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652", [
-      [ "EPOLLERR_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652af6b09ce17d1d03b236b5f3604645ac93", null ],
-      [ "EPOLLET_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652afb60ce2fd2b07674cfbf9aaf0298668d", null ],
-      [ "EPOLLHUP_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a3bbcb1325236956c3874fc4460c292cc", null ],
-      [ "EPOLLIN_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652ac224535d6dc4ee39c1d9ddb935dd21df", null ],
-      [ "EPOLLONESHOT_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a835a3ff38d6ce9cb64aca478f93817c9", null ],
-      [ "EPOLLOUT_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a15dfad2b7bf31ead914d31cabc8cd072", null ],
-      [ "EPOLLPRI_DOC", "mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a04af26276938824836be39d5823a16ca", null ]
-    ] ],
     [ "mainloop_add_fd", "mainloop_8c.html#a28fc2a8a9fc2f5699af8cda114ed288c", null ],
     [ "mainloop_add_timeout", "mainloop_8c.html#a898041ac76512348efcfa124889aa3d6", null ],
     [ "mainloop_exit_failure", "mainloop_8c.html#af0fe5aeddf6b383af28c90b146191ae0", null ],

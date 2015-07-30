@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['hci_2ec',['hci.c',['../hci_8c.html',1,'']]],
-  ['hci_2eh',['hci.h',['../hci_8h.html',1,'']]],
-  ['hci_5flib_2eh',['hci_lib.h',['../hci__lib_8h.html',1,'']]]
+  ['gatt_2dclient_2ec',['gatt-client.c',['../gatt-client_8c.html',1,'']]],
+  ['gatt_2dclient_2eh',['gatt-client.h',['../gatt-client_8h.html',1,'']]],
+  ['gatt_2ddb_2ec',['gatt-db.c',['../gatt-db_8c.html',1,'']]],
+  ['gatt_2ddb_2eh',['gatt-db.h',['../gatt-db_8h.html',1,'']]],
+  ['gatt_2dhelpers_2ec',['gatt-helpers.c',['../gatt-helpers_8c.html',1,'']]],
+  ['gatt_2dhelpers_2eh',['gatt-helpers.h',['../gatt-helpers_8h.html',1,'']]]
 ];

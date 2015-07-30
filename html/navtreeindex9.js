@@ -1,5 +1,7 @@
 var NAVTREEINDEX9 =
 {
+"struct____attribute____.html#a3b9a306c61dd10e85db00fc42055136d":[0,0,0,33],
+"struct____attribute____.html#a3c8d02677e5b8e26ae34584b374028f5":[0,0,0,3],
 "struct____attribute____.html#a3ddd0091402d85a50cf9eb63ff2c7d71":[0,0,0,74],
 "struct____attribute____.html#a3ee173178125752576498fb1c1260f34":[0,0,0,143],
 "struct____attribute____.html#a4031fed1901761f1085d2afb948eaca2":[0,0,0,102],
@@ -247,7 +249,5 @@ var NAVTREEINDEX9 =
 "structbt__gatt__client.html#af64374a8a9289ad68d37e5aa7885c8ab":[0,0,8,23],
 "structbt__gatt__client.html#af90ec4e66c1bcf6cae6842241dd7bb08":[0,0,8,26],
 "structbt__gatt__iter.html":[0,0,9],
-"structbt__gatt__iter.html#a2f066347737da412a5cd3dbcef74223d":[0,0,9,1],
-"structbt__gatt__iter.html#a5594f37c36ff665c755cb59a9632f64c":[0,0,9,0],
-"structbt__gatt__request.html":[0,0,10]
+"structbt__gatt__iter.html#a2f066347737da412a5cd3dbcef74223d":[0,0,9,1]
 };
