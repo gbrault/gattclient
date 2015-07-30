@@ -103,6 +103,7 @@ $(document).ready(function(){initNavTree('mainloop_8c.html','');});
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -140,6 +141,22 @@ Macros</h2></td></tr>
 <tr class="separator:afc006591e1289be0aef777083bf22b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae55077ef9c427822b4a8981903d293ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainloop_8c.html#ae55077ef9c427822b4a8981903d293ee">MAX_MAINLOOP_ENTRIES</a>&#160;&#160;&#160;128</td></tr>
 <tr class="separator:ae55077ef9c427822b4a8981903d293ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2a5353c4b9a09c8a2dfeb5c66d1c1652"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652">EPOLL_EVENTS_DOC</a> { <br />
+&#160;&#160;<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652af6b09ce17d1d03b236b5f3604645ac93">EPOLLERR_DOC</a> =EPOLLERR, 
+<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652afb60ce2fd2b07674cfbf9aaf0298668d">EPOLLET_DOC</a> =EPOLLET, 
+<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a3bbcb1325236956c3874fc4460c292cc">EPOLLHUP_DOC</a> =EPOLLHUP, 
+<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652ac224535d6dc4ee39c1d9ddb935dd21df">EPOLLIN_DOC</a> =EPOLLIN, 
+<br />
+&#160;&#160;<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a835a3ff38d6ce9cb64aca478f93817c9">EPOLLONESHOT_DOC</a> =EPOLLONESHOT, 
+<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a15dfad2b7bf31ead914d31cabc8cd072">EPOLLOUT_DOC</a> =EPOLLOUT, 
+<a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a04af26276938824836be39d5823a16ca">EPOLLPRI_DOC</a> =EPOLLPRI
+<br />
+ }</td></tr>
+<tr class="memdesc:a2a5353c4b9a09c8a2dfeb5c66d1c1652"><td class="mdescLeft">&#160;</td><td class="mdescRight">describe EPOLL possible events  <a href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652">More...</a><br /></td></tr>
+<tr class="separator:a2a5353c4b9a09c8a2dfeb5c66d1c1652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -206,7 +223,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00050">50</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00129">129</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
 </div>
 </div>
@@ -220,9 +237,104 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00064">64</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00143">143</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00240">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00090">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00276">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00302">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00320">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00169">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00364">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00390">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652">EPOLL_EVENTS_DOC</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>describe EPOLL possible events </p>
+<p><code> </p><pre class="fragment">those value are used in the epoll_ctl( )
+
+ int epoll_ctl (int epfd,
+                 int op,
+                 int fd,
+                 struct epoll_event *event);
+
+ struct epoll_event {
+   _  _u32 events;
+   union {
+           void *ptr;
+           int fd;
+           _  _u32 u32;
+           _  _u64 u64;
+   } data;
+ };
+
+ A successful call to epoll_ctl( ) controls the epoll instance associated with the file descriptor epfd.
+ The parameter op specifies the operation to be taken against the file associated with fd.
+ The event parameter further describes the behavior of the operation.
+
+ Here are valid values for the op parameter
+
+ EPOLL_CTL_ADD
+     Add a monitor on the file associated with the file descriptor fd to the epoll instance associated with epfd, per the events defined in event.
+ EPOLL_CTL_DEL
+     Remove a monitor on the file associated with the file descriptor fd from the epoll instance associated with epfd.
+ EPOLL_CTL_MOD
+    Modify an existing monitor of fd with the updated events specified by event.
+
+ The events field in the epoll_event structure lists which events to monitor on the given file descriptor.
+ Multiple events can be bitwise-ORed together.
+
+ Edge- Versus Level-Triggered Events
+
+If the EPOLLET value is set in the events field of the event parameter passed to epoll_ctl( ),
+the watch on fd is edge-triggered, as opposed to level-triggered.
+
+Consider the following events between a producer and a consumer communicating over a Unix pipe:
+
+    The producer writes 1 KB of data onto a pipe.
+
+    The consumer performs an epoll_wait( ) on the pipe, waiting for the pipe to contain data, and thus be readable.
+
+With a level-triggered watch, the call to epoll_wait( ) in step 2 will return immediately,
+showing that the pipe is ready to read. With an edge-triggered watch,
+this call will not return until after step 1 occurs. That is, even if the pipe is readable
+at the invocation of epoll_wait( ), the call will not return until the data is written onto
+the pipe.
+
+Level-triggered is the default behavior. It is how poll( ) and select( ) behave,
+and it is what most developers expect. Edge-triggered behavior requires a different approach
+to programming, commonly utilizing nonblocking I/O, and careful checking for EAGAIN.
+</pre><p></code></p>
+<p><code> </code> </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652af6b09ce17d1d03b236b5f3604645ac93"></a>EPOLLERR_DOC&#160;</td><td class="fielddoc">
+<p>An error condition occurred on the file. This event is always monitored, even if it's not specified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652afb60ce2fd2b07674cfbf9aaf0298668d"></a>EPOLLET_DOC&#160;</td><td class="fielddoc">
+<p>Enables edge-triggered behavior for the monitor of the file (see the upcoming section "Edge- Versus Level-Triggered Events"). The default behavior is level-triggered. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652a3bbcb1325236956c3874fc4460c292cc"></a>EPOLLHUP_DOC&#160;</td><td class="fielddoc">
+<p>A hangup occurred on the file. This event is always monitored, even if it's not specified. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652ac224535d6dc4ee39c1d9ddb935dd21df"></a>EPOLLIN_DOC&#160;</td><td class="fielddoc">
+<p>The file is available to be read from without blocking. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652a835a3ff38d6ce9cb64aca478f93817c9"></a>EPOLLONESHOT_DOC&#160;</td><td class="fielddoc">
+<p>After an event is generated and read, the file is automatically no longer monitored. A new event mask must be specified via EPOLL_CTL_MOD to reenable the watch. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652a15dfad2b7bf31ead914d31cabc8cd072"></a>EPOLLOUT_DOC&#160;</td><td class="fielddoc">
+<p>The file is available to be written to without blocking. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a2a5353c4b9a09c8a2dfeb5c66d1c1652a04af26276938824836be39d5823a16ca"></a>EPOLLPRI_DOC&#160;</td><td class="fielddoc">
+<p>There is urgent out-of-band data available to read. </p>
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00110">110</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
 </div>
 </div>
@@ -268,11 +380,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>trigger an event to be processed by the mainloop_run function</p>
+<p>trigger an event to be processed by the mainloop_run function and create a mainloop_list entry </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652" title="describe EPOLL possible events ">EPOLL_EVENTS_DOC</a> for events description</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fd</td><td>"file descriptor" source of the event </td></tr>
-    <tr><td class="paramname">events</td><td>event flags </td></tr>
+    <tr><td class="paramname">fd</td><td>"file descriptor" source of the event (socket) </td></tr>
+    <tr><td class="paramname">events</td><td>event flags EPOOL type like EPOLLIN, EPOLLOUT... </td></tr>
     <tr><td class="paramname">callback</td><td>function to call back by the event processor </td></tr>
     <tr><td class="paramname">user_data</td><td>associated data </td></tr>
     <tr><td class="paramname">destroy</td><td>management function to unallocate user_data </td></tr>
@@ -281,11 +393,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 success else &lt;0 error </dd></dl>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00240">240</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00320">320</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00059">mainloop_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00060">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00052">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00058">mainloop_data::events</a>, <a class="el" href="mainloop_8c_source.html#l00057">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00064">MAX_MAINLOOP_ENTRIES</a>, and <a class="el" href="mainloop_8c_source.html#l00061">mainloop_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00138">mainloop_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00139">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00131">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00137">mainloop_data::events</a>, <a class="el" href="mainloop_8c_source.html#l00136">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00143">MAX_MAINLOOP_ENTRIES</a>, and <a class="el" href="mainloop_8c_source.html#l00140">mainloop_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00165">io_new()</a>, <a class="el" href="btgattclient_8c_source.html#l01893">main()</a>, <a class="el" href="mainloop_8c_source.html#l00368">mainloop_add_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00165">io_new()</a>, <a class="el" href="btgattclient_8c_source.html#l01893">main()</a>, <a class="el" href="mainloop_8c_source.html#l00456">mainloop_add_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -325,9 +437,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00368">368</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00456">456</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00070">timeout_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00071">timeout_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00069">timeout_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00240">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00337">timeout_callback()</a>, <a class="el" href="mainloop_8c_source.html#l00326">timeout_destroy()</a>, <a class="el" href="mainloop_8c_source.html#l00354">timeout_set()</a>, and <a class="el" href="mainloop_8c_source.html#l00072">timeout_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00149">timeout_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00150">timeout_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00148">timeout_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00320">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00425">timeout_callback()</a>, <a class="el" href="mainloop_8c_source.html#l00414">timeout_destroy()</a>, <a class="el" href="mainloop_8c_source.html#l00442">timeout_set()</a>, and <a class="el" href="mainloop_8c_source.html#l00151">timeout_data::user_data</a>.</p>
 
 </div>
 </div>
@@ -346,9 +458,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>set exit_status to EXIT_FAILURE set epoll_terminate to 1 (mainloop_run exit looping) </p>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00124">124</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00203">203</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00053">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00054">exit_status</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00132">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00133">exit_status</a>.</p>
 
 </div>
 </div>
@@ -367,9 +479,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>set exit_status to EXIT_SUCCESS set epoll_terminate to 1 (mainloop_run exit looping) </p>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00114">114</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00193">193</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00053">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00054">exit_status</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00132">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00133">exit_status</a>.</p>
 
 </div>
 </div>
@@ -388,9 +500,9 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>create the epoll resource (epoll_fd global variable) initialize mainloop_list (global variable) event table set epoll_terminate to 0 (mainloop_run looping) </p>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00090">90</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00169">169</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00052">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00053">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00064">MAX_MAINLOOP_ENTRIES</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00131">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00132">epoll_terminate</a>, and <a class="el" href="mainloop_8c_source.html#l00143">MAX_MAINLOOP_ENTRIES</a>.</p>
 
 <p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01893">main()</a>.</p>
 
@@ -419,12 +531,21 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>trigger an epoll event for an existing mainloop socket (exisiting mainloop_list[fd]) epool event "events" = events, "data.ptr" = mainloop_list[fd]</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>socket </td></tr>
+    <tr><td class="paramname">events</td><td>EPOLL event like EPOLLIN, EPOLLOUT... </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0==Success &lt;0 error </dd></dl>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00276">276</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00364">364</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00052">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00058">mainloop_data::events</a>, <a class="el" href="mainloop_8c_source.html#l00057">mainloop_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00064">MAX_MAINLOOP_ENTRIES</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00131">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00137">mainloop_data::events</a>, <a class="el" href="mainloop_8c_source.html#l00136">mainloop_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00143">MAX_MAINLOOP_ENTRIES</a>.</p>
 
-<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00102">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00283">io_set_disconnect_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00221">io_set_read_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00252">io_set_write_handler()</a>, and <a class="el" href="mainloop_8c_source.html#l00409">mainloop_modify_timeout()</a>.</p>
+<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00102">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00283">io_set_disconnect_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00221">io_set_read_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00252">io_set_write_handler()</a>, and <a class="el" href="mainloop_8c_source.html#l00497">mainloop_modify_timeout()</a>.</p>
 
 </div>
 </div>
@@ -452,9 +573,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00409">409</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00497">497</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00276">mainloop_modify_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00354">timeout_set()</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00364">mainloop_modify_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00442">timeout_set()</a>.</p>
 
 </div>
 </div>
@@ -473,11 +594,11 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>set epoll_terminate to 1 (mainloop_run exit looping) </p>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00105">105</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00184">184</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00053">epoll_terminate</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00132">epoll_terminate</a>.</p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00160">att_disconnect_cb()</a>, <a class="el" href="btgattclient_8c_source.html#l01645">cmd_quit()</a>, <a class="el" href="btgattclient_8c_source.html#l01708">prompt_read_cb()</a>, <a class="el" href="mainloop_8c_source.html#l00136">signal_callback()</a>, and <a class="el" href="btgattclient_8c_source.html#l01763">signal_cb()</a>.</p>
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00160">att_disconnect_cb()</a>, <a class="el" href="btgattclient_8c_source.html#l01645">cmd_quit()</a>, <a class="el" href="btgattclient_8c_source.html#l01708">prompt_read_cb()</a>, <a class="el" href="mainloop_8c_source.html#l00215">signal_callback()</a>, and <a class="el" href="btgattclient_8c_source.html#l01763">signal_cb()</a>.</p>
 
 </div>
 </div>
@@ -495,11 +616,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00302">302</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00390">390</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00060">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00052">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00057">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00064">MAX_MAINLOOP_ENTRIES</a>, and <a class="el" href="mainloop_8c_source.html#l00061">mainloop_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00139">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00131">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00136">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00143">MAX_MAINLOOP_ENTRIES</a>, and <a class="el" href="mainloop_8c_source.html#l00140">mainloop_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00102">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00189">io_destroy()</a>, <a class="el" href="mainloop_8c_source.html#l00422">mainloop_remove_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="io-mainloop_8c_source.html#l00102">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00189">io_destroy()</a>, <a class="el" href="mainloop_8c_source.html#l00510">mainloop_remove_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -517,9 +638,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00422">422</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00510">510</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00302">mainloop_remove_fd()</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00390">mainloop_remove_fd()</a>.</p>
 
 </div>
 </div>
@@ -541,9 +662,9 @@ Variables</h2></td></tr>
 <a class="el" href="mainloop_8c.html#a04caa8b5ab23f7240658bc09d1cd626c">mainloop_exit_success</a></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>exit_status EXIT_SUCCESS or EXIT_FAILURE </dd></dl>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00163">163</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00242">242</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00059">mainloop_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00060">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00079">signal_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00052">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00053">epoll_terminate</a>, <a class="el" href="mainloop_8c_source.html#l00054">exit_status</a>, <a class="el" href="mainloop_8c_source.html#l00057">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00076">signal_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00240">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00302">mainloop_remove_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00077">signal_data::mask</a>, <a class="el" href="mainloop_8c_source.html#l00064">MAX_MAINLOOP_ENTRIES</a>, <a class="el" href="mainloop_8c_source.html#l00136">signal_callback()</a>, <a class="el" href="mainloop_8c_source.html#l00061">mainloop_data::user_data</a>, and <a class="el" href="mainloop_8c_source.html#l00080">signal_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00138">mainloop_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00139">mainloop_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00158">signal_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00131">epoll_fd</a>, <a class="el" href="mainloop_8c_source.html#l00132">epoll_terminate</a>, <a class="el" href="mainloop_8c_source.html#l00133">exit_status</a>, <a class="el" href="mainloop_8c_source.html#l00136">mainloop_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00155">signal_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00320">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00390">mainloop_remove_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00156">signal_data::mask</a>, <a class="el" href="mainloop_8c_source.html#l00143">MAX_MAINLOOP_ENTRIES</a>, <a class="el" href="mainloop_8c_source.html#l00215">signal_callback()</a>, <a class="el" href="mainloop_8c_source.html#l00140">mainloop_data::user_data</a>, and <a class="el" href="mainloop_8c_source.html#l00159">signal_data::user_data</a>.</p>
 
 <p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01893">main()</a>.</p>
 
@@ -596,9 +717,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 success else &lt;0 error </dd></dl>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00437">437</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00525">525</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00078">signal_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00079">signal_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00076">signal_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00077">signal_data::mask</a>, and <a class="el" href="mainloop_8c_source.html#l00080">signal_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00157">signal_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00158">signal_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00155">signal_data::fd</a>, <a class="el" href="mainloop_8c_source.html#l00156">signal_data::mask</a>, and <a class="el" href="mainloop_8c_source.html#l00159">signal_data::user_data</a>.</p>
 
 <p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01893">main()</a>.</p>
 
@@ -650,11 +771,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00136">136</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00215">215</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00078">signal_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00105">mainloop_quit()</a>, and <a class="el" href="mainloop_8c_source.html#l00080">signal_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00157">signal_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00184">mainloop_quit()</a>, and <a class="el" href="mainloop_8c_source.html#l00159">signal_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -696,11 +817,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00337">337</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00425">425</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00070">timeout_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00069">timeout_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00072">timeout_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00149">timeout_data::callback</a>, <a class="el" href="mainloop_8c_source.html#l00148">timeout_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00151">timeout_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00368">mainloop_add_timeout()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00456">mainloop_add_timeout()</a>.</p>
 
 </div>
 </div>
@@ -726,11 +847,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00326">326</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00414">414</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>References <a class="el" href="mainloop_8c_source.html#l00071">timeout_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00069">timeout_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00072">timeout_data::user_data</a>.</p>
+<p>References <a class="el" href="mainloop_8c_source.html#l00150">timeout_data::destroy</a>, <a class="el" href="mainloop_8c_source.html#l00148">timeout_data::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00151">timeout_data::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00368">mainloop_add_timeout()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00456">mainloop_add_timeout()</a>.</p>
 
 </div>
 </div>
@@ -766,9 +887,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00354">354</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00442">442</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00368">mainloop_add_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00409">mainloop_modify_timeout()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00456">mainloop_add_timeout()</a>, and <a class="el" href="mainloop_8c_source.html#l00497">mainloop_modify_timeout()</a>.</p>
 
 </div>
 </div>
@@ -791,9 +912,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00052">52</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00131">131</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00240">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00090">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00276">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00302">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00320">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00169">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00364">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00390">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -815,9 +936,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00053">53</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00132">132</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00124">mainloop_exit_failure()</a>, <a class="el" href="mainloop_8c_source.html#l00114">mainloop_exit_success()</a>, <a class="el" href="mainloop_8c_source.html#l00090">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00105">mainloop_quit()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00203">mainloop_exit_failure()</a>, <a class="el" href="mainloop_8c_source.html#l00193">mainloop_exit_success()</a>, <a class="el" href="mainloop_8c_source.html#l00169">mainloop_init()</a>, <a class="el" href="mainloop_8c_source.html#l00184">mainloop_quit()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -839,9 +960,9 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00054">54</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00133">133</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00124">mainloop_exit_failure()</a>, <a class="el" href="mainloop_8c_source.html#l00114">mainloop_exit_success()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00203">mainloop_exit_failure()</a>, <a class="el" href="mainloop_8c_source.html#l00193">mainloop_exit_success()</a>, and <a class="el" href="mainloop_8c_source.html#l00242">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -863,7 +984,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00066">66</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00145">145</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
 </div>
 </div>
@@ -885,7 +1006,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00083">83</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00162">162</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 
 </div>
 </div>
@@ -895,7 +1016,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="mainloop_8c.html">mainloop.c</a></li>
-    <li class="footer">Generated on Wed Jul 29 2015 18:44:30 for ble_gatt_client by
+    <li class="footer">Generated on Thu Jul 30 2015 14:49:13 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

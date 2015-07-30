@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['hci_5fauth',['HCI_AUTH',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6f7a98dabbc422724b8e3506999b6f9e',1,'hci.h']]],
-  ['hci_5fencrypt',['HCI_ENCRYPT',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9f84b7b73b7c164622f92dbf451b45d3',1,'hci.h']]],
-  ['hci_5finit',['HCI_INIT',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06cab130541eeb02a0e3deba83456237bea4',1,'hci.h']]],
-  ['hci_5finquiry',['HCI_INQUIRY',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca2cfa4d3fb6f439bd8d598dcd2144a437',1,'hci.h']]],
-  ['hci_5fiscan',['HCI_ISCAN',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9fd4affca911337a5964927526bd7a43',1,'hci.h']]],
-  ['hci_5fpscan',['HCI_PSCAN',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06caef1d5e21bf6b142eb15ce75ccf9fdd5b',1,'hci.h']]],
-  ['hci_5fraw',['HCI_RAW',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca7c22406377307253c468a41fdc2ac4ee',1,'hci.h']]],
-  ['hci_5frunning',['HCI_RUNNING',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06ca435aca97df27d40c81241cbde7a20e27',1,'hci.h']]],
-  ['hci_5fup',['HCI_UP',['../hci_8h.html#adc29c2ff13d900c2f185ee95427fb06cae20b92acc5d9d1a0e8155caf58c9fa91',1,'hci.h']]]
+  ['epollerr_5fdoc',['EPOLLERR_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652af6b09ce17d1d03b236b5f3604645ac93',1,'mainloop.c']]],
+  ['epollet_5fdoc',['EPOLLET_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652afb60ce2fd2b07674cfbf9aaf0298668d',1,'mainloop.c']]],
+  ['epollhup_5fdoc',['EPOLLHUP_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a3bbcb1325236956c3874fc4460c292cc',1,'mainloop.c']]],
+  ['epollin_5fdoc',['EPOLLIN_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652ac224535d6dc4ee39c1d9ddb935dd21df',1,'mainloop.c']]],
+  ['epolloneshot_5fdoc',['EPOLLONESHOT_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a835a3ff38d6ce9cb64aca478f93817c9',1,'mainloop.c']]],
+  ['epollout_5fdoc',['EPOLLOUT_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a15dfad2b7bf31ead914d31cabc8cd072',1,'mainloop.c']]],
+  ['epollpri_5fdoc',['EPOLLPRI_DOC',['../mainloop_8c.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652a04af26276938824836be39d5823a16ca',1,'mainloop.c']]]
 ];
