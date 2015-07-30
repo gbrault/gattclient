@@ -9,8 +9,8 @@ var searchData=
   ['bt_5fdisconn',['BT_DISCONN',['../bluetooth_8h.html#a99fb83031ce9923c84392b4e92f956b5ab6855401d357ee819328004501ed0a7a',1,'bluetooth.h']]],
   ['bt_5flisten',['BT_LISTEN',['../bluetooth_8h.html#a99fb83031ce9923c84392b4e92f956b5afbab42a73962af15fc67f675968a80ad',1,'bluetooth.h']]],
   ['bt_5fopen',['BT_OPEN',['../bluetooth_8h.html#a99fb83031ce9923c84392b4e92f956b5a4d0af08383e6f6ea3352c4da6bff7d87',1,'bluetooth.h']]],
-  ['bt_5fuuid128',['BT_UUID128',['../structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169a715da8907a50e27eccfd057daf9c07fe',1,'bt_uuid_t']]],
-  ['bt_5fuuid16',['BT_UUID16',['../structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169acd755aa4b567b0ca071fa76440b7eee6',1,'bt_uuid_t']]],
-  ['bt_5fuuid32',['BT_UUID32',['../structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169a2ffb510ce587687fe3e32cd565ca448b',1,'bt_uuid_t']]],
-  ['bt_5fuuid_5funspec',['BT_UUID_UNSPEC',['../structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169ac339aa5049495b50dd75cca66319866b',1,'bt_uuid_t']]]
+  ['bt_5fuuid128',['BT_UUID128',['../structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6ca715da8907a50e27eccfd057daf9c07fe',1,'bt_uuid_t']]],
+  ['bt_5fuuid16',['BT_UUID16',['../structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6cacd755aa4b567b0ca071fa76440b7eee6',1,'bt_uuid_t']]],
+  ['bt_5fuuid32',['BT_UUID32',['../structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6ca2ffb510ce587687fe3e32cd565ca448b',1,'bt_uuid_t']]],
+  ['bt_5fuuid_5funspec',['BT_UUID_UNSPEC',['../structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6cac339aa5049495b50dd75cca66319866b',1,'bt_uuid_t']]]
 ];

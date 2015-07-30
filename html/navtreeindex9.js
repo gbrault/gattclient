@@ -1,5 +1,10 @@
 var NAVTREEINDEX9 =
 {
+"struct____attribute____.html#a2d7b4433fed4ff7e21016b582aa3706f":[0,0,0,96],
+"struct____attribute____.html#a3037b55132ba3c9fe904820ade82521c":[0,0,0,150],
+"struct____attribute____.html#a35cebab3f7d783545f7b147245dceb82":[0,0,0,9],
+"struct____attribute____.html#a364d851bc63683cd20d464e218bf4ab1":[0,0,0,100],
+"struct____attribute____.html#a3b7a6dd80f17bac3c347b3ac1fb1573b":[0,0,0,101],
 "struct____attribute____.html#a3b9a306c61dd10e85db00fc42055136d":[0,0,0,33],
 "struct____attribute____.html#a3c8d02677e5b8e26ae34584b374028f5":[0,0,0,3],
 "struct____attribute____.html#a3ddd0091402d85a50cf9eb63ff2c7d71":[0,0,0,74],
@@ -103,8 +108,8 @@ var NAVTREEINDEX9 =
 "struct____attribute____.html#abc5e9ce084df906f7db776fe637df08f":[0,0,0,119],
 "struct____attribute____.html#abcc477dca87baacdbbb81a202b754a89":[0,0,0,109],
 "struct____attribute____.html#ac040670ec20d38e3eafe28d907fc0ec6":[0,0,0,8],
-"struct____attribute____.html#ac1f86d036116c0bf1ed216c2b5a416d1":[0,0,0,69],
 "struct____attribute____.html#ac1f86d036116c0bf1ed216c2b5a416d1":[0,0,0,70],
+"struct____attribute____.html#ac1f86d036116c0bf1ed216c2b5a416d1":[0,0,0,69],
 "struct____attribute____.html#ac4ffd524038cc97e66816625e0076eb9":[0,0,0,72],
 "struct____attribute____.html#ac5e21089274faeb03643a78e9a8a1b1d":[0,0,0,157],
 "struct____attribute____.html#ac673832f0dbc41f8647a5c5d9a7fb618":[0,0,0,67],
@@ -114,8 +119,8 @@ var NAVTREEINDEX9 =
 "struct____attribute____.html#accf78296d16f8cf4225d0bb150a30d8e":[0,0,0,95],
 "struct____attribute____.html#aced4dd9ba5137d3e961eb459e01aa0f6":[0,0,0,116],
 "struct____attribute____.html#acee1efd8f87399e4ebabc9c5ac2333f0":[0,0,0,134],
-"struct____attribute____.html#acfe15c30b4c8e9ab3bd39ef5b9ef5f1e":[0,0,0,189],
 "struct____attribute____.html#acfe15c30b4c8e9ab3bd39ef5b9ef5f1e":[0,0,0,190],
+"struct____attribute____.html#acfe15c30b4c8e9ab3bd39ef5b9ef5f1e":[0,0,0,189],
 "struct____attribute____.html#ad427a78729a999048b3d771012cde8df":[0,0,0,7],
 "struct____attribute____.html#ad44353e56adadbac176024121b710211":[0,0,0,146],
 "struct____attribute____.html#ad6a39f9df3bac969fcfc15ab71749ad8":[0,0,0,55],
@@ -244,10 +249,5 @@ var NAVTREEINDEX9 =
 "structbt__gatt__client.html#ae110e8b9c5113454618affa59b6502b8":[0,0,8,12],
 "structbt__gatt__client.html#ae55e1a83a4ac56e564abac37b6294e6a":[0,0,8,25],
 "structbt__gatt__client.html#aeb8cbab0a8ff704427a33ec2ca31e4a0":[0,0,8,20],
-"structbt__gatt__client.html#aeb8dc82d7797c18748b877587bcf3124":[0,0,8,0],
-"structbt__gatt__client.html#af1e23dc3ad97de85ce06dc173bb7351f":[0,0,8,2],
-"structbt__gatt__client.html#af64374a8a9289ad68d37e5aa7885c8ab":[0,0,8,23],
-"structbt__gatt__client.html#af90ec4e66c1bcf6cae6842241dd7bb08":[0,0,8,26],
-"structbt__gatt__iter.html":[0,0,9],
-"structbt__gatt__iter.html#a2f066347737da412a5cd3dbcef74223d":[0,0,9,1]
+"structbt__gatt__client.html#aeb8dc82d7797c18748b877587bcf3124":[0,0,8,0]
 };

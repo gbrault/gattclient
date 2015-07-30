@@ -247,10 +247,10 @@ $(document).ready(function(){initNavTree('uuid_8h_source.html','');});
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
 <div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html">  142</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">enum</span> {</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169ac339aa5049495b50dd75cca66319866b">  144</a></span>&#160;        BT_UUID_UNSPEC = 0,</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169acd755aa4b567b0ca071fa76440b7eee6">  145</a></span>&#160;        BT_UUID16 = 16,</div>
-<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169a2ffb510ce587687fe3e32cd565ca448b">  146</a></span>&#160;        BT_UUID32 = 32,</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#af3802fa2fae6012e8f1081db5faa5169a715da8907a50e27eccfd057daf9c07fe">  147</a></span>&#160;        BT_UUID128 = 128,</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6cac339aa5049495b50dd75cca66319866b">  144</a></span>&#160;        BT_UUID_UNSPEC = 0,</div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6cacd755aa4b567b0ca071fa76440b7eee6">  145</a></span>&#160;        BT_UUID16 = 16,</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6ca2ffb510ce587687fe3e32cd565ca448b">  146</a></span>&#160;        BT_UUID32 = 32,</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#a41c9c7cb17f65da4846747e0fcba6b6ca715da8907a50e27eccfd057daf9c07fe">  147</a></span>&#160;        BT_UUID128 = 128,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    } <a class="code" href="att_8c.html#ad58bd185cf2e7873eef75ec1a3d4c0e4">type</a>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">union </span>{</div>
 <div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="structbt__uuid__t.html#ab690cda7178d1be608b6961bde565a36">  150</a></span>&#160;        uint16_t  <a class="code" href="structbt__uuid__t.html#ab690cda7178d1be608b6961bde565a36">u16</a>;</div>
@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('uuid_8h_source.html','');});
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
 <div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="uuid_8h.html#a4532cdeaee705a9bae7afb5f2970e159">  172</a></span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="uuid_8h.html#a4532cdeaee705a9bae7afb5f2970e159">bt_uuid_len</a>(<span class="keyword">const</span> <a class="code" href="structbt__uuid__t.html">bt_uuid_t</a> *uuid)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;{</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> uuid-&gt;<a class="code" href="structbt__uuid__t.html#a60950402f9e8679172ec4eaa4f4afce9">type</a> / 8;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> uuid-&gt;<a class="code" href="structbt__uuid__t.html#af5f7a29a2d80f1b3db23ea102291584e">type</a> / 8;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -294,10 +294,10 @@ $(document).ready(function(){initNavTree('uuid_8h_source.html','');});
 <div class="ttc" id="uuid_8h_html_ad46c6184684e63d1f68373c605b555d4"><div class="ttname"><a href="uuid_8h.html#ad46c6184684e63d1f68373c605b555d4">bt_uuid16_create</a></div><div class="ttdeci">int bt_uuid16_create(bt_uuid_t *btuuid, uint16_t value)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8c_source.html#l00108">uuid.c:108</a></div></div>
 <div class="ttc" id="structbt__uuid__t_html_ab690cda7178d1be608b6961bde565a36"><div class="ttname"><a href="structbt__uuid__t.html#ab690cda7178d1be608b6961bde565a36">bt_uuid_t::u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8h_source.html#l00150">uuid.h:150</a></div></div>
 <div class="ttc" id="uuid_8h_html_a16c46242eefbfea169da823a7f8f18a9"><div class="ttname"><a href="uuid_8h.html#a16c46242eefbfea169da823a7f8f18a9">bt_uuid_to_uuid128</a></div><div class="ttdeci">void bt_uuid_to_uuid128(const bt_uuid_t *src, bt_uuid_t *dst)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8c_source.html#l00085">uuid.c:85</a></div></div>
+<div class="ttc" id="structbt__uuid__t_html_af5f7a29a2d80f1b3db23ea102291584e"><div class="ttname"><a href="structbt__uuid__t.html#af5f7a29a2d80f1b3db23ea102291584e">bt_uuid_t::type</a></div><div class="ttdeci">enum bt_uuid_t::@7 type</div></div>
 <div class="ttc" id="structbt__uuid__t_html"><div class="ttname"><a href="structbt__uuid__t.html">bt_uuid_t</a></div><div class="ttdef"><b>Definition:</b> <a href="uuid_8h_source.html#l00142">uuid.h:142</a></div></div>
 <div class="ttc" id="uuid_8h_html_a4532cdeaee705a9bae7afb5f2970e159"><div class="ttname"><a href="uuid_8h.html#a4532cdeaee705a9bae7afb5f2970e159">bt_uuid_len</a></div><div class="ttdeci">static int bt_uuid_len(const bt_uuid_t *uuid)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8h_source.html#l00172">uuid.h:172</a></div></div>
 <div class="ttc" id="uuid_8h_html_a289c0dfda81c6c0f394a929eb196000d"><div class="ttname"><a href="uuid_8h.html#a289c0dfda81c6c0f394a929eb196000d">bt_uuid32_create</a></div><div class="ttdeci">int bt_uuid32_create(bt_uuid_t *btuuid, uint32_t value)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8c_source.html#l00117">uuid.c:117</a></div></div>
-<div class="ttc" id="structbt__uuid__t_html_a60950402f9e8679172ec4eaa4f4afce9"><div class="ttname"><a href="structbt__uuid__t.html#a60950402f9e8679172ec4eaa4f4afce9">bt_uuid_t::type</a></div><div class="ttdeci">enum bt_uuid_t::@6 type</div></div>
 <div class="ttc" id="uuid_8h_html_ad24462ec3027df9ae5f7913fb6c2d900"><div class="ttname"><a href="uuid_8h.html#ad24462ec3027df9ae5f7913fb6c2d900">bt_uuid_cmp</a></div><div class="ttdeci">int bt_uuid_cmp(const bt_uuid_t *uuid1, const bt_uuid_t *uuid2)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8c_source.html#l00135">uuid.c:135</a></div></div>
 <div class="ttc" id="structbt__uuid__t_html_aae80eb15f7dc7a0df5e0cb7376ae45d1"><div class="ttname"><a href="structbt__uuid__t.html#aae80eb15f7dc7a0df5e0cb7376ae45d1">bt_uuid_t::u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8h_source.html#l00151">uuid.h:151</a></div></div>
 <div class="ttc" id="uuid_8h_html_ae5fc2e8ed466e6ae47acb6fa79cad119"><div class="ttname"><a href="uuid_8h.html#ae5fc2e8ed466e6ae47acb6fa79cad119">bt_uuid128_create</a></div><div class="ttdeci">int bt_uuid128_create(bt_uuid_t *btuuid, uint128_t value)</div><div class="ttdef"><b>Definition:</b> <a href="uuid_8c_source.html#l00126">uuid.c:126</a></div></div>
@@ -308,7 +308,7 @@ $(document).ready(function(){initNavTree('uuid_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="uuid_8h.html">uuid.h</a></li>
-    <li class="footer">Generated on Thu Jul 30 2015 15:46:41 for ble_gatt_client by
+    <li class="footer">Generated on Thu Jul 30 2015 16:58:07 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

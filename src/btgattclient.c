@@ -540,7 +540,7 @@ static void services_usage(void)
  *
  * @param str			command to parse
  * @param expected_argc	number of arguments expected
- * @param argv			pointers to arguments separated by <space> or <tab>
+ * @param argv			pointers to arguments separated by space or tab
  * @param argc			argument counter (and actual count)
  * @return				true = success false = error
  */
@@ -567,7 +567,7 @@ static bool parse_args(char *str, int expected_argc,  char **argv, int *argc)
  *
  * @param cli		pointer to the client structure
  * @param cmd_str	one of the possible command (help to get a list)
- * 					<command> --help to have a help on that command
+ * 					&lt;command&gt; --help to have a help on that command
  */
 static void cmd_services(struct client *cli, char *cmd_str)
 {

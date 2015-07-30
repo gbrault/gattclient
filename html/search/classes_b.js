@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['notify',['notify',['../structnotify.html',1,'']]],
-  ['notify_5fchrc',['notify_chrc',['../structnotify__chrc.html',1,'']]],
-  ['notify_5fdata',['notify_data',['../structnotify__data.html',1,'']]]
+  ['mainloop_5fdata',['mainloop_data',['../structmainloop__data.html',1,'']]],
+  ['mtu_5fop',['mtu_op',['../structmtu__op.html',1,'']]]
 ];

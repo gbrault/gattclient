@@ -107,23 +107,32 @@ $(document).ready(function(){initNavTree('structmainloop__data.html','');});
 <div class="title">mainloop_data Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>mainloop file descriptor event data structure  
+ <a href="structmainloop__data.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a8c65fe85cc947d48eafa43ebd9f2ffd2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmainloop__data.html#a8c65fe85cc947d48eafa43ebd9f2ffd2">fd</a></td></tr>
+<tr class="memdesc:a8c65fe85cc947d48eafa43ebd9f2ffd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">socket or file descriptor, incl. standard i/o  <a href="#a8c65fe85cc947d48eafa43ebd9f2ffd2">More...</a><br /></td></tr>
 <tr class="separator:a8c65fe85cc947d48eafa43ebd9f2ffd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa020937b090ce2f269f034bddfe292be"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmainloop__data.html#aa020937b090ce2f269f034bddfe292be">events</a></td></tr>
+<tr class="memdesc:aa020937b090ce2f269f034bddfe292be"><td class="mdescLeft">&#160;</td><td class="mdescRight">epoll event  <a href="#aa020937b090ce2f269f034bddfe292be">More...</a><br /></td></tr>
 <tr class="separator:aa020937b090ce2f269f034bddfe292be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac682f797269f1bd89e29b046446c0db5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mainloop_8h.html#aabf37b2b3e27564817db9d17a632bd19">mainloop_event_func</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmainloop__data.html#ac682f797269f1bd89e29b046446c0db5">callback</a></td></tr>
+<tr class="memdesc:ac682f797269f1bd89e29b046446c0db5"><td class="mdescLeft">&#160;</td><td class="mdescRight">call back function(int fd, uint32_t events, void *user_data);  <a href="#ac682f797269f1bd89e29b046446c0db5">More...</a><br /></td></tr>
 <tr class="separator:ac682f797269f1bd89e29b046446c0db5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa76bf6309a44520fa6f6fb56cbbbbaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mainloop_8h.html#a210e30c1e2ed19f8f50c69e110b626c0">mainloop_destroy_func</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmainloop__data.html#aaa76bf6309a44520fa6f6fb56cbbbbaa">destroy</a></td></tr>
+<tr class="memdesc:aaa76bf6309a44520fa6f6fb56cbbbbaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">data management call back function(void *user_data);  <a href="#aaa76bf6309a44520fa6f6fb56cbbbbaa">More...</a><br /></td></tr>
 <tr class="separator:aaa76bf6309a44520fa6f6fb56cbbbbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a679b06a447f515f7ad6fbab5a66b3c1a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmainloop__data.html#a679b06a447f515f7ad6fbab5a66b3c1a">user_data</a></td></tr>
+<tr class="memdesc:a679b06a447f515f7ad6fbab5a66b3c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to a user specific data structure  <a href="#a679b06a447f515f7ad6fbab5a66b3c1a">More...</a><br /></td></tr>
 <tr class="separator:a679b06a447f515f7ad6fbab5a66b3c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00056">56</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<div class="textblock"><p>mainloop file descriptor event data structure </p>
+
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00059">59</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="ac682f797269f1bd89e29b046446c0db5"></a>
 <div class="memitem">
@@ -135,9 +144,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00059">59</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>call back function(int fd, uint32_t events, void *user_data); </p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00241">mainloop_add_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00065">65</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00174">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -151,9 +162,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00060">60</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>data management call back function(void *user_data); </p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00241">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00311">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00067">67</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00322">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00174">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -167,9 +180,12 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00058">58</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>epoll event </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="design__notes_8h.html#a2a5353c4b9a09c8a2dfeb5c66d1c1652" title="EPOLL_EVENTS possible values. ">EPOLL_EVENTS_DOC</a> </dd></dl>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00241">mainloop_add_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00285">mainloop_modify_fd()</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00063">63</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>.</p>
 
 </div>
 </div>
@@ -183,9 +199,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00057">57</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>socket or file descriptor, incl. standard i/o </p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00241">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00285">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00311">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00061">61</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00322">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00174">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -199,9 +217,11 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00061">61</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+<p>pointer to a user specific data structure </p>
 
-<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00241">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00311">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00163">mainloop_run()</a>.</p>
+<p>Definition at line <a class="el" href="mainloop_8c_source.html#l00069">69</a> of file <a class="el" href="mainloop_8c_source.html">mainloop.c</a>.</p>
+
+<p>Referenced by <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, <a class="el" href="mainloop_8c_source.html#l00322">mainloop_remove_fd()</a>, and <a class="el" href="mainloop_8c_source.html#l00174">mainloop_run()</a>.</p>
 
 </div>
 </div>
@@ -214,7 +234,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structmainloop__data.html">mainloop_data</a></li>
-    <li class="footer">Generated on Thu Jul 30 2015 15:46:42 for ble_gatt_client by
+    <li class="footer">Generated on Thu Jul 30 2015 16:58:08 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

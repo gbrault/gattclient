@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gatt_5fdb',['gatt_db',['../structgatt__db.html',1,'']]],
-  ['gatt_5fdb_5fattribute',['gatt_db_attribute',['../structgatt__db__attribute.html',1,'']]],
-  ['gatt_5fdb_5fservice',['gatt_db_service',['../structgatt__db__service.html',1,'']]]
+  ['find_5fby_5ftype_5fvalue_5fdata',['find_by_type_value_data',['../structfind__by__type__value__data.html',1,'']]],
+  ['find_5finformation_5fdata',['find_information_data',['../structfind__information__data.html',1,'']]],
+  ['foreach_5fdata',['foreach_data',['../structforeach__data.html',1,'']]]
 ];

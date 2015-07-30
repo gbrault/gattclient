@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['data',['../structuint128__t.html#a12c84d0c947e784f53e9e97ba403211e',1,'uint128_t::data()'],['../structrequest.html#ace2f6ac9713311f119d73b616662cb9b',1,'request::data()'],['../struct____attribute____.html#a9a0341958b975fe2dc152007c3e2961d',1,'__attribute__::data()'],['../structqueue__entry.html#aff3ed1a98a1b3da4c85665f810db7dd3',1,'queue_entry::data()']]],
+  ['data',['data',['../structuint128__t.html#a12c84d0c947e784f53e9e97ba403211e',1,'uint128_t::data()'],['../structepoll__event__doc.html#aa1cedeaaa36ed95caec76ddde60d682b',1,'epoll_event_doc::data()'],['../structrequest.html#ace2f6ac9713311f119d73b616662cb9b',1,'request::data()'],['../struct____attribute____.html#a9a0341958b975fe2dc152007c3e2961d',1,'__attribute__::data()'],['../structqueue__entry.html#aff3ed1a98a1b3da4c85665f810db7dd3',1,'queue_entry::data()']]],
   ['data_5fblock_5flen',['data_block_len',['../struct____attribute____.html#a0b2f14cab02ab608eca8ceae0fb23efa',1,'__attribute__']]],
   ['data_5flen',['data_len',['../structbt__gatt__result.html#a47c24d6d154321b6e2e4f5cadecd31c9',1,'bt_gatt_result']]],
   ['db',['db',['../structclient.html#a3ad386cb763cbdb731981abe3609c015',1,'client::db()'],['../structbt__gatt__client.html#a22cf1efdd66d6f0bad4806016c60054f',1,'bt_gatt_client::db()'],['../structgatt__db__service.html#a4131b94f198968864e1a4cbbd3acb447',1,'gatt_db_service::db()']]],

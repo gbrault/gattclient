@@ -53,16 +53,27 @@ static int epoll_fd;
 static int epoll_terminate;
 static int exit_status;
 
+/**
+ * @brief mainloop file descriptor event data structure
+ */
 struct mainloop_data {
+	/// socket or file descriptor, incl. standard i/o
 	int fd;
+	/// epoll event @see EPOLL_EVENTS_DOC
 	uint32_t events;
+	/// call back function(int fd, uint32_t events, void *user_data);
 	mainloop_event_func callback;
+	/// data management call back function(void *user_data);
 	mainloop_destroy_func destroy;
+	/// pointer to a user specific data structure
 	void *user_data;
 };
 
 #define MAX_MAINLOOP_ENTRIES 128
 
+/**
+ * @brief array of file descriptor event stub
+ */
 static struct mainloop_data *mainloop_list[MAX_MAINLOOP_ENTRIES];
 
 struct timeout_data {

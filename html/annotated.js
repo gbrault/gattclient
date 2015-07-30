@@ -20,6 +20,7 @@ var annotated =
     [ "clear_range", "structclear__range.html", "structclear__range" ],
     [ "client", "structclient.html", "structclient" ],
     [ "discovery_op", "structdiscovery__op.html", "structdiscovery__op" ],
+    [ "epoll_event_doc", "structepoll__event__doc.html", "structepoll__event__doc" ],
     [ "find_by_type_value_data", "structfind__by__type__value__data.html", "structfind__by__type__value__data" ],
     [ "find_information_data", "structfind__information__data.html", "structfind__information__data" ],
     [ "foreach_data", "structforeach__data.html", "structforeach__data" ],

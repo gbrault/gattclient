@@ -14,7 +14,7 @@ var searchData=
   ['err_5ftx',['err_tx',['../structhci__dev__stats.html#a9ba6bd760c27ee44b98dc583cd6cb996',1,'hci_dev_stats']]],
   ['event',['event',['../struct____attribute____.html#aa7cf819f896c0f1e80465537913926cb',1,'__attribute__::event()'],['../structhci__request.html#a06481b18e4d3be155a2b4f5828ac1121',1,'hci_request::event()']]],
   ['event_5fmask',['event_mask',['../structhci__filter.html#ac2d1ba3267c2b4d1dd49851f0fb8fd60',1,'hci_filter']]],
-  ['events',['events',['../structio.html#ac1706f44f43ddef7b890435a9e139d2a',1,'io::events()'],['../structmainloop__data.html#aa020937b090ce2f269f034bddfe292be',1,'mainloop_data::events()']]],
+  ['events',['events',['../structepoll__event__doc.html#aa3d0af63cd215d3d5940529ed9c6eef9',1,'epoll_event_doc::events()'],['../structio.html#ac1706f44f43ddef7b890435a9e139d2a',1,'io::events()'],['../structmainloop__data.html#aa020937b090ce2f269f034bddfe292be',1,'mainloop_data::events()']]],
   ['evt',['evt',['../struct____attribute____.html#af5e7a29b463fed140284deedc8ab88da',1,'__attribute__']]],
   ['evt_5frx',['evt_rx',['../structhci__dev__stats.html#a48737ae36b082e9848025ccc922bd361',1,'hci_dev_stats']]],
   ['evt_5ftype',['evt_type',['../struct____attribute____.html#aef0c431d7f291dd222e5dee8ccdeb198',1,'__attribute__']]],
