@@ -56,10 +56,16 @@
 #define GATT_SVC_UUID	0x1801
 #define SVC_CHNGD_UUID	0x2a05
 
+/**
+ * @brief bluetooth GATT client structure
+ *
+ * main data structure to manage the GATT client state
+ */
 struct bt_gatt_client {
 	struct bt_att *att;
+	/**< ATT client structure pointer */
 	int ref_count;
-
+	/**< count of references */
 	bt_gatt_client_callback_t ready_callback;
 	bt_gatt_client_destroy_func_t ready_destroy;
 	void *ready_data;
@@ -75,57 +81,73 @@ struct bt_gatt_client {
 	struct gatt_db *db;
 	bool in_init;
 	bool ready;
-
-	/*
-	 * Queue of long write requests. An error during "prepare write"
+	struct queue *long_write_queue;
+	/**< Queue of long write requests. An error during "prepare write"
 	 * requests can result in a cancel through "execute write". To prevent
-	 * cancelation of prepared writes to the wrong attribute and multiple
+	 * cancellation of prepared writes to the wrong attribute and multiple
 	 * requests to the same attribute that may result in a corrupted final
 	 * value, we avoid interleaving prepared writes.
 	 */
-	struct queue *long_write_queue;
 	bool in_long_write;
 
 	unsigned int reliable_write_session_id;
-
-	/* List of registered disconnect/notification/indication callbacks */
 	struct queue *notify_list;
+	/**< List of registered disconnect/notification/indication callbacks */
 	struct queue *notify_chrcs;
 	int next_reg_id;
-	unsigned int disc_id, notify_id, ind_id;
-
-	/*
-	 * Handles of the GATT Service and the Service Changed characteristic
-	 * value handle. These will have the value 0 if they are not present on
-	 * the remote peripheral.
+	unsigned int disc_id;
+	/**< Handle of the GATT Service
+	 * 0 if not present on the remote peripheral.
+	 */
+	unsigned int notify_id;
+	/**<
+	 * Handle of the GATT Service Changed characteristic
+	 * 0 if not present on the remote peripheral.
+	 */
+	unsigned int ind_id;
+	/**<
+	 * Handles of the GATT indication.
+	 * 0 if not present on the remote peripheral.
 	 */
 	unsigned int svc_chngd_ind_id;
 	bool svc_chngd_registered;
-	struct queue *svc_chngd_queue;  /* Queued service changed events */
+	struct queue *svc_chngd_queue;
+	/**< Queued service changed events */
 	bool in_svc_chngd;
-
-	/*
-	 * List of pending read/write operations. For operations that span
+	struct queue *pending_requests;
+	/**< List of pending read/write operations. For operations that span
 	 * across multiple PDUs, this list provides a mapping from an operation
 	 * id to an ATT request id.
 	 */
-	struct queue *pending_requests;
 	unsigned int next_request_id;
-
 	struct bt_gatt_request *discovery_req;
 	unsigned int mtu_req_id;
 };
 
+/**
+ * @brief Request data structure
+ *
+ * Structure to manage request queries
+ */
 struct request {
 	struct bt_gatt_client *client;
+	/**< GATT client context */
 	bool long_write;
+	/**< true if the request is a long write */
 	bool prep_write;
+	/**< true if the request is a preparation write request	 */
 	bool removed;
+	/**< request still in queue if true */
 	int ref_count;
+	/**< number of references to this data structure */
 	unsigned int id;
+	/**< request id: a unique number incremented by each client request */
 	unsigned int att_id;
+	/**< att message sequence number */
 	void *data;
+	/**< reference to the data exchanged during the request */
 	void (*destroy)(void *);
+	/**< function called when data structure need to be released (ref_count reaches 0) */
 };
 
 static struct request *request_ref(struct request *req)

@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('structbt__gatt__client.html','');});
 <div class="title">bt_gatt_client Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>bluetooth GATT client structure  
+ <a href="structbt__gatt__client.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -174,8 +177,10 @@ Data Fields</h2></td></tr>
 <tr class="separator:ae110e8b9c5113454618affa59b6502b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00059">59</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<div class="textblock"><p>bluetooth GATT client structure </p>
+<p>main data structure to manage the GATT client state </p>
+
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00064">64</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a class="anchor" id="aeb8dc82d7797c18748b877587bcf3124"></a>
 <div class="memitem">
@@ -186,10 +191,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>ATT client structure pointer </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00060">60</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00065">65</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01694">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01937">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l01952">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01851">bt_gatt_client_get_mtu()</a>, <a class="el" href="gatt-client_8c_source.html#l03032">bt_gatt_client_get_security()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02248">bt_gatt_client_read_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02091">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02019">bt_gatt_client_read_value()</a>, <a class="el" href="gatt-client_8c_source.html#l03024">bt_gatt_client_set_security()</a>, <a class="el" href="gatt-client_8c_source.html#l02935">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02639">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02374">bt_gatt_client_write_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02297">bt_gatt_client_write_without_response()</a>, <a class="el" href="gatt-client_8c_source.html#l01884">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01913">cancel_prep_write_session()</a>, <a class="el" href="gatt-client_8c_source.html#l01924">cancel_request()</a>, <a class="el" href="gatt-client_8c_source.html#l01586">complete_unregister_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l02540">complete_write_long_op()</a>, <a class="el" href="gatt-client_8c_source.html#l00749">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00590">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00651">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01531">gatt_client_init()</a>, <a class="el" href="gatt-client_8c_source.html#l02454">handle_next_prep_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01634">notify_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01655">notify_data_cleanup()</a>, <a class="el" href="gatt-client_8c_source.html#l01138">notify_data_write_ccc()</a>, <a class="el" href="gatt-client_8c_source.html#l02576">prepare_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l02189">read_long_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01715">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01958">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l01973">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01872">bt_gatt_client_get_mtu()</a>, <a class="el" href="gatt-client_8c_source.html#l03053">bt_gatt_client_get_security()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02836">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02269">bt_gatt_client_read_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02112">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02040">bt_gatt_client_read_value()</a>, <a class="el" href="gatt-client_8c_source.html#l03045">bt_gatt_client_set_security()</a>, <a class="el" href="gatt-client_8c_source.html#l02956">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02660">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02395">bt_gatt_client_write_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02318">bt_gatt_client_write_without_response()</a>, <a class="el" href="gatt-client_8c_source.html#l01905">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01934">cancel_prep_write_session()</a>, <a class="el" href="gatt-client_8c_source.html#l01945">cancel_request()</a>, <a class="el" href="gatt-client_8c_source.html#l01607">complete_unregister_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l02561">complete_write_long_op()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00611">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00672">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01552">gatt_client_init()</a>, <a class="el" href="gatt-client_8c_source.html#l02475">handle_next_prep_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01655">notify_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01676">notify_data_cleanup()</a>, <a class="el" href="gatt-client_8c_source.html#l01159">notify_data_write_ccc()</a>, <a class="el" href="gatt-client_8c_source.html#l02597">prepare_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l02210">read_long_cb()</a>.</p>
 
 </div>
 </div>
@@ -203,9 +209,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00075">75</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00081">81</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01859">bt_gatt_client_get_db()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02987">bt_gatt_client_register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01524">init_fail()</a>, <a class="el" href="gatt-client_8c_source.html#l00233">notify_chrc_create()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01343">register_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01411">service_changed_failure()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01880">bt_gatt_client_get_db()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l03008">bt_gatt_client_register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01545">init_fail()</a>, <a class="el" href="gatt-client_8c_source.html#l00254">notify_chrc_create()</a>, <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01364">register_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01432">service_changed_failure()</a>.</p>
 
 </div>
 </div>
@@ -219,9 +225,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00071">71</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00077">77</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01834">bt_gatt_client_set_debug()</a>, <a class="el" href="gatt-client_8c_source.html#l00749">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00590">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00651">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01497">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01459">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01320">service_changed_register_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02836">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01855">bt_gatt_client_set_debug()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00611">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00672">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01518">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01480">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01341">service_changed_register_cb()</a>.</p>
 
 </div>
 </div>
@@ -235,9 +241,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00073">73</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00079">79</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01834">bt_gatt_client_set_debug()</a>, <a class="el" href="gatt-client_8c_source.html#l00749">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00590">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00651">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01497">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01459">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01320">service_changed_register_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l02836">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01855">bt_gatt_client_set_debug()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00611">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00672">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01518">init_complete()</a>, <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01480">service_changed_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l01341">service_changed_register_cb()</a>.</p>
 
 </div>
 </div>
@@ -251,9 +257,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00072">72</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00078">78</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01834">bt_gatt_client_set_debug()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01855">bt_gatt_client_set_debug()</a>.</p>
 
 </div>
 </div>
@@ -266,10 +272,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Handle of the GATT Service 0 if not present on the remote peripheral. </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00095">95</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00098">98</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01694">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01715">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>.</p>
 
 </div>
 </div>
@@ -283,9 +290,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00115">115</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00123">123</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01952">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l00749">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00590">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00651">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00446">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00964">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00858">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00433">discovery_req_clear()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01973">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00611">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00672">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00454">discovery_req_clear()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>.</p>
 
 </div>
 </div>
@@ -299,9 +306,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00076">76</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00082">82</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01694">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01531">gatt_client_init()</a>, and <a class="el" href="gatt-client_8c_source.html#l01497">init_complete()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01715">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01552">gatt_client_init()</a>, and <a class="el" href="gatt-client_8c_source.html#l01518">init_complete()</a>.</p>
 
 </div>
 </div>
@@ -315,9 +322,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00087">87</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00091">91</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02935">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02639">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01875">cancel_long_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02493">start_next_long_write()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02836">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02956">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02660">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01896">cancel_long_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02514">start_next_long_write()</a>.</p>
 
 </div>
 </div>
@@ -331,9 +338,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00105">105</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00116">116</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02987">bt_gatt_client_register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l01418">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01459">service_changed_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l03008">bt_gatt_client_register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l01439">process_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l01480">service_changed_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>.</p>
 
 </div>
 </div>
@@ -346,10 +353,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Handles of the GATT indication. 0 if not present on the remote peripheral. </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00095">95</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00107">107</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>.</p>
 
 </div>
 </div>
@@ -362,10 +370,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Queue of long write requests. An error during "prepare write" requests can result in a cancel through "execute write". To prevent cancellation of prepared writes to the wrong attribute and multiple requests to the same attribute that may result in a corrupted final value, we avoid interleaving prepared writes. </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00086">86</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00084">84</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02639">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01875">cancel_long_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01884">cancel_long_write_req()</a>, and <a class="el" href="gatt-client_8c_source.html#l02493">start_next_long_write()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02660">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01896">cancel_long_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01905">cancel_long_write_req()</a>, and <a class="el" href="gatt-client_8c_source.html#l02514">start_next_long_write()</a>.</p>
 
 </div>
 </div>
@@ -379,9 +388,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00116">116</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00124">124</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01952">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01065">exchange_mtu_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01531">gatt_client_init()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01973">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01086">exchange_mtu_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01552">gatt_client_init()</a>.</p>
 
 </div>
 </div>
@@ -395,9 +404,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00094">94</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00097">97</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01233">register_notify()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>.</p>
 
 </div>
 </div>
@@ -411,9 +420,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00113">113</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00122">122</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l00138">request_create()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l00159">request_create()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +436,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00093">93</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00096">96</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l00335">gatt_client_remove_notify_chrcs_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l00233">notify_chrc_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l01233">register_notify()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l00356">gatt_client_remove_notify_chrcs_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l00254">notify_chrc_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>.</p>
 
 </div>
 </div>
@@ -442,10 +451,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Handle of the GATT Service Changed characteristic 0 if not present on the remote peripheral. </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00095">95</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00102">102</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>.</p>
 
 </div>
 </div>
@@ -458,10 +468,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>List of registered disconnect/notification/indication callbacks </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00092">92</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00094">94</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l03004">bt_gatt_client_unregister_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l01183">enable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00322">gatt_client_remove_all_notify_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l01634">notify_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01233">register_notify()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l03025">bt_gatt_client_unregister_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l01204">enable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00343">gatt_client_remove_all_notify_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l01655">notify_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>.</p>
 
 </div>
 </div>
@@ -474,10 +485,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>List of pending read/write operations. For operations that span across multiple PDUs, this list provides a mapping from an operation id to an ATT request id. </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00112">112</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00117">117</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01937">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l01952">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02935">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02788">get_reliable_request()</a>, <a class="el" href="gatt-client_8c_source.html#l00138">request_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l00156">request_unref()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01958">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l01973">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l02956">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02809">get_reliable_request()</a>, <a class="el" href="gatt-client_8c_source.html#l00159">request_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l00177">request_unref()</a>.</p>
 
 </div>
 </div>
@@ -491,9 +503,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00077">77</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00083">83</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01694">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01793">bt_gatt_client_is_ready()</a>, <a class="el" href="gatt-client_8c_source.html#l01531">gatt_client_init()</a>, and <a class="el" href="gatt-client_8c_source.html#l01053">notify_client_ready()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01715">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01814">bt_gatt_client_is_ready()</a>, <a class="el" href="gatt-client_8c_source.html#l01552">gatt_client_init()</a>, and <a class="el" href="gatt-client_8c_source.html#l01074">notify_client_ready()</a>.</p>
 
 </div>
 </div>
@@ -507,9 +519,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00063">63</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00069">69</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01798">bt_gatt_client_set_ready_handler()</a>, and <a class="el" href="gatt-client_8c_source.html#l01053">notify_client_ready()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01819">bt_gatt_client_set_ready_handler()</a>, and <a class="el" href="gatt-client_8c_source.html#l01074">notify_client_ready()</a>.</p>
 
 </div>
 </div>
@@ -523,9 +535,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00065">65</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00071">71</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01798">bt_gatt_client_set_ready_handler()</a>, and <a class="el" href="gatt-client_8c_source.html#l01053">notify_client_ready()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01819">bt_gatt_client_set_ready_handler()</a>, and <a class="el" href="gatt-client_8c_source.html#l01074">notify_client_ready()</a>.</p>
 
 </div>
 </div>
@@ -539,9 +551,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00064">64</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00070">70</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01798">bt_gatt_client_set_ready_handler()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, and <a class="el" href="gatt-client_8c_source.html#l01819">bt_gatt_client_set_ready_handler()</a>.</p>
 
 </div>
 </div>
@@ -554,10 +566,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>count of references </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00061">61</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00067">67</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01772">bt_gatt_client_ref()</a>, and <a class="el" href="gatt-client_8c_source.html#l01782">bt_gatt_client_unref()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01793">bt_gatt_client_ref()</a>, and <a class="el" href="gatt-client_8c_source.html#l01803">bt_gatt_client_unref()</a>.</p>
 
 </div>
 </div>
@@ -571,9 +584,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00089">89</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00093">93</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02815">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02935">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02639">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01904">cancel_prep_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02903">exec_write_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02836">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02956">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02660">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01925">cancel_prep_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02924">exec_write_cb()</a>.</p>
 
 </div>
 </div>
@@ -587,9 +600,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00067">67</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00073">73</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01816">bt_gatt_client_set_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01837">bt_gatt_client_set_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>.</p>
 
 </div>
 </div>
@@ -603,9 +616,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00069">69</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00075">75</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01816">bt_gatt_client_set_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01837">bt_gatt_client_set_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>.</p>
 
 </div>
 </div>
@@ -619,9 +632,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00068">68</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00074">74</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01816">bt_gatt_client_set_service_changed()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01837">bt_gatt_client_set_service_changed()</a>.</p>
 
 </div>
 </div>
@@ -635,9 +648,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00102">102</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00112">112</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01343">register_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01320">service_changed_register_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01364">register_service_changed()</a>, and <a class="el" href="gatt-client_8c_source.html#l01341">service_changed_register_cb()</a>.</p>
 
 </div>
 </div>
@@ -650,10 +663,11 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Queued service changed events </p>
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00104">104</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00114">114</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01665">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01711">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01459">service_changed_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01372">service_changed_complete()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01480">service_changed_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>.</p>
 
 </div>
 </div>
@@ -667,9 +681,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00103">103</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
+<p>Definition at line <a class="el" href="gatt-client_8c_source.html#l00113">113</a> of file <a class="el" href="gatt-client_8c_source.html">gatt-client.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01320">service_changed_register_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01341">service_changed_register_cb()</a>.</p>
 
 </div>
 </div>
@@ -682,7 +696,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structbt__gatt__client.html">bt_gatt_client</a></li>
-    <li class="footer">Generated on Thu Jul 30 2015 16:58:08 for ble_gatt_client by
+    <li class="footer">Generated on Sun Aug 2 2015 12:07:36 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
