@@ -44,6 +44,12 @@ struct queue {
 	unsigned int entries;
 };
 
+/**
+ * increment &queue->ref_count
+ *
+ * @param queue pointer to the queue structure
+ * @return
+ */
 static struct queue *queue_ref(struct queue *queue)
 {
 	if (!queue)
@@ -54,6 +60,11 @@ static struct queue *queue_ref(struct queue *queue)
 	return queue;
 }
 
+/**
+ * decrement &queue->ref_count and free queue structure if ref_count == 0
+ *
+ * @param queue  pointer to the queue structure
+ */
 static void queue_unref(struct queue *queue)
 {
 	if (__sync_sub_and_fetch(&queue->ref_count, 1))
@@ -62,6 +73,11 @@ static void queue_unref(struct queue *queue)
 	free(queue);
 }
 
+/**
+ * create a new queue structure
+ *
+ * @return queue reference
+ */
 struct queue *queue_new(void)
 {
 	struct queue *queue;
@@ -77,6 +93,12 @@ struct queue *queue_new(void)
 	return queue_ref(queue);
 }
 
+/**
+ * destroy all queue structure elements
+ *
+ * @param queue		pointer to the queue structure
+ * @param destroy	function making data deallocation
+ */
 void queue_destroy(struct queue *queue, queue_destroy_func_t destroy)
 {
 	if (!queue)
@@ -87,6 +109,12 @@ void queue_destroy(struct queue *queue, queue_destroy_func_t destroy)
 	queue_unref(queue);
 }
 
+/**
+ * increment &entry->ref_count
+ *
+ * @param entry
+ * @return	entry
+ */
 static struct queue_entry *queue_entry_ref(struct queue_entry *entry)
 {
 	if (!entry)
@@ -97,6 +125,11 @@ static struct queue_entry *queue_entry_ref(struct queue_entry *entry)
 	return entry;
 }
 
+/**
+ * decrement &entry->ref_count and free entry structure if ref_count == 0
+ *
+ * @param entry
+ */
 static void queue_entry_unref(struct queue_entry *entry)
 {
 	if (__sync_sub_and_fetch(&entry->ref_count, 1))
@@ -105,6 +138,12 @@ static void queue_entry_unref(struct queue_entry *entry)
 	free(entry);
 }
 
+/**
+ * create a new queue, set queue->data to data, increment queue->ref_count
+ *
+ * @param data
+ * @return	new queue pointer
+ */
 static struct queue_entry *queue_entry_new(void *data)
 {
 	struct queue_entry *entry;
@@ -118,6 +157,13 @@ static struct queue_entry *queue_entry_new(void *data)
 	return queue_entry_ref(entry);
 }
 
+/**
+ * push a queue entry allocated with data and set it in the tail of queue
+ *
+ * @param queue	queue pointer where to allocate data
+ * @param data	data to queue
+ * @return
+ */
 bool queue_push_tail(struct queue *queue, void *data)
 {
 	struct queue_entry *entry;
