@@ -158,7 +158,7 @@ static struct queue_entry *queue_entry_new(void *data)
 }
 
 /**
- * push a queue entry allocated with data and set it in the tail of queue
+ * push a queue entry allocated with data and set it at the tail of queue
  *
  * @param queue	queue pointer where to allocate data
  * @param data	data to queue
@@ -188,6 +188,13 @@ bool queue_push_tail(struct queue *queue, void *data)
 	return true;
 }
 
+/**
+ * push a queue entry allocated with data and set it at the head of queue
+ *
+ * @param queue	queue pointer where to allocate data
+ * @param data	data to queue
+ * @return
+ */
 bool queue_push_head(struct queue *queue, void *data)
 {
 	struct queue_entry *entry;
@@ -211,6 +218,14 @@ bool queue_push_head(struct queue *queue, void *data)
 	return true;
 }
 
+/**
+ * push a queue entry allocated with data and set it after the entry
+ *
+ * @param queue	queue pointer where to allocate data
+ * @param entry element queue where to put the data after
+ * @param data	data to queue
+ * @return
+ */
 bool queue_push_after(struct queue *queue, void *entry, void *data)
 {
 	struct queue_entry *qentry, *tmp, *new_entry;
@@ -245,6 +260,11 @@ bool queue_push_after(struct queue *queue, void *entry, void *data)
 	return true;
 }
 
+/**
+ * pop data from the head of queue
+ *
+ * @param queue	queue pointer
+ */
 void *queue_pop_head(struct queue *queue)
 {
 	struct queue_entry *entry;
@@ -269,6 +289,11 @@ void *queue_pop_head(struct queue *queue)
 	return data;
 }
 
+/**
+ * peek data from the head of the queue
+ *
+ * @param queue	queue pointer
+ */
 void *queue_peek_head(struct queue *queue)
 {
 	if (!queue || !queue->head)
@@ -277,6 +302,11 @@ void *queue_peek_head(struct queue *queue)
 	return queue->head->data;
 }
 
+/**
+ * peek data from the tail of the queue
+ *
+ * @param queue	queue pointer
+ */
 void *queue_peek_tail(struct queue *queue)
 {
 	if (!queue || !queue->tail)
@@ -285,6 +315,13 @@ void *queue_peek_tail(struct queue *queue)
 	return queue->tail->data;
 }
 
+/**
+ * iterator for the queue
+ *
+ * @param queue			queue pointer
+ * @param function		function(void *data, void *user_data) to call for each element
+ * @param user_data		user pointer to pass to function
+ */
 void queue_foreach(struct queue *queue, queue_foreach_func_t function,
 							void *user_data)
 {
@@ -314,11 +351,28 @@ void queue_foreach(struct queue *queue, queue_foreach_func_t function,
 	queue_unref(queue);
 }
 
+/**
+ * compare a with b
+ *
+ * @param a	first parameter
+ * @param b	second parameter
+ *
+ * @return true if both element match
+ */
 static bool direct_match(const void *a, const void *b)
 {
 	return a == b;
 }
 
+/**
+ *
+ *
+ * @param queue			queue pointer
+ * @param function		function call to make comparison
+ * @param match_data	data to match with queue entry
+ *
+ * @return found entry and return pointer to user data (queued data) or NULL if not found
+ */
 void *queue_find(struct queue *queue, queue_match_func_t function,
 							const void *match_data)
 {
@@ -337,6 +391,14 @@ void *queue_find(struct queue *queue, queue_match_func_t function,
 	return NULL;
 }
 
+/**
+ * remove queue element holding data
+ *
+ * @param queue	queue pointer
+ * @param data	data pointer
+ *
+ * @return false if not found, true if element removed
+ */
 bool queue_remove(struct queue *queue, void *data)
 {
 	struct queue_entry *entry, *prev;
@@ -366,6 +428,15 @@ bool queue_remove(struct queue *queue, void *data)
 	return false;
 }
 
+/**
+ * remove element match by function(void *data, void *match_data) where match_data = user_data
+ *
+ * @param queue		queue pointer
+ * @param function	function call to make comparison
+ * @param user_data data to match queue element in function
+ *
+ * @return NULL if not found or queue entry matching criteria
+ */
 void *queue_remove_if(struct queue *queue, queue_match_func_t function,
 							void *user_data)
 {
@@ -403,6 +474,16 @@ void *queue_remove_if(struct queue *queue, queue_match_func_t function,
 	return NULL;
 }
 
+/**
+ * remove all queue element
+ *
+ * @param queue		queue pointer
+ * @param function	function used to match data deallocation
+ * @param user_data	data pointer used in deallocation function
+ * @param destroy	function for data deallocation
+ *
+ * @return			count of element destroyed (0 if none)
+ */
 unsigned int queue_remove_all(struct queue *queue, queue_match_func_t function,
 				void *user_data, queue_destroy_func_t destroy)
 {
@@ -449,6 +530,13 @@ unsigned int queue_remove_all(struct queue *queue, queue_match_func_t function,
 	return count;
 }
 
+/**
+ * return queue head pointer
+ *
+ * @param queue	queue pointer
+ *
+ * @return	queue head
+ */
 const struct queue_entry *queue_get_entries(struct queue *queue)
 {
 	if (!queue)
@@ -457,6 +545,13 @@ const struct queue_entry *queue_get_entries(struct queue *queue)
 	return queue->head;
 }
 
+/**
+ * return queue length
+ *
+ * @param queue	queue pointer
+ *
+ * @return	return 0 or queue elements count
+ */
 unsigned int queue_length(struct queue *queue)
 {
 	if (!queue)
@@ -465,6 +560,12 @@ unsigned int queue_length(struct queue *queue)
 	return queue->entries;
 }
 
+/**
+ * test if queue is empty
+ *
+ * @param queue	queue pointer
+ * @return
+ */
 bool queue_isempty(struct queue *queue)
 {
 	if (!queue)
