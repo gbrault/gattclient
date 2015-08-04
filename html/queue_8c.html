@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('queue_8c.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>set of function to manage queues  
+<p>set of functions to manage queues  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="queue_8h_source.html">queue.h</a>&quot;</code><br />
@@ -168,7 +168,7 @@ Functions</h2></td></tr>
 <tr class="separator:a8eae08e458d0cace1903fc838c0ed80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>set of function to manage queues </p>
+<div class="textblock"><p>set of functions to manage queues </p>
 <dl class="section author"><dt>Author</dt><dd>Gilbert Brault </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Gilbert Brault 2015 the original work comes from bluez v5.39 value add: documenting main features </dd></dl>
 
@@ -205,10 +205,19 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>compare a with b</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>first parameter </td></tr>
+    <tr><td class="paramname">b</td><td>second parameter</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if both element match </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00271">271</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00362">362</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00276">queue_find()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00376">queue_find()</a>.</p>
 
 </div>
 </div>
@@ -235,12 +244,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destroy all queue structure elements</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>pointer to the queue structure </td></tr>
+    <tr><td class="paramname">destroy</td><td>function making data deallocation </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00080">80</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00102">102</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8c_source.html#l00360">queue_remove_all()</a>, and <a class="el" href="queue_8c_source.html#l00057">queue_unref()</a>.</p>
+<p>References <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>, and <a class="el" href="queue_8c_source.html#l00068">queue_unref()</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-db_8c_source.html#l00156">attribute_destroy()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01686">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l00390">discovery_op_free()</a>, <a class="el" href="gatt-db_8c_source.html#l00312">gatt_db_destroy()</a>, <a class="el" href="gatt-db_8c_source.html#l00218">gatt_db_new()</a>, and <a class="el" href="gatt-client_8c_source.html#l00303">notify_chrc_free()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-db_8c_source.html#l00156">attribute_destroy()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="gatt-client_8c_source.html#l01687">bt_gatt_client_free()</a>, <a class="el" href="gatt-client_8c_source.html#l00391">discovery_op_free()</a>, <a class="el" href="gatt-db_8c_source.html#l00312">gatt_db_destroy()</a>, <a class="el" href="gatt-db_8c_source.html#l00218">gatt_db_new()</a>, and <a class="el" href="gatt-client_8c_source.html#l00304">notify_chrc_free()</a>.</p>
 
 </div>
 </div>
@@ -265,12 +282,20 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>create a new queue, set queue-&gt;data to data, increment queue-&gt;ref_count</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>new queue pointer </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00108">108</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00147">147</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, and <a class="el" href="queue_8c_source.html#l00090">queue_entry_ref()</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, and <a class="el" href="queue_8c_source.html#l00118">queue_entry_ref()</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00168">queue_push_after()</a>, <a class="el" href="queue_8c_source.html#l00145">queue_push_head()</a>, and <a class="el" href="queue_8c_source.html#l00121">queue_push_tail()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00229">queue_push_after()</a>, <a class="el" href="queue_8c_source.html#l00198">queue_push_head()</a>, and <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>.</p>
 
 </div>
 </div>
@@ -295,12 +320,20 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>increment &amp;entry-&gt;ref_count</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>entry </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00090">90</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00118">118</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8h_source.html#l00031">queue_entry::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00108">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00242">queue_foreach()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00147">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>.</p>
 
 </div>
 </div>
@@ -325,12 +358,19 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>decrement &amp;entry-&gt;ref_count and free entry structure if ref_count == 0</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entry</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00100">100</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00133">133</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8h_source.html#l00031">queue_entry::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00242">queue_foreach()</a>, <a class="el" href="queue_8c_source.html#l00202">queue_pop_head()</a>, <a class="el" href="queue_8c_source.html#l00294">queue_remove()</a>, <a class="el" href="queue_8c_source.html#l00360">queue_remove_all()</a>, and <a class="el" href="queue_8c_source.html#l00323">queue_remove_if()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>, <a class="el" href="queue_8c_source.html#l00268">queue_pop_head()</a>, <a class="el" href="queue_8c_source.html#l00402">queue_remove()</a>, <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>, and <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>.</p>
 
 </div>
 </div>
@@ -363,12 +403,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+    <tr><td class="paramname">function</td><td>function call to make comparison </td></tr>
+    <tr><td class="paramname">match_data</td><td>data to match with queue entry</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>found entry and return pointer to user data (queued data) or NULL if not found </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00276">276</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00376">376</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00271">direct_match()</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, and <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00362">direct_match()</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, and <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02956">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-db_8c_source.html#l01349">gatt_db_get_attribute()</a>, <a class="el" href="gatt-db_8c_source.html#l01385">gatt_db_get_service_with_uuid()</a>, <a class="el" href="gatt-db_8c_source.html#l00638">gatt_db_unregister()</a>, <a class="el" href="gatt-client_8c_source.html#l02809">get_reliable_request()</a>, and <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l02957">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-db_8c_source.html#l01349">gatt_db_get_attribute()</a>, <a class="el" href="gatt-db_8c_source.html#l01385">gatt_db_get_service_with_uuid()</a>, <a class="el" href="gatt-db_8c_source.html#l00638">gatt_db_unregister()</a>, <a class="el" href="gatt-client_8c_source.html#l02810">get_reliable_request()</a>, and <a class="el" href="gatt-client_8c_source.html#l01255">register_notify()</a>.</p>
 
 </div>
 </div>
@@ -401,12 +450,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>iterator for the queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+    <tr><td class="paramname">function</td><td>function(void *data, void *user_data) to call for each element </td></tr>
+    <tr><td class="paramname">user_data</td><td>user pointer to pass to function </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00242">242</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00325">325</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00090">queue_entry_ref()</a>, <a class="el" href="queue_8c_source.html#l00100">queue_entry_unref()</a>, <a class="el" href="queue_8c_source.html#l00047">queue_ref()</a>, <a class="el" href="queue_8c_source.html#l00057">queue_unref()</a>, and <a class="el" href="queue_8c_source.html#l00041">queue::ref_count</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00118">queue_entry_ref()</a>, <a class="el" href="queue_8c_source.html#l00133">queue_entry_unref()</a>, <a class="el" href="queue_8c_source.html#l00053">queue_ref()</a>, <a class="el" href="queue_8c_source.html#l00068">queue_unref()</a>, and <a class="el" href="queue_8c_source.html#l00041">queue::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l01056">gatt_db_find_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l01077">gatt_db_find_by_type_value()</a>, <a class="el" href="gatt-db_8c_source.html#l01187">gatt_db_find_information()</a>, <a class="el" href="gatt-db_8c_source.html#l01237">gatt_db_foreach_service_in_range()</a>, <a class="el" href="gatt-db_8c_source.html#l01136">gatt_db_read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01655">notify_cb()</a>, and <a class="el" href="gatt-db_8c_source.html#l00278">notify_service_changed()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l01056">gatt_db_find_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l01077">gatt_db_find_by_type_value()</a>, <a class="el" href="gatt-db_8c_source.html#l01187">gatt_db_find_information()</a>, <a class="el" href="gatt-db_8c_source.html#l01237">gatt_db_foreach_service_in_range()</a>, <a class="el" href="gatt-db_8c_source.html#l01136">gatt_db_read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01656">notify_cb()</a>, and <a class="el" href="gatt-db_8c_source.html#l00278">notify_service_changed()</a>.</p>
 
 </div>
 </div>
@@ -423,8 +481,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return queue head pointer</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>queue head </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00406">406</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00540">540</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8c_source.html#l00042">queue::head</a>.</p>
 
@@ -445,12 +511,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>test if queue is empty</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00422">422</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00569">569</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01896">cancel_long_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l00339">gatt_db_isempty()</a>, <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>, <a class="el" href="gatt-db_8c_source.html#l00278">notify_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l02514">start_next_long_write()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01897">cancel_long_write_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00986">discover_primary_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l00339">gatt_db_isempty()</a>, <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>, <a class="el" href="gatt-db_8c_source.html#l00278">notify_service_changed()</a>, <a class="el" href="gatt-client_8c_source.html#l02515">start_next_long_write()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -467,8 +541,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return queue length</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>return 0 or queue elements count </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00414">414</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00555">555</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>.</p>
 
@@ -487,12 +569,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>create a new queue structure</p>
+<dl class="section return"><dt>Returns</dt><dd>queue reference </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00065">65</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00081">81</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="queue_8c_source.html#l00047">queue_ref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="queue_8c_source.html#l00053">queue_ref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01732">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l00398">discovery_op_create()</a>, <a class="el" href="gatt-db_8c_source.html#l00218">gatt_db_new()</a>, <a class="el" href="gatt-db_8c_source.html#l00169">new_attribute()</a>, and <a class="el" href="gatt-client_8c_source.html#l00254">notify_chrc_create()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>, <a class="el" href="gatt-client_8c_source.html#l00399">discovery_op_create()</a>, <a class="el" href="gatt-db_8c_source.html#l00218">gatt_db_new()</a>, <a class="el" href="gatt-db_8c_source.html#l00169">new_attribute()</a>, and <a class="el" href="gatt-client_8c_source.html#l00255">notify_chrc_create()</a>.</p>
 
 </div>
 </div>
@@ -509,8 +593,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>peek data from the head of the queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00226">226</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00297">297</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, and <a class="el" href="queue_8c_source.html#l00042">queue::head</a>.</p>
 
@@ -529,8 +620,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>peek data from the tail of the queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00234">234</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00310">310</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
@@ -549,12 +647,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>pop data from the head of queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00202">202</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00268">268</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00100">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00133">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01585">disable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00611">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00672">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01204">enable_ccc_callback()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, <a class="el" href="gatt-client_8c_source.html#l01393">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l02514">start_next_long_write()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01586">disable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00771">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00612">discover_descs()</a>, <a class="el" href="gatt-client_8c_source.html#l00673">discover_descs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00468">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00880">discover_secondary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01205">enable_ccc_callback()</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, <a class="el" href="gatt-client_8c_source.html#l01394">service_changed_complete()</a>, and <a class="el" href="gatt-client_8c_source.html#l02515">start_next_long_write()</a>.</p>
 
 </div>
 </div>
@@ -587,10 +692,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>push a queue entry allocated with data and set it after the entry</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer where to allocate data </td></tr>
+    <tr><td class="paramname">entry</td><td>element queue where to put the data after </td></tr>
+    <tr><td class="paramname">data</td><td>data to queue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00168">168</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00229">229</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00108">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00147">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-db_8c_source.html#l00531">gatt_db_insert_service()</a>.</p>
 
@@ -619,10 +734,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>push a queue entry allocated with data and set it at the head of queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer where to allocate data </td></tr>
+    <tr><td class="paramname">data</td><td>data to queue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00145">145</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00198">198</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00108">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00147">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-db_8c_source.html#l00531">gatt_db_insert_service()</a>, and <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>.</p>
 
@@ -651,12 +775,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>push a queue entry allocated with data and set it at the tail of queue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer where to allocate data </td></tr>
+    <tr><td class="paramname">data</td><td>data to queue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00121">121</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00167">167</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00108">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00147">queue_entry_new()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01151">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="gatt-client_8c_source.html#l02660">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l00770">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00467">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00985">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00879">discover_secondary_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l01157">find_information()</a>, <a class="el" href="gatt-db_8c_source.html#l01590">gatt_db_attribute_read()</a>, <a class="el" href="gatt-db_8c_source.html#l01674">gatt_db_attribute_write()</a>, <a class="el" href="gatt-db_8c_source.html#l00968">gatt_db_read_by_group_type()</a>, <a class="el" href="gatt-db_8c_source.html#l00605">gatt_db_register()</a>, <a class="el" href="gatt-client_8c_source.html#l00254">notify_chrc_create()</a>, <a class="el" href="gatt-db_8c_source.html#l01108">read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00159">request_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l01480">service_changed_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01151">bt_att_register_disconnect()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="gatt-client_8c_source.html#l02661">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l00771">discover_chrcs_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00468">discover_incl_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00986">discover_primary_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l00880">discover_secondary_cb()</a>, <a class="el" href="gatt-db_8c_source.html#l01157">find_information()</a>, <a class="el" href="gatt-db_8c_source.html#l01590">gatt_db_attribute_read()</a>, <a class="el" href="gatt-db_8c_source.html#l01674">gatt_db_attribute_write()</a>, <a class="el" href="gatt-db_8c_source.html#l00968">gatt_db_read_by_group_type()</a>, <a class="el" href="gatt-db_8c_source.html#l00605">gatt_db_register()</a>, <a class="el" href="gatt-client_8c_source.html#l00255">notify_chrc_create()</a>, <a class="el" href="gatt-db_8c_source.html#l01108">read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01255">register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00160">request_create()</a>, and <a class="el" href="gatt-client_8c_source.html#l01481">service_changed_cb()</a>.</p>
 
 </div>
 </div>
@@ -681,12 +814,20 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>increment &amp;queue-&gt;ref_count</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>pointer to the queue structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00047">47</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00053">53</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8c_source.html#l00041">queue::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00242">queue_foreach()</a>, and <a class="el" href="queue_8c_source.html#l00065">queue_new()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>, and <a class="el" href="queue_8c_source.html#l00081">queue_new()</a>.</p>
 
 </div>
 </div>
@@ -713,12 +854,21 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>remove queue element holding data</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+    <tr><td class="paramname">data</td><td>data pointer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if not found, true if element removed </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00294">294</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00402">402</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00100">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00133">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01905">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01204">enable_ccc_callback()</a>, <a class="el" href="gatt-db_8c_source.html#l00425">gatt_db_remove_service()</a>, <a class="el" href="gatt-db_8c_source.html#l00638">gatt_db_unregister()</a>, <a class="el" href="gatt-db_8c_source.html#l01577">read_timeout()</a>, <a class="el" href="gatt-client_8c_source.html#l01254">register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00177">request_unref()</a>, and <a class="el" href="gatt-db_8c_source.html#l01661">write_timeout()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01906">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01205">enable_ccc_callback()</a>, <a class="el" href="gatt-db_8c_source.html#l00425">gatt_db_remove_service()</a>, <a class="el" href="gatt-db_8c_source.html#l00638">gatt_db_unregister()</a>, <a class="el" href="gatt-db_8c_source.html#l01577">read_timeout()</a>, <a class="el" href="gatt-client_8c_source.html#l01255">register_notify()</a>, <a class="el" href="gatt-client_8c_source.html#l00178">request_unref()</a>, and <a class="el" href="gatt-db_8c_source.html#l01661">write_timeout()</a>.</p>
 
 </div>
 </div>
@@ -757,12 +907,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>remove all queue element</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+    <tr><td class="paramname">function</td><td>function used to match data deallocation </td></tr>
+    <tr><td class="paramname">user_data</td><td>data pointer used in deallocation function </td></tr>
+    <tr><td class="paramname">destroy</td><td>function for data deallocation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>count of element destroyed (0 if none) </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00360">360</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00487">487</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00100">queue_entry_unref()</a>, <a class="el" href="queue_8c_source.html#l00323">queue_remove_if()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00133">queue_entry_unref()</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01973">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01204">enable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00343">gatt_client_remove_all_notify_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l00356">gatt_client_remove_notify_chrcs_in_range()</a>, <a class="el" href="gatt-db_8c_source.html#l00442">gatt_db_clear()</a>, <a class="el" href="gatt-db_8c_source.html#l00481">gatt_db_clear_range()</a>, and <a class="el" href="queue_8c_source.html#l00080">queue_destroy()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01974">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-client_8c_source.html#l01205">enable_ccc_callback()</a>, <a class="el" href="gatt-client_8c_source.html#l00344">gatt_client_remove_all_notify_in_range()</a>, <a class="el" href="gatt-client_8c_source.html#l00357">gatt_client_remove_notify_chrcs_in_range()</a>, <a class="el" href="gatt-db_8c_source.html#l00442">gatt_db_clear()</a>, <a class="el" href="gatt-db_8c_source.html#l00481">gatt_db_clear_range()</a>, and <a class="el" href="queue_8c_source.html#l00102">queue_destroy()</a>.</p>
 
 </div>
 </div>
@@ -795,12 +956,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>remove element match by function(void *data, void *match_data) where match_data = user_data</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>queue pointer </td></tr>
+    <tr><td class="paramname">function</td><td>function call to make comparison </td></tr>
+    <tr><td class="paramname">user_data</td><td>data to match queue element in function</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL if not found or queue entry matching criteria </dd></dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00323">323</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00440">440</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
-<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00100">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
+<p>References <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="queue_8c_source.html#l00044">queue::entries</a>, <a class="el" href="queue_8c_source.html#l00042">queue::head</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="queue_8c_source.html#l00133">queue_entry_unref()</a>, and <a class="el" href="queue_8c_source.html#l00043">queue::tail</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01414">bt_att_unregister()</a>, <a class="el" href="att_8c_source.html#l01182">bt_att_unregister_disconnect()</a>, <a class="el" href="gatt-client_8c_source.html#l01958">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l03025">bt_gatt_client_unregister_notify()</a>, <a class="el" href="gatt-db_8c_source.html#l01642">gatt_db_attribute_read_result()</a>, <a class="el" href="gatt-db_8c_source.html#l01734">gatt_db_attribute_write_result()</a>, and <a class="el" href="queue_8c_source.html#l00360">queue_remove_all()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01414">bt_att_unregister()</a>, <a class="el" href="att_8c_source.html#l01182">bt_att_unregister_disconnect()</a>, <a class="el" href="gatt-client_8c_source.html#l01959">bt_gatt_client_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l03026">bt_gatt_client_unregister_notify()</a>, <a class="el" href="gatt-db_8c_source.html#l01642">gatt_db_attribute_read_result()</a>, <a class="el" href="gatt-db_8c_source.html#l01734">gatt_db_attribute_write_result()</a>, and <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>.</p>
 
 </div>
 </div>
@@ -825,12 +996,19 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>decrement &amp;queue-&gt;ref_count and free queue structure if ref_count == 0</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue</td><td>pointer to the queue structure </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="queue_8c_source.html#l00057">57</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+<p>Definition at line <a class="el" href="queue_8c_source.html#l00068">68</a> of file <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 <p>References <a class="el" href="queue_8c_source.html#l00041">queue::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="queue_8c_source.html#l00080">queue_destroy()</a>, and <a class="el" href="queue_8c_source.html#l00242">queue_foreach()</a>.</p>
+<p>Referenced by <a class="el" href="queue_8c_source.html#l00102">queue_destroy()</a>, and <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>.</p>
 
 </div>
 </div>
@@ -840,7 +1018,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="queue_8c.html">queue.c</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 12:07:36 for ble_gatt_client by
+    <li class="footer">Generated on Sun Aug 2 2015 19:37:53 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

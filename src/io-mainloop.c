@@ -43,10 +43,13 @@
 #include "util.h"
 #include "io.h"
 
+/**
+ * @brief data structure to manage io
+ */
 struct io {
-	int ref_count;
-	int fd;
-	uint32_t events;
+	int ref_count; 							/**< number of references to the data structure */
+	int fd; 								/**< file descriptor */
+	uint32_t events;						/**< epoll events (might be ored) */
 	bool close_on_destroy;
 	io_callback_func_t read_callback;
 	io_destroy_func_t read_destroy;
