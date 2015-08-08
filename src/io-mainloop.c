@@ -50,18 +50,23 @@ struct io {
 	int ref_count; 							/**< number of references to the data structure */
 	int fd; 								/**< file descriptor */
 	uint32_t events;						/**< epoll events (might be ored) */
-	bool close_on_destroy;
-	io_callback_func_t read_callback;
-	io_destroy_func_t read_destroy;
-	void *read_data;
-	io_callback_func_t write_callback;
-	io_destroy_func_t write_destroy;
-	void *write_data;
-	io_callback_func_t disconnect_callback;
-	io_destroy_func_t disconnect_destroy;
-	void *disconnect_data;
+	bool close_on_destroy;					/**< do you need to close the underlying socket on destroy? */
+	io_callback_func_t read_callback;		/**< read call back */
+	io_destroy_func_t read_destroy;			/**< data management for read */
+	void *read_data;						/**< user pointer for read data */
+	io_callback_func_t write_callback;		/**< write call back*/
+	io_destroy_func_t write_destroy;		/**< data management for write */
+	void *write_data;						/**< user pointer for write data */
+	io_callback_func_t disconnect_callback; /**< call back on disconnect */
+	io_destroy_func_t disconnect_destroy;	/**< data management at disconnect */
+	void *disconnect_data;					/**< user pointer for disconnect */
 };
 
+/**
+ * Increment &io->ref_count
+ * @param io	point to io data structure
+ * @return
+ */
 static struct io *io_ref(struct io *io)
 {
 	if (!io)
@@ -72,6 +77,11 @@ static struct io *io_ref(struct io *io)
 	return io;
 }
 
+/**
+ * Decrement &io->ref_count and free io data structure when count reaches 0
+ * @param io	point to io data structure
+ * @return
+ */
 static void io_unref(struct io *io)
 {
 	if (!io)
@@ -83,6 +93,10 @@ static void io_unref(struct io *io)
 	free(io);
 }
 
+/**
+ * io data structure house keeping
+ * @param user_data	pointer to io data structure
+ */
 static void io_cleanup(void *user_data)
 {
 	struct io *io = user_data;
@@ -102,6 +116,15 @@ static void io_cleanup(void *user_data)
 	io->fd = -1;
 }
 
+/**
+ * depending on events epoll event and read, write or disconnect prepare for the appropriate call back calling mainloop_modify_fd
+ *
+ * epoll event value (some 'ored' combination allowed) EPOLLRDHUP | EPOLLHUP | EPOLLERR | EPOLLIN | EPOLLOUT )
+ *
+ * @param fd		file descriptor data structure (can be socket)
+ * @param events	epoll event
+ * @param user_data	pointer to io data structure
+ */
 static void io_callback(int fd, uint32_t events, void *user_data)
 {
 	struct io *io = user_data;
@@ -165,6 +188,12 @@ static void io_callback(int fd, uint32_t events, void *user_data)
 	io_unref(io);
 }
 
+/**
+ * create a new io data structure
+ *
+ * @param fd	file descriptor (includes socket)
+ * @return		NULL if error or io data structure
+ */
 struct io *io_new(int fd)
 {
 	struct io *io;
@@ -189,6 +218,11 @@ struct io *io_new(int fd)
 	return io_ref(io);
 }
 
+/**
+ * remove the fd from the 'mainloop' and reset all io call back, unref the io data structure
+ *
+ * @param io	pointer to the io data structure
+ */
 void io_destroy(struct io *io)
 {
 	if (!io)
@@ -203,6 +237,12 @@ void io_destroy(struct io *io)
 	io_unref(io);
 }
 
+/**
+ *  return the fd (file descriptor, can be a socket) attached to the io data structure
+ *
+ * @param io	pointer to io data structure
+ * @return
+ */
 int io_get_fd(struct io *io)
 {
 	if (!io)
@@ -211,6 +251,12 @@ int io_get_fd(struct io *io)
 	return io->fd;
 }
 
+/**
+ *
+ * @param io
+ * @param do_close
+ * @return
+ */
 bool io_set_close_on_destroy(struct io *io, bool do_close)
 {
 	if (!io)
@@ -221,6 +267,14 @@ bool io_set_close_on_destroy(struct io *io, bool do_close)
 	return true;
 }
 
+/**
+ *
+ * @param io
+ * @param callback
+ * @param user_data
+ * @param destroy
+ * @return
+ */
 bool io_set_read_handler(struct io *io, io_callback_func_t callback,
 				void *user_data, io_destroy_func_t destroy)
 {
@@ -252,6 +306,14 @@ bool io_set_read_handler(struct io *io, io_callback_func_t callback,
 	return true;
 }
 
+/**
+ *
+ * @param io
+ * @param callback
+ * @param user_data
+ * @param destroy
+ * @return
+ */
 bool io_set_write_handler(struct io *io, io_callback_func_t callback,
 				void *user_data, io_destroy_func_t destroy)
 {
@@ -283,6 +345,14 @@ bool io_set_write_handler(struct io *io, io_callback_func_t callback,
 	return true;
 }
 
+/**
+ *
+ * @param io
+ * @param callback
+ * @param user_data
+ * @param destroy
+ * @return
+ */
 bool io_set_disconnect_handler(struct io *io, io_callback_func_t callback,
 				void *user_data, io_destroy_func_t destroy)
 {
@@ -339,6 +409,11 @@ ssize_t io_send(struct io *io, const struct iovec *iov, int iovcnt)
 	return ret;
 }
 
+/**
+ *
+ * @param io
+ * @return
+ */
 bool io_shutdown(struct io *io)
 {
 	if (!io || io->fd < 0)
