@@ -70,13 +70,13 @@ void util_debug(util_debug_func_t function, void *user_data,
 }
 
 /**
- * hexadecimal dump utility
+ * hexadecimal dump utility: create the str hex string and then call function(str,user_data)
  *
- * @param dir
- * @param buf
- * @param len
- * @param function
- * @param user_data
+ * @param dir			first char of str
+ * @param buf			buffer to convert to hex (str)
+ * @param len			size of buffer (should be less than or equal to 16)
+ * @param function		function to call with (str,user_data)
+ * @param user_data		pointer to pass to function
  */
 void util_hexdump(const char dir, const unsigned char *buf, size_t len,
 				util_debug_func_t function, void *user_data)
@@ -120,7 +120,13 @@ void util_hexdump(const char dir, const unsigned char *buf, size_t len,
 	}
 }
 
-/* Helper for getting the dirent type in case readdir returns DT_UNKNOWN */
+/**
+ * Helper for getting the dirent type in case readdir
+ *
+ * @param parent	prefix to build full path
+ * @param name		suffix to builld full path
+ * @return DT_UNKNOWN or DT_DIR if parent/name is a DIR
+ */
 unsigned char util_get_dt(const char *parent, const char *name)
 {
 	char filename[PATH_MAX];
@@ -133,10 +139,15 @@ unsigned char util_get_dt(const char *parent, const char *name)
 	return DT_UNKNOWN;
 }
 
-/* Helpers for bitfield operations */
-
-/* Find unique id in range from 1 to max but no bigger then
+/**
+ * Helpers for bitfield operations
+ *
+ * Find unique id in range from 1 to max but no bigger then
  * sizeof(int) * 8. ffs() is used since it is POSIX standard
+ *
+ * @param bitmap	map of bits
+ * @param max		max bit position
+ * @return
  */
 uint8_t util_get_uid(unsigned int *bitmap, uint8_t max)
 {
@@ -152,7 +163,12 @@ uint8_t util_get_uid(unsigned int *bitmap, uint8_t max)
 	return id;
 }
 
-/* Clear id bit in bitmap */
+/**
+ * Clear id bit in bitmap
+ *
+ * @param bitmap	map of bits
+ * @param id		bit rank to clear
+ */
 void util_clear_uid(unsigned int *bitmap, uint8_t id)
 {
 	if (!id)

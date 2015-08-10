@@ -183,10 +183,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>remove the fd from the 'mainloop' and reset all io call back, unref the io data structure</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td>pointer to the io data structure </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00189">189</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00226">226</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00057">io::disconnect_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>, <a class="el" href="io-mainloop_8c_source.html#l00072">io_unref()</a>, <a class="el" href="mainloop_8c_source.html#l00322">mainloop_remove_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::read_callback</a>, and <a class="el" href="io-mainloop_8c_source.html#l00054">io::write_callback</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00060">io::disconnect_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>, <a class="el" href="io-mainloop_8c_source.html#l00085">io_unref()</a>, <a class="el" href="mainloop_8c_source.html#l00322">mainloop_remove_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00054">io::read_callback</a>, and <a class="el" href="io-mainloop_8c_source.html#l00057">io::write_callback</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, and <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
 
@@ -205,10 +212,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return the fd (file descriptor, can be a socket) attached to the io data structure</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td>pointer to io data structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00203">203</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00246">246</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>.</p>
 
 </div>
 </div>
@@ -225,10 +240,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>create a new io data structure</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>file descriptor (includes socket) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NULL if error or io data structure </dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00165">165</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00197">197</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00050">io::close_on_destroy</a>, <a class="el" href="io-mainloop_8c_source.html#l00049">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>, <a class="el" href="io-mainloop_8c_source.html#l00102">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00083">io_cleanup()</a>, <a class="el" href="io-mainloop_8c_source.html#l00062">io_ref()</a>, <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, and <a class="el" href="util_8h_source.html#l00082">new0</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00053">io::close_on_destroy</a>, <a class="el" href="io-mainloop_8c_source.html#l00052">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>, <a class="el" href="io-mainloop_8c_source.html#l00128">io_callback()</a>, <a class="el" href="io-mainloop_8c_source.html#l00100">io_cleanup()</a>, <a class="el" href="io-mainloop_8c_source.html#l00070">io_ref()</a>, <a class="el" href="mainloop_8c_source.html#l00252">mainloop_add_fd()</a>, and <a class="el" href="util_8h_source.html#l00082">new0</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
 
@@ -274,9 +297,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The return value is a count of bytes written, or -errno indicating an error. </dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00322">322</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00395">395</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
 
@@ -305,10 +328,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td></td></tr>
+    <tr><td class="paramname">do_close</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00211">211</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00260">260</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00050">io::close_on_destroy</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00053">io::close_on_destroy</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l01072">bt_att_set_close_on_unref()</a>.</p>
 
@@ -349,10 +380,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+    <tr><td class="paramname">user_data</td><td></td></tr>
+    <tr><td class="paramname">destroy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00283">283</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00356">356</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00057">io::disconnect_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00059">io::disconnect_data</a>, <a class="el" href="io-mainloop_8c_source.html#l00058">io::disconnect_destroy</a>, <a class="el" href="io-mainloop_8c_source.html#l00049">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00060">io::disconnect_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00062">io::disconnect_data</a>, <a class="el" href="io-mainloop_8c_source.html#l00061">io::disconnect_destroy</a>, <a class="el" href="io-mainloop_8c_source.html#l00052">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>, and <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
 
@@ -393,10 +434,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+    <tr><td class="paramname">user_data</td><td></td></tr>
+    <tr><td class="paramname">destroy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00221">221</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00278">278</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00049">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>, <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::read_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00053">io::read_data</a>, and <a class="el" href="io-mainloop_8c_source.html#l00052">io::read_destroy</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00052">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>, <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00054">io::read_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00056">io::read_data</a>, and <a class="el" href="io-mainloop_8c_source.html#l00055">io::read_destroy</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
 
@@ -437,10 +488,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td></td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+    <tr><td class="paramname">user_data</td><td></td></tr>
+    <tr><td class="paramname">destroy</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00252">252</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00317">317</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00049">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>, <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00054">io::write_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00056">io::write_data</a>, and <a class="el" href="io-mainloop_8c_source.html#l00055">io::write_destroy</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00052">io::events</a>, <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>, <a class="el" href="mainloop_8c_source.html#l00296">mainloop_modify_fd()</a>, <a class="el" href="io-mainloop_8c_source.html#l00057">io::write_callback</a>, <a class="el" href="io-mainloop_8c_source.html#l00059">io::write_data</a>, and <a class="el" href="io-mainloop_8c_source.html#l00058">io::write_destroy</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
 
@@ -459,10 +520,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">io</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00339">339</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
+<p>Definition at line <a class="el" href="io-mainloop_8c_source.html#l00417">417</a> of file <a class="el" href="io-mainloop_8c_source.html">io-mainloop.c</a>.</p>
 
-<p>References <a class="el" href="io-mainloop_8c_source.html#l00048">io::fd</a>.</p>
+<p>References <a class="el" href="io-mainloop_8c_source.html#l00051">io::fd</a>.</p>
 
 <p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
 
@@ -474,7 +542,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="io_8h.html">io.h</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 19:37:53 for ble_gatt_client by
+    <li class="footer">Generated on Mon Aug 10 2015 09:57:28 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

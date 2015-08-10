@@ -1,4 +1,5 @@
 /**
+
  * @file hci.c
  * @brief hci functions
  * @author Gilbert Brault
@@ -63,6 +64,12 @@ typedef struct {
 	unsigned int val;
 } hci_map;
 
+/**
+ *
+ * @param m
+ * @param val
+ * @return
+ */
 static char *hci_bit2str(hci_map *m, unsigned int val)
 {
 	char *str = malloc(120);
@@ -80,7 +87,13 @@ static char *hci_bit2str(hci_map *m, unsigned int val)
 	return str;
 }
 
-static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
+/**
+ *
+ * @param map
+ * @param str
+ * @param val
+ * @return
+ */static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
 {
 	char *t, *ptr;
 	hci_map *m;
@@ -104,6 +117,12 @@ static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
 	return set;
 }
 
+ /**
+  *
+  * @param m
+  * @param val
+  * @return
+  */
 static char *hci_uint2str(hci_map *m, unsigned int val)
 {
 	char *str = malloc(50);
@@ -123,6 +142,13 @@ static char *hci_uint2str(hci_map *m, unsigned int val)
 	return str;
 }
 
+/**
+ *
+ * @param map
+ * @param str
+ * @param val
+ * @return
+ */
 static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
 {
 	char *t, *ptr;
@@ -148,6 +174,11 @@ static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
 	return set;
 }
 
+/**
+ *
+ * @param bus
+ * @return
+ */
 char *hci_bustostr(int bus)
 {
 	switch (bus) {
@@ -170,6 +201,11 @@ char *hci_bustostr(int bus)
 	}
 }
 
+/**
+ *
+ * @param type
+ * @return
+ */
 char *hci_dtypetostr(int type)
 {
 	return hci_bustostr(type & 0x0f);
@@ -201,6 +237,11 @@ static hci_map dev_flags_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param flags
+ * @return
+ */
 char *hci_dflagstostr(uint32_t flags)
 {
 	char *str = bt_malloc(50);
@@ -257,21 +298,43 @@ static hci_map sco_ptype_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param ptype
+ * @return
+ */
 char *hci_ptypetostr(unsigned int ptype)
 {
 	return hci_bit2str(pkt_type_map, ptype);
 }
 
+/**
+ *
+ * @param str
+ * @param val
+ * @return
+ */
 int hci_strtoptype(char *str, unsigned int *val)
 {
 	return hci_str2bit(pkt_type_map, str, val);
 }
 
+/**
+ *
+ * @param ptype
+ * @return
+ */
 char *hci_scoptypetostr(unsigned int ptype)
 {
 	return hci_bit2str(sco_ptype_map, ptype);
 }
 
+/**
+ *
+ * @param str
+ * @param val
+ * @return
+ */
 int hci_strtoscoptype(char *str, unsigned int *val)
 {
 	return hci_str2bit(sco_ptype_map, str, val);
@@ -287,11 +350,22 @@ static hci_map link_policy_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param lp
+ * @return
+ */
 char *hci_lptostr(unsigned int lp)
 {
 	return hci_bit2str(link_policy_map, lp);
 }
 
+/**
+ *
+ * @param str
+ * @param val
+ * @return
+ */
 int hci_strtolp(char *str, unsigned int *val)
 {
 	return hci_str2bit(link_policy_map, str, val);
@@ -310,6 +384,11 @@ static hci_map link_mode_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param lm
+ * @return
+ */
 char *hci_lmtostr(unsigned int lm)
 {
 	char *s, *str = bt_malloc(50);
@@ -331,6 +410,12 @@ char *hci_lmtostr(unsigned int lm)
 	return str;
 }
 
+/**
+ *
+ * @param str
+ * @param val
+ * @return
+ */
 int hci_strtolm(char *str, unsigned int *val)
 {
 	return hci_str2bit(link_mode_map, str, val);
@@ -602,11 +687,23 @@ static hci_map commands_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param cmd
+ * @return
+ */
 char *hci_cmdtostr(unsigned int cmd)
 {
 	return hci_uint2str(commands_map, cmd);
 }
 
+/**
+ *
+ * @param commands
+ * @param pref
+ * @param width
+ * @return
+ */
 char *hci_commandstostr(uint8_t *commands, char *pref, int width)
 {
 	unsigned int maxwidth = width - 3;
@@ -663,21 +760,43 @@ static hci_map ver_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param ver
+ * @return
+ */
 char *hci_vertostr(unsigned int ver)
 {
 	return hci_uint2str(ver_map, ver);
 }
 
+/**
+ *
+ * @param str
+ * @param ver
+ * @return
+ */
 int hci_strtover(char *str, unsigned int *ver)
 {
 	return hci_str2uint(ver_map, str, ver);
 }
 
+/**
+ *
+ * @param ver
+ * @return
+ */
 char *lmp_vertostr(unsigned int ver)
 {
 	return hci_uint2str(ver_map, ver);
 }
 
+/**
+ *
+ * @param str
+ * @param ver
+ * @return
+ */
 int lmp_strtover(char *str, unsigned int *ver)
 {
 	return hci_str2uint(ver_map, str, ver);
@@ -688,11 +807,22 @@ static hci_map pal_map[] = {
 	{ NULL }
 };
 
+/**
+ *
+ * @param ver
+ * @return
+ */
 char *pal_vertostr(unsigned int ver)
 {
 	return hci_uint2str(pal_map, ver);
 }
 
+/**
+ *
+ * @param str
+ * @param ver
+ * @return
+ */
 int pal_strtover(char *str, unsigned int *ver)
 {
 	return hci_str2uint(pal_map, str, ver);
@@ -787,6 +917,13 @@ static hci_map lmp_features_map[8][9] = {
 	},
 };
 
+/**
+ *
+ * @param features
+ * @param pref
+ * @param width
+ * @return
+ */
 char *lmp_featurestostr(uint8_t *features, char *pref, int width)
 {
 	unsigned int maxwidth = width - 1;
@@ -834,7 +971,14 @@ char *lmp_featurestostr(uint8_t *features, char *pref, int width)
 	return str;
 }
 
-/* HCI functions that do not require open device */
+/**
+ * HCI functions that do not require open device
+ *
+ * @param flag
+ * @param func
+ * @param arg
+ * @return
+ */
 int hci_for_each_dev(int flag, int (*func)(int dd, int dev_id, long arg),
 			long arg)
 {
@@ -884,6 +1028,13 @@ done:
 	return dev_id;
 }
 
+/**
+ *
+ * @param dd
+ * @param dev_id
+ * @param arg
+ * @return
+ */
 static int __other_bdaddr(int dd, int dev_id, long arg)
 {
 	struct hci_dev_info di = { .dev_id = dev_id };
@@ -897,6 +1048,13 @@ static int __other_bdaddr(int dd, int dev_id, long arg)
 	return bacmp((bdaddr_t *) arg, &di.bdaddr);
 }
 
+/**
+ *
+ * @param dd
+ * @param dev_id
+ * @param arg
+ * @return
+ */
 static int __same_bdaddr(int dd, int dev_id, long arg)
 {
 	struct hci_dev_info di = { .dev_id = dev_id };
@@ -907,6 +1065,11 @@ static int __same_bdaddr(int dd, int dev_id, long arg)
 	return !bacmp((bdaddr_t *) arg, &di.bdaddr);
 }
 
+/**
+ *
+ * @param bdaddr
+ * @return
+ */
 int hci_get_route(bdaddr_t *bdaddr)
 {
 	int dev_id;
@@ -920,6 +1083,11 @@ int hci_get_route(bdaddr_t *bdaddr)
 	return dev_id;
 }
 
+/**
+ *
+ * @param str
+ * @return
+ */
 int hci_devid(const char *str)
 {
 	bdaddr_t ba;
@@ -938,6 +1106,12 @@ int hci_devid(const char *str)
 	return id;
 }
 
+/**
+ *
+ * @param dev_id
+ * @param di
+ * @return
+ */
 int hci_devinfo(int dev_id, struct hci_dev_info *di)
 {
 	int dd, err, ret;
@@ -958,6 +1132,12 @@ int hci_devinfo(int dev_id, struct hci_dev_info *di)
 	return ret;
 }
 
+/**
+ *
+ * @param dev_id
+ * @param bdaddr
+ * @return
+ */
 int hci_devba(int dev_id, bdaddr_t *bdaddr)
 {
 	struct hci_dev_info di;
@@ -977,6 +1157,16 @@ int hci_devba(int dev_id, bdaddr_t *bdaddr)
 	return 0;
 }
 
+/**
+ *
+ * @param dev_id
+ * @param len
+ * @param nrsp
+ * @param lap
+ * @param ii
+ * @param flags
+ * @return
+ */
 int hci_inquiry(int dev_id, int len, int nrsp, const uint8_t *lap,
 		inquiry_info **ii, long flags)
 {

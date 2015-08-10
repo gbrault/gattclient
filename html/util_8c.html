@@ -165,8 +165,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Clear id bit in bitmap</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>map of bits </td></tr>
+    <tr><td class="paramname">id</td><td>bit rank to clear </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00156">156</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00172">172</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -246,8 +254,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Helper for getting the dirent type in case readdir</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>prefix to build full path </td></tr>
+    <tr><td class="paramname">name</td><td>suffix to builld full path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>DT_UNKNOWN or DT_DIR if parent/name is a DIR </dd></dl>
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00124">124</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00130">130</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -274,8 +291,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Helpers for bitfield operations</p>
+<p>Find unique id in range from 1 to max but no bigger then sizeof(int) * 8. ffs() is used since it is POSIX standard</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bitmap</td><td>map of bits </td></tr>
+    <tr><td class="paramname">max</td><td>max bit position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Definition at line <a class="el" href="util_8c_source.html#l00141">141</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p>Definition at line <a class="el" href="util_8c_source.html#l00152">152</a> of file <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -320,14 +347,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>hexadecimal dump utility</p>
+<p>hexadecimal dump utility: create the str hex string and then call function(str,user_data)</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td></td></tr>
-    <tr><td class="paramname">buf</td><td></td></tr>
-    <tr><td class="paramname">len</td><td></td></tr>
-    <tr><td class="paramname">function</td><td></td></tr>
-    <tr><td class="paramname">user_data</td><td></td></tr>
+    <tr><td class="paramname">dir</td><td>first char of str </td></tr>
+    <tr><td class="paramname">buf</td><td>buffer to convert to hex (str) </td></tr>
+    <tr><td class="paramname">len</td><td>size of buffer (should be less than or equal to 16) </td></tr>
+    <tr><td class="paramname">function</td><td>function to call with (str,user_data) </td></tr>
+    <tr><td class="paramname">user_data</td><td>pointer to pass to function </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,7 +373,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="util_8c.html">util.c</a></li>
-    <li class="footer">Generated on Sun Aug 2 2015 19:37:53 for ble_gatt_client by
+    <li class="footer">Generated on Mon Aug 10 2015 09:57:28 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
