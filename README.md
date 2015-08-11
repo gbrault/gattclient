@@ -1,6 +1,6 @@
 # gattclient
 A gatt client, based on bluez stack -- just using socket
-[How to use Gatt Client] to see client features
+<a href="#usage">How to use Gatt Client</a> to see client features
 
 # context
 Bluez is one of the bluetooth stack for linux. I was looking for a gatt client to make some testing for ble.
@@ -42,8 +42,9 @@ you can clone with git and there is an eclipse project
 A doxygen documentation is provided, see the html directory (index.html file)
 This is a work in progress with the intent of documenting all important functions and data structures
 
-# How to use Gatt Client
-
+<a id="usage">
+<H1> How to use Gatt Client <H1>
+</a>
 <pre>
 <b>$./gattclient help</b>
 Options:
