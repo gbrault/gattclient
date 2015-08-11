@@ -43,7 +43,7 @@ This is a work in progress with the intent of documenting all important function
 
 # How to use Gatt Client
 
-<code>
+<pre>
 $./gattclient help
 Options:
 	-i, --index <id>		Specify adapter index, e.g. hci0
@@ -124,4 +124,4 @@ Options:
 	 -c, --sign-key <csrk>	CSRK
 e.g.:
 	set-sign-key -c D8515948451FEA320DC05A2E88308188
-</code>
+</pre>
