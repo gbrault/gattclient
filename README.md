@@ -50,13 +50,13 @@ This is a work in progress with the intent of documenting all important function
 <pre>
 <b>$./gattclient help</b>
 Options:
-	-i, --index <id>		Specify adapter index, e.g. hci0
-	-d, --dest <addr>		Specify the destination address
-	-t, --type [random|public] 	Specify the LE address type
-	-m, --mtu <mtu> 		The ATT MTU to use
-	-s, --security-level <sec> 	Set security level (low|medium|high)
-	-v, --verbose			Enable extra logging
-	-h, --help			Display help
+	-i, --index &lt;id&gt;				Specify adapter index, e.g. hci0
+	-d, --dest &lt;addr&gt;				Specify the destination address
+	-t, --type [random|public] 		Specify the LE address type
+	-m, --mtu &lt;mtu> 					The ATT MTU to use
+	-s, --security-level &lt;sec&gt; 	Set security level (low|medium|high)
+	-v, --verbose						Enable extra logging
+	-h, --help							Display help (this message)
 Example:
 gattclient -v -d C4:BE:84:70:29:04
 
@@ -80,46 +80,46 @@ Commands:
 	set-sign-key   		Set signing key for signed write command
 	quit           		Quit
 <b>[GATT client]# read-value</b>
-Usage: read-value <value_handle>
+Usage: read-value &lt;value_handle&gt;
 <b>[GATT client]# read-long-value</b>
-Usage: read-long-value <value_handle> <offset>
+Usage: read-long-value &lt;value_handle&gt; &lt;offset&gt;
 <b>[GATT client]# read-multiple</b>
-Usage: read-multiple <handle_1> <handle_2> ...
+Usage: read-multiple &lt;handle_1&gt; &lt;handle_2&gt; ...
 <b>[GATT client]# write-value</b>
-Usage: write-value [options] <value_handle> <value>
+Usage: write-value [options] &lt;value_handle&gt; &lt;value&gt;
 Options:
 	-w, --without-response	Write without response
 	-s, --signed-write	Signed write command
 e.g.:
 	write-value 0x0001 00 01 00
 <b>[GATT client]# write-long-value</b>
-Usage: write-long-value [options] <value_handle> <offset> <value>
+Usage: write-long-value [options] &lt;value_handle&gt; &lt;offset&gt; &lt;value&gt;
 Options:
 	-r, --reliable-write	Reliable write
 e.g.:
 	write-long-value 0x0001 0 00 01 00
 <b>[GATT client]# write-prepare</b>
-Usage: write-prepare [options] <value_handle> <offset> <value>
+Usage: write-prepare [options] &lt;value_handle&gt; &lt;offset&gt; &lt;value&gt;
 Options:
 	-s, --session-id	Session id
 e.g.:
 	write-prepare -s 1 0x0001 00 01 00
 <b>[GATT client]# write-prepare</b>
-Usage: write-prepare [options] <value_handle> <offset> <value>
+Usage: write-prepare [options] &lt;value_handle&gt; &lt;offset&gt; &lt;value&gt;
 Options:
 	-s, --session-id	Session id
 e.g.:
 	write-prepare -s 1 0x0001 00 01 00
 <b>[GATT client]# write-execute</b>
-Usage: write-execute <session_id> <execute>
+Usage: write-execute &lt;session_id&gt; <execute&gt;
 e.g.:
 	write-execute 1 0
 <b>[GATT client]# register-notify</b>
-Usage: register-notify <chrc value handle>
+Usage: register-notify &lt;chrc value handle&gt;
 <b>[GATT client]# unregister-notify	</b>
-Usage: unregister-notify <notify id>
+Usage: unregister-notify &lt;notify id&gt;
 <b>[GATT client]# set-security</b>
-Usage: set_security <level>
+Usage: set_security &lt;level&gt;
 level: 1-3
 e.g.:
 	set-sec-level 2
@@ -127,7 +127,7 @@ e.g.:
 Security level: 1
 Usage: set-sign-key [options]
 Options:
-	 -c, --sign-key <csrk>	CSRK
+	 -c, --sign-key &lt;csrk&gt;	CSRK
 e.g.:
 	set-sign-key -c D8515948451FEA320DC05A2E88308188
 </pre>
