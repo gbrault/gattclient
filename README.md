@@ -1,7 +1,7 @@
 # gattclient
 A gatt client, based on bluez stack -- just using socket
 
-<a href="#user-content-usage">How to use Gatt Client</a> to see client features
+<br/><a href="#user-content-usage">How to use Gatt Client</a> to see client features
 
 # context
 Bluez is one of the bluetooth stack for linux. I was looking for a gatt client to make some testing for ble.
