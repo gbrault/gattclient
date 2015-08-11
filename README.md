@@ -125,6 +125,7 @@ e.g.:
 	set-sec-level 2
 <b>[GATT client]# get-security</b>
 Security level: 1
+<b>[GATT client]# set-sign-key</b>
 Usage: set-sign-key [options]
 Options:
 	 -c, --sign-key &lt;csrk&gt;	CSRK
