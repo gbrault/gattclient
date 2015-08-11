@@ -45,7 +45,7 @@ This is a work in progress with the intent of documenting all important function
 
 # How to use Gatt Client
 
-<a id="usage"></a>
+<a id="usage">Usage</a>
 <pre>
 <b>$./gattclient help</b>
 Options:
