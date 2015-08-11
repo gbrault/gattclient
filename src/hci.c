@@ -65,10 +65,11 @@ typedef struct {
 } hci_map;
 
 /**
+ * lookup the numeric code val into the hci_map m and return the matching string
  *
- * @param m
- * @param val
- * @return
+ * @param m		pointer to the hci_map
+ * @param val	code to match
+ * @return		string matching the code (val) from the hci_map
  */
 static char *hci_bit2str(hci_map *m, unsigned int val)
 {
@@ -88,11 +89,13 @@ static char *hci_bit2str(hci_map *m, unsigned int val)
 }
 
 /**
+ * ored bits corresponding to comma separated commands matching the hci_map array
  *
- * @param map
- * @param str
- * @param val
- * @return
+ * @param map	pointer to the hci_map array
+ * @param str	commands, separated by commas for match in the hci_map array
+ * @param val	ored bits (from the hci_map) of maching commands
+ *
+ * @return		1 val is set, 0
  */static int hci_str2bit(hci_map *map, char *str, unsigned int *val)
 {
 	char *t, *ptr;
@@ -118,10 +121,11 @@ static char *hci_bit2str(hci_map *m, unsigned int val)
 }
 
  /**
+  * lookup the hci_map and find entry corresponding to val and return the corresponding string
   *
-  * @param m
-  * @param val
-  * @return
+  * @param m	hci_map pointer
+  * @param val	val to match in the hci_map
+  * @return		string mapped to the matching value or NULL if no matching
   */
 static char *hci_uint2str(hci_map *m, unsigned int val)
 {
@@ -143,11 +147,13 @@ static char *hci_uint2str(hci_map *m, unsigned int val)
 }
 
 /**
+ * lookup a command string in the hci_map array and return the corresponding code
  *
- * @param map
- * @param str
- * @param val
- * @return
+ * @param map	pointer to the hci_map array
+ * @param str	command to match
+ * @param val	returned corresponding code
+ *
+ * @return		1 val is set 0 if no matching string
  */
 static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
 {
@@ -175,9 +181,10 @@ static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
 }
 
 /**
+ * return a string corresponding to the bus code (see HCI bus types in hci.h)
  *
- * @param bus
- * @return
+ * @param bus	bus code
+ * @return		string corresponding to the bus code (NULL if error)
  */
 char *hci_bustostr(int bus)
 {
@@ -202,15 +209,22 @@ char *hci_bustostr(int bus)
 }
 
 /**
+ * return the bus string according to the bus code (type)
  *
- * @param type
- * @return
+ * @param type	bus code
+ * @return		bus string (NULL if error)
  */
 char *hci_dtypetostr(int type)
 {
 	return hci_bustostr(type & 0x0f);
 }
 
+/**
+ * return the bluetooth type string give the code (see HCI controller types in hci.h)
+ *
+ * @param type	HCI controller types
+ * @return		corresponding string (NULL if error)
+ */
 char *hci_typetostr(int type)
 {
 	switch (type) {
@@ -238,9 +252,10 @@ static hci_map dev_flags_map[] = {
 };
 
 /**
+ * return the HCI device flags string given its code
  *
- * @param flags
- * @return
+ * @param flags		HCI device flags code
+ * @return			HCI device flags string (NULL if error)
  */
 char *hci_dflagstostr(uint32_t flags)
 {
@@ -284,6 +299,7 @@ static hci_map pkt_type_map[] = {
 	{ NULL }
 };
 
+/* SCO (synchronous connection orientated) links */
 static hci_map sco_ptype_map[] = {
 	{ "HV1",   0x0001   },
 	{ "HV2",   0x0002   },
@@ -299,9 +315,10 @@ static hci_map sco_ptype_map[] = {
 };
 
 /**
+ * return the HCI packet type string given the code
  *
- * @param ptype
- * @return
+ * @param ptype	HCI packet type
+ * @return		HCI packet type string (NULL if error)
  */
 char *hci_ptypetostr(unsigned int ptype)
 {
@@ -309,10 +326,11 @@ char *hci_ptypetostr(unsigned int ptype)
 }
 
 /**
+ * return the HCI packet type code given the string
  *
- * @param str
- * @param val
- * @return
+ * @param str	HCI packet type string
+ * @param val	HCI packet type code
+ * @return		1 if found 0 error
  */
 int hci_strtoptype(char *str, unsigned int *val)
 {
@@ -320,9 +338,10 @@ int hci_strtoptype(char *str, unsigned int *val)
 }
 
 /**
+ * return the SCO (synchronous connection orientated) links string given the code
  *
- * @param ptype
- * @return
+ * @param ptype	SCO type code
+ * @return		SCO string (NULL if error)
  */
 char *hci_scoptypetostr(unsigned int ptype)
 {
@@ -330,10 +349,11 @@ char *hci_scoptypetostr(unsigned int ptype)
 }
 
 /**
+ * return the SCO (synchronous connection orientated) links code given the string
  *
- * @param str
- * @param val
- * @return
+ * @param str	SCO (synchronous connection orientated) links string
+ * @param val	SCO (synchronous connection orientated) links code
+ * @return		1 match found 0 error
  */
 int hci_strtoscoptype(char *str, unsigned int *val)
 {
@@ -351,9 +371,10 @@ static hci_map link_policy_map[] = {
 };
 
 /**
+ * return the Link policy mapping string given the code
  *
- * @param lp
- * @return
+ * @param lp	Link policy mapping code
+ * @return		Link policy mapping string (NULL if error)
  */
 char *hci_lptostr(unsigned int lp)
 {
@@ -361,10 +382,11 @@ char *hci_lptostr(unsigned int lp)
 }
 
 /**
+ * return Link policy mapping code given the string
  *
- * @param str
- * @param val
- * @return
+ * @param str	Link policy mapping string
+ * @param val	Link policy mapping code
+ * @return		1 match found 0 error
  */
 int hci_strtolp(char *str, unsigned int *val)
 {
@@ -385,9 +407,10 @@ static hci_map link_mode_map[] = {
 };
 
 /**
+ * return the Link mode mapping string given the code
  *
- * @param lm
- * @return
+ * @param lm	Link mode mapping code
+ * @return		Link mode mapping string (NULL if error)
  */
 char *hci_lmtostr(unsigned int lm)
 {
@@ -411,10 +434,11 @@ char *hci_lmtostr(unsigned int lm)
 }
 
 /**
+ * retrun Link mode mapping code given the tring
  *
- * @param str
- * @param val
- * @return
+ * @param str	Link mode mapping string
+ * @param val	Link mode mapping code
+ * @return	1 match found, 0 error
  */
 int hci_strtolm(char *str, unsigned int *val)
 {
@@ -688,9 +712,12 @@ static hci_map commands_map[] = {
 };
 
 /**
+ * translate a command code into an english sentence
  *
- * @param cmd
- * @return
+ * use the commands_map table which is an array of structures { "english sentence", command code }
+ *
+ * @param cmd	command code value
+ * @return		english sentence corresponding to the command code (NULL if error)
  */
 char *hci_cmdtostr(unsigned int cmd)
 {
@@ -698,11 +725,12 @@ char *hci_cmdtostr(unsigned int cmd)
 }
 
 /**
+ * translate a byte array of bit "commands" into a series of corresponding english strings which is returned
  *
- * @param commands
- * @param pref
+ * @param commands	an array of bytes corresponding to a list of encoded commands
+ * @param pref		prefix to add to str (if pref !=NULL pref will be the first concatenated string)
  * @param width
- * @return
+ * @return NULL 	if error else str which is a string of concatenated commands separated by /0
  */
 char *hci_commandstostr(uint8_t *commands, char *pref, int width)
 {
@@ -761,9 +789,10 @@ static hci_map ver_map[] = {
 };
 
 /**
+ * translate a version code into a mapping string
  *
- * @param ver
- * @return
+ * @param ver	version code
+ * @return		mapping string (NULL if error)
  */
 char *hci_vertostr(unsigned int ver)
 {
@@ -771,10 +800,11 @@ char *hci_vertostr(unsigned int ver)
 }
 
 /**
+ * return the version code given the string
  *
- * @param str
- * @param ver
- * @return
+ * @param str	version string
+ * @param ver	version code
+ * @return		1 of match found, 0 error
  */
 int hci_strtover(char *str, unsigned int *ver)
 {
@@ -782,9 +812,10 @@ int hci_strtover(char *str, unsigned int *ver)
 }
 
 /**
+ * Link Manager Protocol version (same as hci) string given the code
  *
- * @param ver
- * @return
+ * @param ver	version code
+ * @return		mapping string (NULL if error)
  */
 char *lmp_vertostr(unsigned int ver)
 {
@@ -792,10 +823,11 @@ char *lmp_vertostr(unsigned int ver)
 }
 
 /**
+ * Link Manager Protocol code given the string
  *
- * @param str
- * @param ver
- * @return
+ * @param str	version string
+ * @param ver	version code
+ * @return		1 of match found, 0 error
  */
 int lmp_strtover(char *str, unsigned int *ver)
 {
@@ -971,8 +1003,10 @@ char *lmp_featurestostr(uint8_t *features, char *pref, int width)
 	return str;
 }
 
+/*  HCI functions that do not require open device */
+
 /**
- * HCI functions that do not require open device
+ *
  *
  * @param flag
  * @param func
@@ -1067,6 +1101,7 @@ static int __same_bdaddr(int dd, int dev_id, long arg)
 
 /**
  *
+ *
  * @param bdaddr
  * @return
  */
@@ -1084,9 +1119,10 @@ int hci_get_route(bdaddr_t *bdaddr)
 }
 
 /**
+ * return the bt device number
  *
- * @param str
- * @return
+ * @param str	string should be hci<n>
+ * @return		bt device number (-1 if error)
  */
 int hci_devid(const char *str)
 {
@@ -1107,6 +1143,7 @@ int hci_devid(const char *str)
 }
 
 /**
+ *
  *
  * @param dev_id
  * @param di
@@ -1134,6 +1171,7 @@ int hci_devinfo(int dev_id, struct hci_dev_info *di)
 
 /**
  *
+ *
  * @param dev_id
  * @param bdaddr
  * @return
@@ -1158,6 +1196,7 @@ int hci_devba(int dev_id, bdaddr_t *bdaddr)
 }
 
 /**
+ *
  *
  * @param dev_id
  * @param len
@@ -1236,8 +1275,12 @@ done:
 	return ret;
 }
 
-/* Open HCI device.
- * Returns device descriptor (dd). */
+/**
+ * Open HCI device.
+ *
+ * @param dev_id	integer device address
+ * @return 			device descriptor (dd): a bluetooth socket
+ */
 int hci_open_dev(int dev_id)
 {
 	struct sockaddr_hci a;
@@ -1271,14 +1314,29 @@ failed:
 	return -1;
 }
 
+/**
+ * Close the device
+ *
+ * @param dd		Device descriptor returned by hci_open_dev.
+ * @return			0 if OK or -1 if failure
+ */
 int hci_close_dev(int dd)
 {
 	return close(dd);
 }
 
-/* HCI functions that require open device
- * dd - Device descriptor returned by hci_open_dev. */
+/* HCI functions that require open device */
 
+/**
+ *
+ *
+ * @param dd		Device descriptor returned by hci_open_dev.
+ * @param ogf
+ * @param ocf
+ * @param plen
+ * @param param
+ * @return
+ */
 int hci_send_cmd(int dd, uint16_t ogf, uint16_t ocf, uint8_t plen, void *param)
 {
 	uint8_t type = HCI_COMMAND_PKT;
@@ -1309,6 +1367,14 @@ int hci_send_cmd(int dd, uint16_t ogf, uint16_t ocf, uint8_t plen, void *param)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param r
+ * @param to
+ * @return
+ */
 int hci_send_req(int dd, struct hci_request *r, int to)
 {
 	unsigned char buf[HCI_MAX_EVENT_SIZE], *ptr;
@@ -1455,6 +1521,18 @@ done:
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param ptype
+ * @param clkoffset
+ * @param rswitch
+ * @param handle
+ * @param to
+ * @return
+ */
 int hci_create_connection(int dd, const bdaddr_t *bdaddr, uint16_t ptype,
 				uint16_t clkoffset, uint8_t rswitch,
 				uint16_t *handle, int to)
@@ -1491,6 +1569,15 @@ int hci_create_connection(int dd, const bdaddr_t *bdaddr, uint16_t ptype,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param reason
+ * @param to
+ * @return
+ */
 int hci_disconnect(int dd, uint16_t handle, uint8_t reason, int to)
 {
 	evt_disconn_complete rp;
@@ -1520,6 +1607,15 @@ int hci_disconnect(int dd, uint16_t handle, uint8_t reason, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param type
+ * @param to
+ * @return
+ */
 int hci_le_add_white_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int to)
 {
 	struct hci_request rq;
@@ -1549,6 +1645,15 @@ int hci_le_add_white_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param type
+ * @param to
+ * @return
+ */
 int hci_le_rm_white_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int to)
 {
 	struct hci_request rq;
@@ -1578,6 +1683,14 @@ int hci_le_rm_white_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param size
+ * @param to
+ * @return
+ */
 int hci_le_read_white_list_size(int dd, uint8_t *size, int to)
 {
 	struct hci_request rq;
@@ -1605,6 +1718,13 @@ int hci_le_read_white_list_size(int dd, uint8_t *size, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param to
+ * @return
+ */
 int hci_le_clear_white_list(int dd, int to)
 {
 	struct hci_request rq;
@@ -1627,6 +1747,17 @@ int hci_le_clear_white_list(int dd, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param type
+ * @param peer_irk
+ * @param local_irk
+ * @param to
+ * @return
+ */
 int hci_le_add_resolving_list(int dd, const bdaddr_t *bdaddr, uint8_t type,
 				uint8_t *peer_irk, uint8_t *local_irk, int to)
 {
@@ -1661,6 +1792,15 @@ int hci_le_add_resolving_list(int dd, const bdaddr_t *bdaddr, uint8_t type,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param type
+ * @param to
+ * @return
+ */
 int hci_le_rm_resolving_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int to)
 {
 	struct hci_request rq;
@@ -1690,6 +1830,13 @@ int hci_le_rm_resolving_list(int dd, const bdaddr_t *bdaddr, uint8_t type, int t
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param to
+ * @return
+ */
 int hci_le_clear_resolving_list(int dd, int to)
 {
 	struct hci_request rq;
@@ -1712,6 +1859,14 @@ int hci_le_clear_resolving_list(int dd, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param size
+ * @param to
+ * @return
+ */
 int hci_le_read_resolving_list_size(int dd, uint8_t *size, int to)
 {
 	struct hci_request rq;
@@ -1739,6 +1894,14 @@ int hci_le_read_resolving_list_size(int dd, uint8_t *size, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param enable
+ * @param to
+ * @return
+ */
 int hci_le_set_address_resolution_enable(int dd, uint8_t enable, int to)
 {
 	struct hci_request rq;
@@ -1767,6 +1930,15 @@ int hci_le_set_address_resolution_enable(int dd, uint8_t enable, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param len
+ * @param name
+ * @param to
+ * @return
+ */
 int hci_read_local_name(int dd, int len, char *name, int to)
 {
 	read_local_name_rp rp;
@@ -1791,6 +1963,14 @@ int hci_read_local_name(int dd, int len, char *name, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param name
+ * @param to
+ * @return
+ */
 int hci_write_local_name(int dd, const char *name, int to)
 {
 	change_local_name_cp cp;
@@ -1811,6 +1991,18 @@ int hci_write_local_name(int dd, const char *name, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param pscan_rep_mode
+ * @param clkoffset
+ * @param len
+ * @param name
+ * @param to
+ * @return
+ */
 int hci_read_remote_name_with_clock_offset(int dd, const bdaddr_t *bdaddr,
 						uint8_t pscan_rep_mode,
 						uint16_t clkoffset,
@@ -1847,6 +2039,16 @@ int hci_read_remote_name_with_clock_offset(int dd, const bdaddr_t *bdaddr,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param len
+ * @param name
+ * @param to
+ * @return
+ */
 int hci_read_remote_name(int dd, const bdaddr_t *bdaddr, int len, char *name,
 				int to)
 {
@@ -1854,6 +2056,14 @@ int hci_read_remote_name(int dd, const bdaddr_t *bdaddr, int len, char *name,
 							len, name, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param to
+ * @return
+ */
 int hci_read_remote_name_cancel(int dd, const bdaddr_t *bdaddr, int to)
 {
 	remote_name_req_cancel_cp cp;
@@ -1874,6 +2084,15 @@ int hci_read_remote_name_cancel(int dd, const bdaddr_t *bdaddr, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param ver
+ * @param to
+ * @return
+ */
 int hci_read_remote_version(int dd, uint16_t handle, struct hci_version *ver,
 				int to)
 {
@@ -1907,6 +2126,15 @@ int hci_read_remote_version(int dd, uint16_t handle, struct hci_version *ver,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param features
+ * @param to
+ * @return
+ */
 int hci_read_remote_features(int dd, uint16_t handle, uint8_t *features, int to)
 {
 	evt_read_remote_features_complete rp;
@@ -1939,6 +2167,17 @@ int hci_read_remote_features(int dd, uint16_t handle, uint8_t *features, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param page
+ * @param max_page
+ * @param features
+ * @param to
+ * @return
+ */
 int hci_read_remote_ext_features(int dd, uint16_t handle, uint8_t page,
 					uint8_t *max_page, uint8_t *features,
 					int to)
@@ -1977,6 +2216,15 @@ int hci_read_remote_ext_features(int dd, uint16_t handle, uint8_t page,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param clkoffset
+ * @param to
+ * @return
+ */
 int hci_read_clock_offset(int dd, uint16_t handle, uint16_t *clkoffset, int to)
 {
 	evt_read_clock_offset_complete rp;
@@ -2007,6 +2255,14 @@ int hci_read_clock_offset(int dd, uint16_t handle, uint16_t *clkoffset, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param ver
+ * @param to
+ * @return
+ */
 int hci_read_local_version(int dd, struct hci_version *ver, int to)
 {
 	read_local_version_rp rp;
@@ -2034,6 +2290,14 @@ int hci_read_local_version(int dd, struct hci_version *ver, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param commands
+ * @param to
+ * @return
+ */
 int hci_read_local_commands(int dd, uint8_t *commands, int to)
 {
 	read_local_commands_rp rp;
@@ -2059,6 +2323,14 @@ int hci_read_local_commands(int dd, uint8_t *commands, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param features
+ * @param to
+ * @return
+ */
 int hci_read_local_features(int dd, uint8_t *features, int to)
 {
 	read_local_features_rp rp;
@@ -2084,6 +2356,16 @@ int hci_read_local_features(int dd, uint8_t *features, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param page
+ * @param max_page
+ * @param features
+ * @param to
+ * @return
+ */
 int hci_read_local_ext_features(int dd, uint8_t page, uint8_t *max_page,
 				uint8_t *features, int to)
 {
@@ -2118,6 +2400,14 @@ int hci_read_local_ext_features(int dd, uint8_t page, uint8_t *max_page,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param to
+ * @return
+ */
 int hci_read_bd_addr(int dd, bdaddr_t *bdaddr, int to)
 {
 	read_bd_addr_rp rp;
@@ -2143,6 +2433,14 @@ int hci_read_bd_addr(int dd, bdaddr_t *bdaddr, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param cls
+ * @param to
+ * @return
+ */
 int hci_read_class_of_dev(int dd, uint8_t *cls, int to)
 {
 	read_class_of_dev_rp rp;
@@ -2166,6 +2464,14 @@ int hci_read_class_of_dev(int dd, uint8_t *cls, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param cls
+ * @param to
+ * @return
+ */
 int hci_write_class_of_dev(int dd, uint32_t cls, int to)
 {
 	write_class_of_dev_cp cp;
@@ -2182,6 +2488,14 @@ int hci_write_class_of_dev(int dd, uint32_t cls, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param vs
+ * @param to
+ * @return
+ */
 int hci_read_voice_setting(int dd, uint16_t *vs, int to)
 {
 	read_voice_setting_rp rp;
@@ -2205,6 +2519,14 @@ int hci_read_voice_setting(int dd, uint16_t *vs, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param vs
+ * @param to
+ * @return
+ */
 int hci_write_voice_setting(int dd, uint16_t vs, int to)
 {
 	write_voice_setting_cp cp;
@@ -2220,6 +2542,15 @@ int hci_write_voice_setting(int dd, uint16_t vs, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param num_iac
+ * @param lap
+ * @param to
+ * @return
+ */
 int hci_read_current_iac_lap(int dd, uint8_t *num_iac, uint8_t *lap, int to)
 {
 	read_current_iac_lap_rp rp;
@@ -2244,6 +2575,15 @@ int hci_read_current_iac_lap(int dd, uint8_t *num_iac, uint8_t *lap, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param num_iac
+ * @param lap
+ * @param to
+ * @return
+ */
 int hci_write_current_iac_lap(int dd, uint8_t num_iac, uint8_t *lap, int to)
 {
 	write_current_iac_lap_cp cp;
@@ -2262,6 +2602,15 @@ int hci_write_current_iac_lap(int dd, uint8_t num_iac, uint8_t *lap, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param all
+ * @param to
+ * @return
+ */
 int hci_read_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t all, int to)
 {
 	read_stored_link_key_cp cp;
@@ -2280,6 +2629,15 @@ int hci_read_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t all, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param key
+ * @param to
+ * @return
+ */
 int hci_write_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t *key, int to)
 {
 	unsigned char cp[WRITE_STORED_LINK_KEY_CP_SIZE + 6 + 16];
@@ -2299,6 +2657,15 @@ int hci_write_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t *key, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param all
+ * @param to
+ * @return
+ */
 int hci_delete_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t all, int to)
 {
 	delete_stored_link_key_cp cp;
@@ -2317,6 +2684,14 @@ int hci_delete_stored_link_key(int dd, bdaddr_t *bdaddr, uint8_t all, int to)
 	return hci_send_req(dd, &rq, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param to
+ * @return
+ */
 int hci_authenticate_link(int dd, uint16_t handle, int to)
 {
 	auth_requested_cp cp;
@@ -2344,6 +2719,15 @@ int hci_authenticate_link(int dd, uint16_t handle, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param encrypt
+ * @param to
+ * @return
+ */
 int hci_encrypt_link(int dd, uint16_t handle, uint8_t encrypt, int to)
 {
 	set_conn_encrypt_cp cp;
@@ -2372,6 +2756,14 @@ int hci_encrypt_link(int dd, uint16_t handle, uint8_t encrypt, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param to
+ * @return
+ */
 int hci_change_link_key(int dd, uint16_t handle, int to)
 {
 	change_conn_link_key_cp cp;
@@ -2399,6 +2791,15 @@ int hci_change_link_key(int dd, uint16_t handle, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param bdaddr
+ * @param role
+ * @param to
+ * @return
+ */
 int hci_switch_role(int dd, bdaddr_t *bdaddr, uint8_t role, int to)
 {
 	switch_role_cp cp;
@@ -2426,6 +2827,16 @@ int hci_switch_role(int dd, bdaddr_t *bdaddr, uint8_t role, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param max_interval
+ * @param min_interval
+ * @param to
+ * @return
+ */
 int hci_park_mode(int dd, uint16_t handle, uint16_t max_interval,
 			uint16_t min_interval, int to)
 {
@@ -2458,6 +2869,14 @@ int hci_park_mode(int dd, uint16_t handle, uint16_t max_interval,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param to
+ * @return
+ */
 int hci_exit_park_mode(int dd, uint16_t handle, int to)
 {
 	exit_park_mode_cp cp;
@@ -2487,6 +2906,14 @@ int hci_exit_park_mode(int dd, uint16_t handle, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param type
+ * @param to
+ * @return
+ */
 int hci_read_inquiry_scan_type(int dd, uint8_t *type, int to)
 {
 	read_inquiry_scan_type_rp rp;
@@ -2510,6 +2937,14 @@ int hci_read_inquiry_scan_type(int dd, uint8_t *type, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param type
+ * @param to
+ * @return
+ */
 int hci_write_inquiry_scan_type(int dd, uint8_t type, int to)
 {
 	write_inquiry_scan_type_cp cp;
@@ -2538,6 +2973,14 @@ int hci_write_inquiry_scan_type(int dd, uint8_t type, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_read_inquiry_mode(int dd, uint8_t *mode, int to)
 {
 	read_inquiry_mode_rp rp;
@@ -2561,6 +3004,14 @@ int hci_read_inquiry_mode(int dd, uint8_t *mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_write_inquiry_mode(int dd, uint8_t mode, int to)
 {
 	write_inquiry_mode_cp cp;
@@ -2589,6 +3040,14 @@ int hci_write_inquiry_mode(int dd, uint8_t mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_read_afh_mode(int dd, uint8_t *mode, int to)
 {
 	read_afh_mode_rp rp;
@@ -2612,6 +3071,14 @@ int hci_read_afh_mode(int dd, uint8_t *mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_write_afh_mode(int dd, uint8_t mode, int to)
 {
 	write_afh_mode_cp cp;
@@ -2640,6 +3107,15 @@ int hci_write_afh_mode(int dd, uint8_t mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param fec
+ * @param data
+ * @param to
+ * @return
+ */
 int hci_read_ext_inquiry_response(int dd, uint8_t *fec, uint8_t *data, int to)
 {
 	read_ext_inquiry_response_rp rp;
@@ -2665,6 +3141,15 @@ int hci_read_ext_inquiry_response(int dd, uint8_t *fec, uint8_t *data, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param fec
+ * @param data
+ * @param to
+ * @return
+ */
 int hci_write_ext_inquiry_response(int dd, uint8_t fec, uint8_t *data, int to)
 {
 	write_ext_inquiry_response_cp cp;
@@ -2694,6 +3179,14 @@ int hci_write_ext_inquiry_response(int dd, uint8_t fec, uint8_t *data, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_read_simple_pairing_mode(int dd, uint8_t *mode, int to)
 {
 	read_simple_pairing_mode_rp rp;
@@ -2717,6 +3210,14 @@ int hci_read_simple_pairing_mode(int dd, uint8_t *mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param mode
+ * @param to
+ * @return
+ */
 int hci_write_simple_pairing_mode(int dd, uint8_t mode, int to)
 {
 	write_simple_pairing_mode_cp cp;
@@ -2745,6 +3246,15 @@ int hci_write_simple_pairing_mode(int dd, uint8_t mode, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param hash
+ * @param randomizer
+ * @param to
+ * @return
+ */
 int hci_read_local_oob_data(int dd, uint8_t *hash, uint8_t *randomizer, int to)
 {
 	read_local_oob_data_rp rp;
@@ -2769,6 +3279,14 @@ int hci_read_local_oob_data(int dd, uint8_t *hash, uint8_t *randomizer, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param level
+ * @param to
+ * @return
+ */
 int hci_read_inq_response_tx_power_level(int dd, int8_t *level, int to)
 {
 	read_inq_response_tx_power_level_rp rp;
@@ -2792,11 +3310,27 @@ int hci_read_inq_response_tx_power_level(int dd, int8_t *level, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param level
+ * @param to
+ * @return
+ */
 int hci_read_inquiry_transmit_power_level(int dd, int8_t *level, int to)
 {
 	return hci_read_inq_response_tx_power_level(dd, level, to);
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param level
+ * @param to
+ * @return
+ */
 int hci_write_inquiry_transmit_power_level(int dd, int8_t level, int to)
 {
 	write_inquiry_transmit_power_level_cp cp;
@@ -2825,6 +3359,16 @@ int hci_write_inquiry_transmit_power_level(int dd, int8_t level, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param type
+ * @param level
+ * @param to
+ * @return
+ */
 int hci_read_transmit_power_level(int dd, uint16_t handle, uint8_t type,
 					int8_t *level, int to)
 {
@@ -2856,6 +3400,15 @@ int hci_read_transmit_power_level(int dd, uint16_t handle, uint8_t type,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param policy
+ * @param to
+ * @return
+ */
 int hci_read_link_policy(int dd, uint16_t handle, uint16_t *policy, int to)
 {
 	read_link_policy_rp rp;
@@ -2881,6 +3434,15 @@ int hci_read_link_policy(int dd, uint16_t handle, uint16_t *policy, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param policy
+ * @param to
+ * @return
+ */
 int hci_write_link_policy(int dd, uint16_t handle, uint16_t policy, int to)
 {
 	write_link_policy_cp cp;
@@ -2910,6 +3472,15 @@ int hci_write_link_policy(int dd, uint16_t handle, uint16_t policy, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param timeout
+ * @param to
+ * @return
+ */
 int hci_read_link_supervision_timeout(int dd, uint16_t handle,
 					uint16_t *timeout, int to)
 {
@@ -2936,6 +3507,15 @@ int hci_read_link_supervision_timeout(int dd, uint16_t handle,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param timeout
+ * @param to
+ * @return
+ */
 int hci_write_link_supervision_timeout(int dd, uint16_t handle,
 					uint16_t timeout, int to)
 {
@@ -2966,6 +3546,14 @@ int hci_write_link_supervision_timeout(int dd, uint16_t handle,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param map
+ * @param to
+ * @return
+ */
 int hci_set_afh_classification(int dd, uint8_t *map, int to)
 {
 	set_afh_classification_cp cp;
@@ -2994,6 +3582,15 @@ int hci_set_afh_classification(int dd, uint8_t *map, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param link_quality
+ * @param to
+ * @return
+ */
 int hci_read_link_quality(int dd, uint16_t handle, uint8_t *link_quality,
 				int to)
 {
@@ -3020,6 +3617,15 @@ int hci_read_link_quality(int dd, uint16_t handle, uint8_t *link_quality,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param rssi
+ * @param to
+ * @return
+ */
 int hci_read_rssi(int dd, uint16_t handle, int8_t *rssi, int to)
 {
 	read_rssi_rp rp;
@@ -3045,6 +3651,16 @@ int hci_read_rssi(int dd, uint16_t handle, int8_t *rssi, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param mode
+ * @param map
+ * @param to
+ * @return
+ */
 int hci_read_afh_map(int dd, uint16_t handle, uint8_t *mode, uint8_t *map,
 			int to)
 {
@@ -3072,6 +3688,17 @@ int hci_read_afh_map(int dd, uint16_t handle, uint8_t *mode, uint8_t *map,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param which
+ * @param clock
+ * @param accuracy
+ * @param to
+ * @return
+ */
 int hci_read_clock(int dd, uint16_t handle, uint8_t which, uint32_t *clock,
 			uint16_t *accuracy, int to)
 {
@@ -3104,6 +3731,15 @@ int hci_read_clock(int dd, uint16_t handle, uint8_t which, uint32_t *clock,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param enable
+ * @param filter_dup
+ * @param to
+ * @return
+ */
 int hci_le_set_scan_enable(int dd, uint8_t enable, uint8_t filter_dup, int to)
 {
 	struct hci_request rq;
@@ -3133,6 +3769,18 @@ int hci_le_set_scan_enable(int dd, uint8_t enable, uint8_t filter_dup, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param type
+ * @param interval
+ * @param window
+ * @param own_type
+ * @param filter
+ * @param to
+ * @return
+ */
 int hci_le_set_scan_parameters(int dd, uint8_t type,
 					uint16_t interval, uint16_t window,
 					uint8_t own_type, uint8_t filter, int to)
@@ -3167,6 +3815,14 @@ int hci_le_set_scan_parameters(int dd, uint8_t type,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param enable
+ * @param to
+ * @return
+ */
 int hci_le_set_advertise_enable(int dd, uint8_t enable, int to)
 {
 	struct hci_request rq;
@@ -3195,6 +3851,26 @@ int hci_le_set_advertise_enable(int dd, uint8_t enable, int to)
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param interval
+ * @param window
+ * @param initiator_filter
+ * @param peer_bdaddr_type
+ * @param peer_bdaddr
+ * @param own_bdaddr_type
+ * @param min_interval
+ * @param max_interval
+ * @param latency
+ * @param supervision_timeout
+ * @param min_ce_length
+ * @param max_ce_length
+ * @param handle
+ * @param to
+ * @return
+ */
 int hci_le_create_conn(int dd, uint16_t interval, uint16_t window,
 		uint8_t initiator_filter, uint8_t peer_bdaddr_type,
 		bdaddr_t peer_bdaddr, uint8_t own_bdaddr_type,
@@ -3244,6 +3920,18 @@ int hci_le_create_conn(int dd, uint16_t interval, uint16_t window,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param min_interval
+ * @param max_interval
+ * @param latency
+ * @param supervision_timeout
+ * @param to
+ * @return
+ */
 int hci_le_conn_update(int dd, uint16_t handle, uint16_t min_interval,
 			uint16_t max_interval, uint16_t latency,
 			uint16_t supervision_timeout, int to)
@@ -3281,6 +3969,15 @@ int hci_le_conn_update(int dd, uint16_t handle, uint16_t min_interval,
 	return 0;
 }
 
+/**
+ *
+ *
+ * @param dd
+ * @param handle
+ * @param features
+ * @param to
+ * @return
+ */
 int hci_le_read_remote_features(int dd, uint16_t handle, uint8_t *features, int to)
 {
 	evt_le_read_remote_used_features_complete rp;
