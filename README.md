@@ -42,9 +42,10 @@ you can clone with git and there is an eclipse project
 A doxygen documentation is provided, see the html directory (index.html file)
 This is a work in progress with the intent of documenting all important functions and data structures
 
-<a id="usage">
-<H1> How to use Gatt Client <H1>
-</a>
+
+# How to use Gatt Client
+
+<a id="usage"></a>
 <pre>
 <b>$./gattclient help</b>
 Options:
