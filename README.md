@@ -44,7 +44,7 @@ This is a work in progress with the intent of documenting all important function
 # How to use Gatt Client
 
 <pre>
-$./gattclient help
+<b>$./gattclient help</b>
 Options:
 	-i, --index <id>		Specify adapter index, e.g. hci0
 	-d, --dest <addr>		Specify the destination address
@@ -56,7 +56,7 @@ Options:
 Example:
 gattclient -v -d C4:BE:84:70:29:04
 
-[GATT client]#help
+<b>[GATT client]#help</b>
 Commands:
 	help           		Display help message
 	services       		Show discovered services
@@ -73,51 +73,51 @@ Commands:
 	get-security   		Get security level on le connection
 	set-sign-key   		Set signing key for signed write command
 	quit           		Quit
-[GATT client]# read-value
+<b>[GATT client]# read-value</b>
 Usage: read-value <value_handle>
-[GATT client]# read-long-value
+<b>[GATT client]# read-long-value</b>
 Usage: read-long-value <value_handle> <offset>
-[GATT client]# read-multiple
+<b>[GATT client]# read-multiple</b>
 Usage: read-multiple <handle_1> <handle_2> ...
-[GATT client]# write-value
+<b>[GATT client]# write-value</b>
 Usage: write-value [options] <value_handle> <value>
 Options:
 	-w, --without-response	Write without response
 	-s, --signed-write	Signed write command
 e.g.:
 	write-value 0x0001 00 01 00
-[GATT client]# write-long-value
+<b>[GATT client]# write-long-value</b>
 Usage: write-long-value [options] <value_handle> <offset> <value>
 Options:
 	-r, --reliable-write	Reliable write
 e.g.:
 	write-long-value 0x0001 0 00 01 00
-[GATT client]# write-prepare
+<b>[GATT client]# write-prepare</b>
 Usage: write-prepare [options] <value_handle> <offset> <value>
 Options:
 	-s, --session-id	Session id
 e.g.:
 	write-prepare -s 1 0x0001 00 01 00
-[GATT client]# write-prepare
+<b>[GATT client]# write-prepare</b>
 Usage: write-prepare [options] <value_handle> <offset> <value>
 Options:
 	-s, --session-id	Session id
 e.g.:
 	write-prepare -s 1 0x0001 00 01 00
-[GATT client]# write-execute
+<b>[GATT client]# write-execute</b>
 Usage: write-execute <session_id> <execute>
 e.g.:
 	write-execute 1 0
-[GATT client]# register-notify
+<b>[GATT client]# register-notify</b>
 Usage: register-notify <chrc value handle>
-[GATT client]# unregister-notify	
+<b>[GATT client]# unregister-notify	</b>
 Usage: unregister-notify <notify id>
-[GATT client]# set-security
+<b>[GATT client]# set-security</b>
 Usage: set_security <level>
 level: 1-3
 e.g.:
 	set-sec-level 2
-[GATT client]# get-security
+<b>[GATT client]# get-security</b>
 Security level: 1
 Usage: set-sign-key [options]
 Options:
