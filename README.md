@@ -56,6 +56,7 @@ Options:
 Example:
 gattclient -v -d C4:BE:84:70:29:04
 
+$gattclient -v -d C4:BE:84:70:29:04
 <b>[GATT client]#help</b>
 Commands:
 	help           		Display help message
