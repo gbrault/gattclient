@@ -1009,7 +1009,7 @@ char *lmp_featurestostr(uint8_t *features, char *pref, int width)
 /*  HCI functions that do not require open device */
 
 /**
- *
+ * return the bt device number
  *
  * @param flag
  * @param func
@@ -1146,11 +1146,11 @@ int hci_devid(const char *str)
 }
 
 /**
+ * get device info given device id
  *
- *
- * @param dev_id
- * @param di
- * @return
+ * @param dev_id	device id
+ * @param di		device info structure if ok
+ * @return			0 info structure set else error
  */
 int hci_devinfo(int dev_id, struct hci_dev_info *di)
 {
@@ -1177,7 +1177,7 @@ int hci_devinfo(int dev_id, struct hci_dev_info *di)
  *
  * @param dev_id
  * @param bdaddr
- * @return
+ * @return			0 = OK, -1 = Error
  */
 int hci_devba(int dev_id, bdaddr_t *bdaddr)
 {

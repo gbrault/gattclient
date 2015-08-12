@@ -1,6 +1,9 @@
 /**
  * @file btgattclient.c
  * @brief bluetooth main gatt client
+ *
+ * the original file is in bluez/tools and the name is btgatt-client.c
+ *
  * @author Gilbert Brault
  * @copyright Gilbert Brault 2015
  * the original work comes from bluez v5.39
