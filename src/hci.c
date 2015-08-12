@@ -840,9 +840,10 @@ static hci_map pal_map[] = {
 };
 
 /**
+ * pal version string given code
  *
- * @param ver
- * @return
+ * @param ver	pal version code
+ * @return		pal version string or NULL if error
  */
 char *pal_vertostr(unsigned int ver)
 {
@@ -850,10 +851,11 @@ char *pal_vertostr(unsigned int ver)
 }
 
 /**
+ * pal version code given string
  *
- * @param str
- * @param ver
- * @return
+ * @param str	pal version string
+ * @param ver	pal version code
+ * @return		1 pal version code is set 0 error
  */
 int pal_strtover(char *str, unsigned int *ver)
 {
@@ -950,11 +952,12 @@ static hci_map lmp_features_map[8][9] = {
 };
 
 /**
+ * Link Manager Protocol feature string given code
  *
- * @param features
- * @param pref
+ * @param features	Link Manager Protocol feature code
+ * @param pref		prefix
  * @param width
- * @return
+ * @return			Link Manager Protocol string or NULL if error
  */
 char *lmp_featurestostr(uint8_t *features, char *pref, int width)
 {
