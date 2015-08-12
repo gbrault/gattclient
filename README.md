@@ -111,7 +111,7 @@ Options:
 e.g.:
 	write-prepare -s 1 0x0001 00 01 00
 <b>[GATT client]# write-execute</b>
-Usage: write-execute &lt;session_id&gt; <execute&gt;
+Usage: write-execute &lt;session_id&gt; &lt;execute&gt;
 e.g.:
 	write-execute 1 0
 <b>[GATT client]# register-notify</b>
