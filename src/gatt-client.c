@@ -2038,6 +2038,15 @@ done:
 		op->callback(success, att_ecode, value, length, op->user_data);
 }
 
+/**
+ *
+ * @param client
+ * @param value_handle
+ * @param callback
+ * @param user_data
+ * @param destroy
+ * @return
+ */
 unsigned int bt_gatt_client_read_value(struct bt_gatt_client *client,
 					uint16_t value_handle,
 					bt_gatt_client_read_callback_t callback,
