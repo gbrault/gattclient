@@ -225,6 +225,13 @@ struct att_send_op {
 	void *user_data;
 };
 
+/**
+ * @brief destroy att send operation
+ * calls the destroy callback with user_data as an argument
+ * free pdu data
+ *
+ * @param data	att_send_op pointer
+ */
 static void destroy_att_send_op(void *data)
 {
 	struct att_send_op *op = data;

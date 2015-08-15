@@ -91,6 +91,11 @@ struct bt_crypto {
 	int cmac_aes;
 };
 
+/**
+ * open the pseudo random os generator, returns the associated file descriptor
+ *
+ * @return	pseudo-random generator associated file descriptor
+ */
 static int urandom_setup(void)
 {
 	int fd;
@@ -102,6 +107,10 @@ static int urandom_setup(void)
 	return fd;
 }
 
+/**
+ *
+ * @return
+ */
 static int ecb_aes_setup(void)
 {
 	struct sockaddr_alg salg;
@@ -334,7 +343,7 @@ bool bt_crypto_sign_att(struct bt_crypto *crypto, const uint8_t key[16],
 
 	return true;
 }
-/*
+/**
  * Security function e
  *
  * Security function e generates 128-bit encryptedData from a 128-bit key
@@ -380,7 +389,7 @@ bool bt_crypto_e(struct bt_crypto *crypto, const uint8_t key[16],
 	return true;
 }
 
-/*
+/**
  * Random Address Hash function ah
  *
  * The random address hash function ah is used to generate a hash value
@@ -453,7 +462,7 @@ static inline void u128_xor(const uint8_t p[16], const uint8_t q[16],
 	memcpy(r, &rr, 16);
 }
 
-/*
+/**
  * Confirm value generation function c1
  *
  * During the pairing process confirm values are exchanged. This confirm
@@ -538,7 +547,7 @@ bool bt_crypto_c1(struct bt_crypto *crypto, const uint8_t k[16],
 	return bt_crypto_e(crypto, k, res, res);
 }
 
-/*
+/**
  * Key generation function s1
  *
  * The key generation function s1 is used to generate the STK during the

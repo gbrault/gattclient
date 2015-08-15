@@ -179,6 +179,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e9f38ecc822c81af086f6947a3f453f"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="att_8c.html#a5e9f38ecc822c81af086f6947a3f453f">get_req_opcode</a> (uint8_t <a class="el" href="att_8c.html#a58ace63834bc4bdf15a17ad29790d18e">rsp_opcode</a>)</td></tr>
 <tr class="separator:a5e9f38ecc822c81af086f6947a3f453f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa12b5b9e6a8066f29fcadf77607fa50c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="att_8c.html#aa12b5b9e6a8066f29fcadf77607fa50c">destroy_att_send_op</a> (void *data)</td></tr>
+<tr class="memdesc:aa12b5b9e6a8066f29fcadf77607fa50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">destroy att send operation calls the destroy callback with user_data as an argument free pdu data  <a href="#aa12b5b9e6a8066f29fcadf77607fa50c">More...</a><br /></td></tr>
 <tr class="separator:aa12b5b9e6a8066f29fcadf77607fa50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f47253e0412c1e5164385f9729ce8aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="att_8c.html#a0f47253e0412c1e5164385f9729ce8aa">cancel_att_send_op</a> (struct <a class="el" href="structatt__send__op.html">att_send_op</a> *op)</td></tr>
 <tr class="separator:a0f47253e0412c1e5164385f9729ce8aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -320,7 +321,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00051">51</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>.</p>
 
 </div>
 </div>
@@ -350,7 +351,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00053">53</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, and <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00311">encode_pdu()</a>, and <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -366,7 +367,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00054">54</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00481">can_write_data()</a>.</p>
 
 </div>
 </div>
@@ -382,7 +383,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00057">57</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>, and <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00311">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>, and <a class="el" href="att_8c_source.html#l00780">handle_signed()</a>.</p>
 
 </div>
 </div>
@@ -440,11 +441,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01333">1333</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01340">1340</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att-types_8h_source.html#l00097">BT_ATT_ERROR_INSUFFICIENT_RESOURCES</a>, <a class="el" href="att-types_8h_source.html#l00081">BT_ATT_ERROR_INVALID_HANDLE</a>, <a class="el" href="att-types_8h_source.html#l00094">BT_ATT_ERROR_UNLIKELY</a>, <a class="el" href="att-types_8h_source.html#l00106">BT_ERROR_ALREADY_IN_PROGRESS</a>, and <a class="el" href="att-types_8h_source.html#l00107">BT_ERROR_OUT_OF_RANGE</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01361">bt_att_send_error_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01368">bt_att_send_error_rsp()</a>.</p>
 
 </div>
 </div>
@@ -472,9 +473,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01271">1271</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01278">1278</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00242">cancel_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l01263">match_op_id()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>, <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00249">cancel_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l01270">match_op_id()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>, <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01974">bt_gatt_client_cancel_all()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00616">bt_gatt_request_cancel()</a>, <a class="el" href="gatt-client_8c_source.html#l01946">cancel_request()</a>, <a class="el" href="gatt-client_8c_source.html#l01608">complete_unregister_notify()</a>, and <a class="el" href="gatt-client_8c_source.html#l01677">notify_data_cleanup()</a>.</p>
 
@@ -494,11 +495,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01313">1313</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01320">1320</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00242">cancel_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00249">cancel_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>, and <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>, and <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>.</p>
 
 </div>
 </div>
@@ -524,11 +525,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00953">953</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00960">960</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="crypto_8c_source.html#l00191">bt_crypto_unref()</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00110">bt_att::debug_destroy</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00226">io_destroy()</a>, <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00102">queue_destroy()</a>, <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00106">bt_att::timeout_data</a>, <a class="el" href="att_8c_source.html#l00104">bt_att::timeout_destroy</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
+<p>References <a class="el" href="crypto_8c_source.html#l00200">bt_crypto_unref()</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00110">bt_att::debug_destroy</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00226">io_destroy()</a>, <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00102">queue_destroy()</a>, <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00106">bt_att::timeout_data</a>, <a class="el" href="att_8c_source.html#l00104">bt_att::timeout_destroy</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00991">bt_att_new()</a>, and <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>.</p>
 
 </div>
 </div>
@@ -546,7 +547,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01080">1080</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01087">1087</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>.</p>
 
@@ -566,11 +567,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01104">1104</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01111">1111</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01873">bt_gatt_client_get_mtu()</a>, <a class="el" href="gatt-client_8c_source.html#l02113">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02661">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01087">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02598">prepare_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02211">read_long_cb()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01873">bt_gatt_client_get_mtu()</a>, <a class="el" href="gatt-client_8c_source.html#l02122">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02670">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l01087">exchange_mtu_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02607">prepare_write_cb()</a>, and <a class="el" href="gatt-client_8c_source.html#l02220">read_long_cb()</a>.</p>
 
 </div>
 </div>
@@ -588,11 +589,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01441">1441</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01448">1448</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="bluetooth_8h_source.html#l00063">BT_SECURITY</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00072">bt_att::io_on_l2cap</a>, <a class="el" href="att_8c_source.html#l00074">bt_att::io_sec_level</a>, <a class="el" href="bluetooth_8h_source.html#l00065">bt_security::level</a>, and <a class="el" href="bluetooth_8h_source.html#l00060">SOL_BLUETOOTH</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l03054">bt_gatt_client_get_security()</a>, <a class="el" href="gatt-client_8c_source.html#l02319">bt_gatt_client_write_without_response()</a>, and <a class="el" href="att_8c_source.html#l00610">change_security()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l03063">bt_gatt_client_get_security()</a>, <a class="el" href="gatt-client_8c_source.html#l02328">bt_gatt_client_write_without_response()</a>, and <a class="el" href="att_8c_source.html#l00617">change_security()</a>.</p>
 
 </div>
 </div>
@@ -610,7 +611,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01517">1517</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01524">1524</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>.</p>
 
@@ -640,11 +641,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00984">984</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00991">991</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att-types_8h_source.html#l00035">BT_ATT_DEFAULT_LE_MTU</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01048">bt_att_ref()</a>, <a class="el" href="crypto_8c_source.html#l00149">bt_crypto_new()</a>, <a class="el" href="bluetooth_8h_source.html#l00069">BT_SECURITY_LOW</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00116">bt_att::ext_signed</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00197">io_new()</a>, <a class="el" href="att_8c_source.html#l00072">bt_att::io_on_l2cap</a>, <a class="el" href="att_8c_source.html#l00074">bt_att::io_sec_level</a>, <a class="el" href="io-mainloop_8c_source.html#l00356">io_set_disconnect_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00278">io_set_read_handler()</a>, <a class="el" href="att_8c_source.html#l00928">is_io_l2cap_based()</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="queue_8c_source.html#l00081">queue_new()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
+<p>References <a class="el" href="att-types_8h_source.html#l00035">BT_ATT_DEFAULT_LE_MTU</a>, <a class="el" href="att_8c_source.html#l00960">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01055">bt_att_ref()</a>, <a class="el" href="crypto_8c_source.html#l00158">bt_crypto_new()</a>, <a class="el" href="bluetooth_8h_source.html#l00069">BT_SECURITY_LOW</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>, <a class="el" href="att_8c_source.html#l00116">bt_att::ext_signed</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00197">io_new()</a>, <a class="el" href="att_8c_source.html#l00072">bt_att::io_on_l2cap</a>, <a class="el" href="att_8c_source.html#l00074">bt_att::io_sec_level</a>, <a class="el" href="io-mainloop_8c_source.html#l00356">io_set_disconnect_handler()</a>, <a class="el" href="io-mainloop_8c_source.html#l00278">io_set_read_handler()</a>, <a class="el" href="att_8c_source.html#l00935">is_io_l2cap_based()</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="queue_8c_source.html#l00081">queue_new()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>.</p>
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00251">client_create()</a>.</p>
 
 </div>
 </div>
@@ -662,11 +663,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01048">1048</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01055">1055</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00066">bt_att::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, and <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00991">bt_att_new()</a>, <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>, <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>, and <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -712,9 +713,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01382">1382</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01389">1389</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00255">att_notify::callback</a>, <a class="el" href="att_8c_source.html#l00256">att_notify::destroy</a>, <a class="el" href="att_8c_source.html#l00253">att_notify::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00100">bt_att::next_reg_id</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00254">att_notify::opcode</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, and <a class="el" href="att_8c_source.html#l00257">att_notify::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00262">att_notify::callback</a>, <a class="el" href="att_8c_source.html#l00263">att_notify::destroy</a>, <a class="el" href="att_8c_source.html#l00260">att_notify::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00100">bt_att::next_reg_id</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00261">att_notify::opcode</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, and <a class="el" href="att_8c_source.html#l00264">att_notify::user_data</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>.</p>
 
@@ -756,11 +757,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01151">1151</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01158">1158</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00281">att_disconn::callback</a>, <a class="el" href="att_8c_source.html#l00282">att_disconn::destroy</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00279">att_disconn::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00100">bt_att::next_reg_id</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, and <a class="el" href="att_8c_source.html#l00283">att_disconn::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00288">att_disconn::callback</a>, <a class="el" href="att_8c_source.html#l00289">att_disconn::destroy</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00286">att_disconn::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00100">bt_att::next_reg_id</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, and <a class="el" href="att_8c_source.html#l00290">att_disconn::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>, and <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01733">bt_gatt_client_new()</a>, and <a class="el" href="btgattclient_8c_source.html#l00251">client_create()</a>.</p>
 
 </div>
 </div>
@@ -832,11 +833,11 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>att message sequence number or 0 if error </dd></dl>
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01213">1213</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01220">1220</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00347">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="att_8c_source.html#l00098">bt_att::next_send_id</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00219">att_send_op::type</a>, <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00354">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="att_8c_source.html#l00098">bt_att::next_send_id</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="queue_8c_source.html#l00167">queue_push_tail()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00219">att_send_op::type</a>, <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01361">bt_att_send_error_rsp()</a>, <a class="el" href="gatt-client_8c_source.html#l02837">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02270">bt_gatt_client_read_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02113">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02041">bt_gatt_client_read_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02957">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02661">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02396">bt_gatt_client_write_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02319">bt_gatt_client_write_without_response()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01277">bt_gatt_discover_characteristics()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01510">bt_gatt_discover_descriptors()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01160">bt_gatt_discover_included_services()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00548">bt_gatt_exchange_mtu()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01387">bt_gatt_read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01906">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01935">cancel_prep_write_session()</a>, <a class="el" href="gatt-client_8c_source.html#l02562">complete_write_long_op()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01198">discover_chrcs_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01426">discover_descs_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01065">discover_included_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00821">discover_services()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00748">find_by_type_val_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02476">handle_next_prep_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01656">notify_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01160">notify_data_write_ccc()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00653">read_by_grp_type_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01315">read_by_type_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01044">read_included()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00967">read_included_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02211">read_long_cb()</a>, and <a class="el" href="att_8c_source.html#l00761">respond_not_supported()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01368">bt_att_send_error_rsp()</a>, <a class="el" href="gatt-client_8c_source.html#l02846">bt_gatt_client_prepare_write()</a>, <a class="el" href="gatt-client_8c_source.html#l02279">bt_gatt_client_read_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02122">bt_gatt_client_read_multiple()</a>, <a class="el" href="gatt-client_8c_source.html#l02050">bt_gatt_client_read_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02966">bt_gatt_client_write_execute()</a>, <a class="el" href="gatt-client_8c_source.html#l02670">bt_gatt_client_write_long_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02405">bt_gatt_client_write_value()</a>, <a class="el" href="gatt-client_8c_source.html#l02328">bt_gatt_client_write_without_response()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01277">bt_gatt_discover_characteristics()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01510">bt_gatt_discover_descriptors()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01160">bt_gatt_discover_included_services()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00548">bt_gatt_exchange_mtu()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01387">bt_gatt_read_by_type()</a>, <a class="el" href="gatt-client_8c_source.html#l01906">cancel_long_write_req()</a>, <a class="el" href="gatt-client_8c_source.html#l01935">cancel_prep_write_session()</a>, <a class="el" href="gatt-client_8c_source.html#l02571">complete_write_long_op()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01198">discover_chrcs_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01426">discover_descs_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01065">discover_included_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00821">discover_services()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00748">find_by_type_val_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02485">handle_next_prep_write()</a>, <a class="el" href="gatt-client_8c_source.html#l01656">notify_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01160">notify_data_write_ccc()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00653">read_by_grp_type_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01315">read_by_type_cb()</a>, <a class="el" href="gatt-helpers_8c_source.html#l01044">read_included()</a>, <a class="el" href="gatt-helpers_8c_source.html#l00967">read_included_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l02220">read_long_cb()</a>, and <a class="el" href="att_8c_source.html#l00768">respond_not_supported()</a>.</p>
 
 </div>
 </div>
@@ -876,9 +877,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01361">1361</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01368">1368</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l01333">att_ecode_from_error()</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00073">bt_att_pdu_error_rsp::handle</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, and <a class="el" href="util_8h_source.html#l00130">put_le16()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l01340">att_ecode_from_error()</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l01220">bt_att_send()</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00073">bt_att_pdu_error_rsp::handle</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, and <a class="el" href="util_8h_source.html#l00130">put_le16()</a>.</p>
 
 </div>
 </div>
@@ -906,11 +907,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01072">1072</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01079">1079</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, and <a class="el" href="io-mainloop_8c_source.html#l00260">io_set_close_on_destroy()</a>.</p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>.</p>
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00251">client_create()</a>.</p>
 
 </div>
 </div>
@@ -950,11 +951,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01088">1088</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01095">1095</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, and <a class="el" href="att_8c_source.html#l00110">bt_att::debug_destroy</a>.</p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>.</p>
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l00251">client_create()</a>.</p>
 
 </div>
 </div>
@@ -994,11 +995,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01499">1499</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01506">1506</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, and <a class="el" href="att_8c_source.html#l01483">sign_set_key()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, and <a class="el" href="att_8c_source.html#l01490">sign_set_key()</a>.</p>
 
-<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01618">cmd_set_sign_key()</a>.</p>
+<p>Referenced by <a class="el" href="btgattclient_8c_source.html#l01621">cmd_set_sign_key()</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1027,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01112">1112</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01119">1119</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att-types_8h_source.html#l00035">BT_ATT_DEFAULT_LE_MTU</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, and <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>.</p>
 
@@ -1070,9 +1071,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01508">1508</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01515">1515</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, and <a class="el" href="att_8c_source.html#l01483">sign_set_key()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, and <a class="el" href="att_8c_source.html#l01490">sign_set_key()</a>.</p>
 
 </div>
 </div>
@@ -1100,11 +1101,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01460">1460</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01467">1467</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att-types_8h_source.html#l00030">BT_ATT_SECURITY_AUTO</a>, <a class="el" href="att-types_8h_source.html#l00033">BT_ATT_SECURITY_HIGH</a>, <a class="el" href="bluetooth_8h_source.html#l00063">BT_SECURITY</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00072">bt_att::io_on_l2cap</a>, <a class="el" href="att_8c_source.html#l00074">bt_att::io_sec_level</a>, <a class="el" href="bluetooth_8h_source.html#l00065">bt_security::level</a>, and <a class="el" href="bluetooth_8h_source.html#l00060">SOL_BLUETOOTH</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l03046">bt_gatt_client_set_security()</a>, and <a class="el" href="att_8c_source.html#l00610">change_security()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l03055">bt_gatt_client_set_security()</a>, and <a class="el" href="att_8c_source.html#l00617">change_security()</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1145,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01134">1134</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01141">1141</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00102">bt_att::timeout_callback</a>, <a class="el" href="att_8c_source.html#l00106">bt_att::timeout_data</a>, and <a class="el" href="att_8c_source.html#l00104">bt_att::timeout_destroy</a>.</p>
 
@@ -1164,11 +1165,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01058">1058</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01065">1065</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l00066">bt_att::ref_count</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l01320">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00960">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l01437">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l00066">bt_att::ref_count</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01716">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01687">bt_gatt_client_free()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="btgattclient_8c_source.html#l00248">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00323">client_destroy()</a>, <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>, and <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01716">att_disconnect_cb()</a>, <a class="el" href="gatt-client_8c_source.html#l01687">bt_gatt_client_free()</a>, <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>, <a class="el" href="btgattclient_8c_source.html#l00251">client_create()</a>, <a class="el" href="btgattclient_8c_source.html#l00326">client_destroy()</a>, <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>, and <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -1196,9 +1197,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01414">1414</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01421">1421</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00260">destroy_att_notify()</a>, <a class="el" href="att_8c_source.html#l00270">match_notify_id()</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, and <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00267">destroy_att_notify()</a>, <a class="el" href="att_8c_source.html#l00277">match_notify_id()</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, and <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01687">bt_gatt_client_free()</a>.</p>
 
@@ -1218,11 +1219,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01430">1430</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01437">1437</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00286">destroy_att_disconn()</a>, <a class="el" href="att_8c_source.html#l00260">destroy_att_notify()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, and <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00293">destroy_att_disconn()</a>, <a class="el" href="att_8c_source.html#l00267">destroy_att_notify()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, and <a class="el" href="queue_8c_source.html#l00487">queue_remove_all()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>, and <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>, and <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>.</p>
 
 </div>
 </div>
@@ -1250,9 +1251,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01182">1182</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01189">1189</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00286">destroy_att_disconn()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00296">match_disconn_id()</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, and <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00293">destroy_att_disconn()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00303">match_disconn_id()</a>, <a class="el" href="queue_8c_source.html#l00440">queue_remove_if()</a>, and <a class="el" href="util_8h_source.html#l00077">UINT_TO_PTR</a>.</p>
 
 <p>Referenced by <a class="el" href="gatt-client_8c_source.html#l01687">bt_gatt_client_free()</a>.</p>
 
@@ -1290,11 +1291,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00856">856</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00863">863</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00051">ATT_MIN_PDU_LEN</a>, <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l01048">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00092">bt_att::in_req</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="util_8c_source.html#l00081">util_hexdump()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00051">ATT_MIN_PDU_LEN</a>, <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l01055">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l00094">bt_att::buf</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="att_8c_source.html#l00726">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>, <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>, <a class="el" href="att_8c_source.html#l00092">bt_att::in_req</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="util_8c_source.html#l00081">util_hexdump()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00991">bt_att_new()</a>.</p>
 
 </div>
 </div>
@@ -1330,11 +1331,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00474">474</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00481">481</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00427">timeout_data::att</a>, <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00054">ATT_TIMEOUT_INTERVAL</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00428">timeout_data::id</a>, <a class="el" href="att_8c_source.html#l00092">bt_att::in_req</a>, <a class="el" href="io-mainloop_8c_source.html#l00395">io_send()</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00396">pick_next_send_op()</a>, <a class="el" href="timeout-glib_8c_source.html#l00058">timeout_add()</a>, <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="util_8c_source.html#l00081">util_hexdump()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00434">timeout_data::att</a>, <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00135">ATT_OP_TYPE_CONF</a>, <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00134">ATT_OP_TYPE_NOT</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00131">ATT_OP_TYPE_RSP</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00054">ATT_TIMEOUT_INTERVAL</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00435">timeout_data::id</a>, <a class="el" href="att_8c_source.html#l00092">bt_att::in_req</a>, <a class="el" href="io-mainloop_8c_source.html#l00395">io_send()</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00403">pick_next_send_op()</a>, <a class="el" href="timeout-glib_8c_source.html#l00058">timeout_add()</a>, <a class="el" href="att_8c_source.html#l00438">timeout_cb()</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="util_8c_source.html#l00081">util_hexdump()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -1360,11 +1361,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00242">242</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00249">249</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00224">att_send_op::destroy</a>, and <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, and <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01278">bt_att_cancel()</a>, and <a class="el" href="att_8c_source.html#l01320">bt_att_cancel_all()</a>.</p>
 
 </div>
 </div>
@@ -1400,11 +1401,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00610">610</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00617">617</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att-types_8h_source.html#l00085">BT_ATT_ERROR_AUTHENTICATION</a>, <a class="el" href="att-types_8h_source.html#l00095">BT_ATT_ERROR_INSUFFICIENT_ENCRYPTION</a>, <a class="el" href="att_8c_source.html#l01441">bt_att_get_security()</a>, <a class="el" href="att-types_8h_source.html#l00030">BT_ATT_SECURITY_AUTO</a>, <a class="el" href="att-types_8h_source.html#l00033">BT_ATT_SECURITY_HIGH</a>, <a class="el" href="att-types_8h_source.html#l00032">BT_ATT_SECURITY_MEDIUM</a>, and <a class="el" href="att_8c_source.html#l01460">bt_att_set_security()</a>.</p>
+<p>References <a class="el" href="att-types_8h_source.html#l00085">BT_ATT_ERROR_AUTHENTICATION</a>, <a class="el" href="att-types_8h_source.html#l00095">BT_ATT_ERROR_INSUFFICIENT_ENCRYPTION</a>, <a class="el" href="att_8c_source.html#l01448">bt_att_get_security()</a>, <a class="el" href="att-types_8h_source.html#l00030">BT_ATT_SECURITY_AUTO</a>, <a class="el" href="att-types_8h_source.html#l00033">BT_ATT_SECURITY_HIGH</a>, <a class="el" href="att-types_8h_source.html#l00032">BT_ATT_SECURITY_MEDIUM</a>, and <a class="el" href="att_8c_source.html#l01467">bt_att_set_security()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00637">handle_error_rsp()</a>.</p>
 
 </div>
 </div>
@@ -1470,11 +1471,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00347">347</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00354">354</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00224">att_send_op::destroy</a>, <a class="el" href="att_8c_source.html#l00304">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00219">att_send_op::type</a>, and <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00133">ATT_OP_TYPE_IND</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00224">att_send_op::destroy</a>, <a class="el" href="att_8c_source.html#l00311">encode_pdu()</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="util_8h_source.html#l00082">new0</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00219">att_send_op::type</a>, and <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01220">bt_att_send()</a>.</p>
 
 </div>
 </div>
@@ -1500,11 +1501,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00286">286</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00293">293</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00282">att_disconn::destroy</a>, and <a class="el" href="att_8c_source.html#l00283">att_disconn::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00289">att_disconn::destroy</a>, and <a class="el" href="att_8c_source.html#l00290">att_disconn::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l01182">bt_att_unregister_disconnect()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01437">bt_att_unregister_all()</a>, and <a class="el" href="att_8c_source.html#l01189">bt_att_unregister_disconnect()</a>.</p>
 
 </div>
 </div>
@@ -1530,11 +1531,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00260">260</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00267">267</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00256">att_notify::destroy</a>, and <a class="el" href="att_8c_source.html#l00257">att_notify::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00263">att_notify::destroy</a>, and <a class="el" href="att_8c_source.html#l00264">att_notify::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01414">bt_att_unregister()</a>, and <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01421">bt_att_unregister()</a>, and <a class="el" href="att_8c_source.html#l01437">bt_att_unregister_all()</a>.</p>
 
 </div>
 </div>
@@ -1560,11 +1561,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00228">228</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>destroy att send operation calls the destroy callback with user_data as an argument free pdu data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td><a class="el" href="structatt__send__op.html">att_send_op</a> pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="att_8c_source.html#l00235">235</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00224">att_send_op::destroy</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="att_8c_source.html#l00218">att_send_op::timeout_id</a>, <a class="el" href="timeout-glib_8c_source.html#l00080">timeout_remove()</a>, and <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00953">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, and <a class="el" href="att_8c_source.html#l00431">timeout_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01278">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01320">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l00960">bt_att_free()</a>, <a class="el" href="att_8c_source.html#l00481">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00726">handle_conf()</a>, <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>, and <a class="el" href="att_8c_source.html#l00438">timeout_cb()</a>.</p>
 
 </div>
 </div>
@@ -1600,11 +1609,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00564">564</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00571">571</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00281">att_disconn::callback</a>, <a class="el" href="util_8h_source.html#l00079">PTR_TO_INT</a>, <a class="el" href="att_8c_source.html#l00280">att_disconn::removed</a>, and <a class="el" href="att_8c_source.html#l00283">att_disconn::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00288">att_disconn::callback</a>, <a class="el" href="util_8h_source.html#l00079">PTR_TO_INT</a>, <a class="el" href="att_8c_source.html#l00287">att_disconn::removed</a>, and <a class="el" href="att_8c_source.html#l00290">att_disconn::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00576">disconnect_cb()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00583">disconnect_cb()</a>.</p>
 
 </div>
 </div>
@@ -1640,11 +1649,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00576">576</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00583">583</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l01313">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l01048">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l01430">bt_att_unregister_all()</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00564">disconn_handler()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="util_8h_source.html#l00080">INT_TO_PTR</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00226">io_destroy()</a>, <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l01320">bt_att_cancel_all()</a>, <a class="el" href="att_8c_source.html#l01055">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l01437">bt_att_unregister_all()</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00571">disconn_handler()</a>, <a class="el" href="att_8c_source.html#l00090">bt_att::disconn_list</a>, <a class="el" href="att_8c_source.html#l00068">bt_att::fd</a>, <a class="el" href="util_8h_source.html#l00080">INT_TO_PTR</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00226">io_destroy()</a>, <a class="el" href="queue_8c_source.html#l00325">queue_foreach()</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00991">bt_att_new()</a>.</p>
 
 </div>
 </div>
@@ -1692,11 +1701,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00304">304</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00311">311</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00053">ATT_OP_SIGNED_MASK</a>, <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="crypto_8c_source.html#l00277">bt_crypto_sign_att()</a>, <a class="el" href="att_8c_source.html#l00125">sign_info::counter</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00124">sign_info::key</a>, <a class="el" href="att_8c_source.html#l00222">att_send_op::len</a>, <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="att_8c_source.html#l00126">sign_info::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00053">ATT_OP_SIGNED_MASK</a>, <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="crypto_8c_source.html#l00286">bt_crypto_sign_att()</a>, <a class="el" href="att_8c_source.html#l00125">sign_info::counter</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00124">sign_info::key</a>, <a class="el" href="att_8c_source.html#l00222">att_send_op::len</a>, <a class="el" href="att_8c_source.html#l00118">bt_att::local_sign</a>, <a class="el" href="att_8c_source.html#l00096">bt_att::mtu</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="att_8c_source.html#l00126">sign_info::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00347">create_att_send_op()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00354">create_att_send_op()</a>.</p>
 
 </div>
 </div>
@@ -1726,7 +1735,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="att_8c_source.html#l00136">ATT_OP_TYPE_UNKNOWN</a>, and <a class="el" href="att_8c.html#a0007d37a841c18d72b63c18558081774">att_opcode_type_table</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00347">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>, and <a class="el" href="att_8c_source.html#l00750">opcode_match()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00354">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>, and <a class="el" href="att_8c_source.html#l00757">opcode_match()</a>.</p>
 
 </div>
 </div>
@@ -1756,7 +1765,7 @@ Variables</h2></td></tr>
 
 <p>References <a class="el" href="att_8c.html#a304d72036f84b15d14812f39fce42b92">att_req_rsp_mapping_table</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>.</p>
 
 </div>
 </div>
@@ -1798,11 +1807,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00719">719</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00726">726</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att-types_8h_source.html#l00067">BT_ATT_OP_HANDLE_VAL_CONF</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
+<p>References <a class="el" href="att-types_8h_source.html#l00067">BT_ATT_OP_HANDLE_VAL_CONF</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>.</p>
 
 </div>
 </div>
@@ -1850,11 +1859,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00630">630</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00637">637</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00610">change_security()</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00198">queue_push_head()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00617">change_security()</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00198">queue_push_head()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>.</p>
 
 </div>
 </div>
@@ -1902,11 +1911,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00810">810</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00817">817</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00053">ATT_OP_SIGNED_MASK</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l01048">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="att_8c_source.html#l01058">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l00255">att_notify::callback</a>, <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="att_8c_source.html#l00116">bt_att::ext_signed</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="att_8c_source.html#l00773">handle_signed()</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00254">att_notify::opcode</a>, <a class="el" href="att_8c_source.html#l00750">opcode_match()</a>, <a class="el" href="queue_8c_source.html#l00540">queue_get_entries()</a>, <a class="el" href="queue_8c_source.html#l00569">queue_isempty()</a>, <a class="el" href="att_8c_source.html#l00761">respond_not_supported()</a>, and <a class="el" href="att_8c_source.html#l00257">att_notify::user_data</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00053">ATT_OP_SIGNED_MASK</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att_8c_source.html#l01055">bt_att_ref()</a>, <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="att_8c_source.html#l01065">bt_att_unref()</a>, <a class="el" href="att_8c_source.html#l00262">att_notify::callback</a>, <a class="el" href="queue_8h_source.html#l00032">queue_entry::data</a>, <a class="el" href="att_8c_source.html#l00116">bt_att::ext_signed</a>, <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>, <a class="el" href="att_8c_source.html#l00780">handle_signed()</a>, <a class="el" href="queue_8h_source.html#l00033">queue_entry::next</a>, <a class="el" href="att_8c_source.html#l00088">bt_att::notify_list</a>, <a class="el" href="att_8c_source.html#l00261">att_notify::opcode</a>, <a class="el" href="att_8c_source.html#l00757">opcode_match()</a>, <a class="el" href="queue_8c_source.html#l00540">queue_get_entries()</a>, <a class="el" href="queue_8c_source.html#l00569">queue_isempty()</a>, <a class="el" href="att_8c_source.html#l00768">respond_not_supported()</a>, and <a class="el" href="att_8c_source.html#l00264">att_notify::user_data</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>.</p>
 
 </div>
 </div>
@@ -1954,11 +1963,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00658">658</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00665">665</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00204">get_req_opcode()</a>, <a class="el" href="att_8c_source.html#l00630">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00187">req_opcode</a>, <a class="el" href="att_8c_source.html#l00188">rsp_opcode</a>, <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
+<p>References <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l00223">att_send_op::callback</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00204">get_req_opcode()</a>, <a class="el" href="att_8c_source.html#l00637">handle_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00140">opcode</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00221">att_send_op::pdu</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00187">req_opcode</a>, <a class="el" href="att_8c_source.html#l00188">rsp_opcode</a>, <a class="el" href="att_8c_source.html#l00225">att_send_op::user_data</a>, <a class="el" href="util_8c_source.html#l00056">util_debug()</a>, and <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>.</p>
 
 </div>
 </div>
@@ -2006,11 +2015,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00773">773</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00780">780</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="crypto_8c_source.html#l00277">bt_crypto_sign_att()</a>, <a class="el" href="att_8c_source.html#l00125">sign_info::counter</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="util_8h_source.html#l00110">get_le32()</a>, <a class="el" href="att_8c_source.html#l00124">sign_info::key</a>, <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, <a class="el" href="att_8c_source.html#l00126">sign_info::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00057">BT_ATT_SIGNATURE_LEN</a>, <a class="el" href="crypto_8c_source.html#l00286">bt_crypto_sign_att()</a>, <a class="el" href="att_8c_source.html#l00125">sign_info::counter</a>, <a class="el" href="att_8c_source.html#l00114">bt_att::crypto</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="util_8h_source.html#l00110">get_le32()</a>, <a class="el" href="att_8c_source.html#l00124">sign_info::key</a>, <a class="el" href="att_8c_source.html#l00120">bt_att::remote_sign</a>, <a class="el" href="att_8c_source.html#l00126">sign_info::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -2036,11 +2045,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00928">928</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00935">935</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="bluetooth_8h_source.html#l00041">AF_BLUETOOTH</a>, and <a class="el" href="bluetooth_8h_source.html#l00045">BTPROTO_L2CAP</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00984">bt_att_new()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00991">bt_att_new()</a>.</p>
 
 </div>
 </div>
@@ -2076,11 +2085,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00296">296</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00303">303</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00279">att_disconn::id</a>, and <a class="el" href="util_8h_source.html#l00076">PTR_TO_UINT</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00286">att_disconn::id</a>, and <a class="el" href="util_8h_source.html#l00076">PTR_TO_UINT</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01182">bt_att_unregister_disconnect()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01189">bt_att_unregister_disconnect()</a>.</p>
 
 </div>
 </div>
@@ -2116,11 +2125,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00270">270</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00277">277</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00253">att_notify::id</a>, and <a class="el" href="util_8h_source.html#l00076">PTR_TO_UINT</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00260">att_notify::id</a>, and <a class="el" href="util_8h_source.html#l00076">PTR_TO_UINT</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01414">bt_att_unregister()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01421">bt_att_unregister()</a>.</p>
 
 </div>
 </div>
@@ -2156,11 +2165,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01263">1263</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01270">1270</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, and <a class="el" href="util_8h_source.html#l00076">PTR_TO_UINT</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01278">bt_att_cancel()</a>.</p>
 
 </div>
 </div>
@@ -2196,11 +2205,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00750">750</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00757">757</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00132">ATT_OP_TYPE_CMD</a>, <a class="el" href="att_8c_source.html#l00130">ATT_OP_TYPE_REQ</a>, <a class="el" href="att-types_8h_source.html#l00078">BT_ATT_ALL_REQUESTS</a>, and <a class="el" href="att_8c_source.html#l00174">get_op_type()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -2226,11 +2235,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00396">396</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00403">403</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00268">queue_pop_head()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, and <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00481">can_write_data()</a>.</p>
 
 </div>
 </div>
@@ -2266,11 +2275,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00761">761</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00768">768</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att-types_8h_source.html#l00086">BT_ATT_ERROR_REQUEST_NOT_SUPPORTED</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00073">bt_att_pdu_error_rsp::handle</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, and <a class="el" href="att_8c_source.html#l00140">opcode</a>.</p>
+<p>References <a class="el" href="att-types_8h_source.html#l00086">BT_ATT_ERROR_REQUEST_NOT_SUPPORTED</a>, <a class="el" href="att-types_8h_source.html#l00040">BT_ATT_OP_ERROR_RSP</a>, <a class="el" href="att_8c_source.html#l01220">bt_att_send()</a>, <a class="el" href="att-types_8h_source.html#l00074">bt_att_pdu_error_rsp::ecode</a>, <a class="el" href="att-types_8h_source.html#l00073">bt_att_pdu_error_rsp::handle</a>, <a class="el" href="att-types_8h_source.html#l00072">bt_att_pdu_error_rsp::opcode</a>, and <a class="el" href="att_8c_source.html#l00140">opcode</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00810">handle_notify()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00817">handle_notify()</a>.</p>
 
 </div>
 </div>
@@ -2318,11 +2327,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l01483">1483</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l01490">1490</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="btgattclient_8c_source.html#l01654">func</a>, and <a class="el" href="util_8h_source.html#l00082">new0</a>.</p>
+<p>References <a class="el" href="btgattclient_8c_source.html#l01657">func</a>, and <a class="el" href="util_8h_source.html#l00082">new0</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01499">bt_att_set_local_key()</a>, and <a class="el" href="att_8c_source.html#l01508">bt_att_set_remote_key()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01506">bt_att_set_local_key()</a>, and <a class="el" href="att_8c_source.html#l01515">bt_att_set_remote_key()</a>.</p>
 
 </div>
 </div>
@@ -2348,11 +2357,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00431">431</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00438">438</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00427">timeout_data::att</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00228">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00428">timeout_data::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00102">bt_att::timeout_callback</a>, <a class="el" href="att_8c_source.html#l00106">bt_att::timeout_data</a>, <a class="el" href="att_8c_source.html#l00218">att_send_op::timeout_id</a>, <a class="el" href="mainloop_8c_source.html#l00083">timeout_data::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00434">timeout_data::att</a>, <a class="el" href="att_8c_source.html#l00108">bt_att::debug_callback</a>, <a class="el" href="att_8c_source.html#l00112">bt_att::debug_data</a>, <a class="el" href="att_8c_source.html#l00235">destroy_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00217">att_send_op::id</a>, <a class="el" href="att_8c_source.html#l00435">timeout_data::id</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00417">io_shutdown()</a>, <a class="el" href="att_8c_source.html#l00220">att_send_op::opcode</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="att_8c_source.html#l00102">bt_att::timeout_callback</a>, <a class="el" href="att_8c_source.html#l00106">bt_att::timeout_data</a>, <a class="el" href="att_8c_source.html#l00218">att_send_op::timeout_id</a>, <a class="el" href="mainloop_8c_source.html#l00083">timeout_data::user_data</a>, and <a class="el" href="util_8c_source.html#l00056">util_debug()</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00481">can_write_data()</a>.</p>
 
 </div>
 </div>
@@ -2378,11 +2387,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00543">543</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00550">550</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>References <a class="el" href="att_8c_source.html#l00474">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00317">io_set_write_handler()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00569">queue_isempty()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>, <a class="el" href="att_8c_source.html#l00467">write_watch_destroy()</a>, and <a class="el" href="att_8c_source.html#l00086">bt_att::writer_active</a>.</p>
+<p>References <a class="el" href="att_8c_source.html#l00481">can_write_data()</a>, <a class="el" href="att_8c_source.html#l00080">bt_att::ind_queue</a>, <a class="el" href="att_8c_source.html#l00070">bt_att::io</a>, <a class="el" href="io-mainloop_8c_source.html#l00317">io_set_write_handler()</a>, <a class="el" href="att_8c_source.html#l00082">bt_att::pending_ind</a>, <a class="el" href="att_8c_source.html#l00078">bt_att::pending_req</a>, <a class="el" href="queue_8c_source.html#l00569">queue_isempty()</a>, <a class="el" href="att_8c_source.html#l00076">bt_att::req_queue</a>, <a class="el" href="att_8c_source.html#l00084">bt_att::write_queue</a>, <a class="el" href="att_8c_source.html#l00474">write_watch_destroy()</a>, and <a class="el" href="att_8c_source.html#l00086">bt_att::writer_active</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01271">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01213">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00719">handle_conf()</a>, and <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01278">bt_att_cancel()</a>, <a class="el" href="att_8c_source.html#l01220">bt_att_send()</a>, <a class="el" href="att_8c_source.html#l00726">handle_conf()</a>, and <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>.</p>
 
 </div>
 </div>
@@ -2408,11 +2417,11 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="att_8c_source.html#l00467">467</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
+<p>Definition at line <a class="el" href="att_8c_source.html#l00474">474</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
 <p>References <a class="el" href="att_8c_source.html#l00086">bt_att::writer_active</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00543">wakeup_writer()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00550">wakeup_writer()</a>.</p>
 
 </div>
 </div>
@@ -2493,7 +2502,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00140">140</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l01382">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01361">bt_att_send_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00856">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00347">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>, <a class="el" href="hci__lib_8h_source.html#l00225">hci_filter_set_opcode()</a>, <a class="el" href="hci_8c_source.html#l01122">hci_send_req()</a>, <a class="el" href="att_8c_source.html#l00761">respond_not_supported()</a>, and <a class="el" href="gatt-helpers_8c_source.html#l00060">result_create()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l01389">bt_att_register()</a>, <a class="el" href="att_8c_source.html#l01368">bt_att_send_error_rsp()</a>, <a class="el" href="att_8c_source.html#l00863">can_read_data()</a>, <a class="el" href="att_8c_source.html#l00354">create_att_send_op()</a>, <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>, <a class="el" href="hci__lib_8h_source.html#l00225">hci_filter_set_opcode()</a>, <a class="el" href="hci_8c_source.html#l01381">hci_send_req()</a>, <a class="el" href="att_8c_source.html#l00768">respond_not_supported()</a>, and <a class="el" href="gatt-helpers_8c_source.html#l00060">result_create()</a>.</p>
 
 </div>
 </div>
@@ -2509,7 +2518,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00187">187</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>.</p>
 
 </div>
 </div>
@@ -2525,7 +2534,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00188">188</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="att_8c_source.html#l00658">handle_rsp()</a>.</p>
+<p>Referenced by <a class="el" href="att_8c_source.html#l00665">handle_rsp()</a>.</p>
 
 </div>
 </div>
@@ -2541,7 +2550,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="att_8c_source.html#l00141">141</a> of file <a class="el" href="att_8c_source.html">att.c</a>.</p>
 
-<p>Referenced by <a class="el" href="gatt-db_8c_source.html#l01056">gatt_db_find_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l01077">gatt_db_find_by_type_value()</a>, <a class="el" href="gatt-db_8c_source.html#l00531">gatt_db_insert_service()</a>, <a class="el" href="gatt-db_8c_source.html#l01136">gatt_db_read_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l00384">gatt_db_service_create()</a>, <a class="el" href="hci_8c_source.html#l01440">hci_le_add_resolving_list()</a>, <a class="el" href="hci_8c_source.html#l01333">hci_le_add_white_list()</a>, <a class="el" href="hci_8c_source.html#l01474">hci_le_rm_resolving_list()</a>, <a class="el" href="hci_8c_source.html#l01362">hci_le_rm_white_list()</a>, <a class="el" href="hci_8c_source.html#l02946">hci_le_set_scan_parameters()</a>, <a class="el" href="hci_8c_source.html#l02638">hci_read_transmit_power_level()</a>, <a class="el" href="hci_8c_source.html#l01092">hci_send_cmd()</a>, <a class="el" href="hci_8c_source.html#l02323">hci_write_inquiry_scan_type()</a>, and <a class="el" href="gatt-db_8c_source.html#l00169">new_attribute()</a>.</p>
+<p>Referenced by <a class="el" href="gatt-db_8c_source.html#l01056">gatt_db_find_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l01077">gatt_db_find_by_type_value()</a>, <a class="el" href="gatt-db_8c_source.html#l00531">gatt_db_insert_service()</a>, <a class="el" href="gatt-db_8c_source.html#l01136">gatt_db_read_by_type()</a>, <a class="el" href="gatt-db_8c_source.html#l00384">gatt_db_service_create()</a>, <a class="el" href="hci_8c_source.html#l01764">hci_le_add_resolving_list()</a>, <a class="el" href="hci_8c_source.html#l01622">hci_le_add_white_list()</a>, <a class="el" href="hci_8c_source.html#l01807">hci_le_rm_resolving_list()</a>, <a class="el" href="hci_8c_source.html#l01660">hci_le_rm_white_list()</a>, <a class="el" href="hci_8c_source.html#l03787">hci_le_set_scan_parameters()</a>, <a class="el" href="hci_8c_source.html#l03375">hci_read_transmit_power_level()</a>, <a class="el" href="hci_8c_source.html#l01343">hci_send_cmd()</a>, <a class="el" href="hci_8c_source.html#l02951">hci_write_inquiry_scan_type()</a>, and <a class="el" href="gatt-db_8c_source.html#l00169">new_attribute()</a>.</p>
 
 </div>
 </div>
@@ -2551,7 +2560,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="att_8c.html">att.c</a></li>
-    <li class="footer">Generated on Mon Aug 10 2015 09:57:27 for ble_gatt_client by
+    <li class="footer">Generated on Sat Aug 15 2015 17:35:59 for ble_gatt_client by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
