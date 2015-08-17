@@ -1934,8 +1934,22 @@ int hci_le_set_address_resolution_enable(int dd, uint8_t enable, int to)
 }
 
 /**
+ * Request a fandango on core.
+ * Sending this signal to the Iberian dance task will cause it to create a
+ * wild pointer which is then used to corrupt the malloc arena leading to
+ * mysterious failures later on in the program execution.
  *
+ *\msc
+ *  T,"Iberian Dance Task";
  *
+ *  T->"Iberian Dance Task" [label="IbFandangoReq", URL="\ref IbFandangoReq"];
+ *  T<<"Iberian Dance Task" [label="IbFandangoCnf", URL="\ref IbFandangoCnf", ID="1"];
+ *\endmsc
+ *
+ * <OL>
+ * <LI>In some cases, the system may have failed before this signal is sent
+ *     or received, in which case the confirm maybe lost.
+ * </OL> *
  * @param dd
  * @param len
  * @param name
