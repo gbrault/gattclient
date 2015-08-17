@@ -5,6 +5,42 @@ Message Sequence Chart doxygen addon [see](http://www.mcternan.me.uk/mscgen/) al
 * Install the addon (according to the above documentation link)
 * Encode comments according to thereafter syntax reference
 
+# A first example
+
+<pre>
+<code>
+<table border=0>
+<tr>
+<td>
+	# MSC for some fictional process
+	
+	msc {
+  		hscale = "2";
+
+  		a,b,c;
+
+  		a->b [ label = "ab()" ] ;
+  		b->c [ label = "bc(TRUE)"];
+  		c=>c [ label = "process(1)" ];
+  		c=>c [ label = "process(2)" ];
+  		...;
+  		c=>c [ label = "process(n)" ];
+  		c=>c [ label = "process(END)" ];
+  		a<<=c [ label = "callback()"];
+  		---  [ label = "If more to run", ID="*" ];
+  		a->a [ label = "next()"];
+  		a->c [ label = "ac1()\nac2()"];
+  		b<-c [ label = "cb(TRUE)"];
+  		b->b [ label = "stalled(...)"];
+  		a<-b [ label = "ab() = FALSE"];
+	}
+</code>
+</td>
+<td><a href="img/example0.msc"><img src="img/example0.png" border="0" alt="Example rendered MSC"></a></td>
+</tr>
+</table>
+</pre>
+
 # Syntax reference
 
 <table border="1">
