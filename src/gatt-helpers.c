@@ -518,6 +518,13 @@ static uint8_t process_error(const void *pdu, uint16_t length)
 	return error_pdu->ecode;
 }
 
+/**
+ *
+ * @param opcode
+ * @param pdu
+ * @param length
+ * @param user_data
+ */
 static void mtu_cb(uint8_t opcode, const void *pdu, uint16_t length,
 								void *user_data)
 {
@@ -545,6 +552,28 @@ done:
 		op->callback(success, att_ecode, op->user_data);
 }
 
+/**
+ * Exchange MTU trigger
+ *
+ * \msc
+ * "GATT Client", "ATT Layer";
+ *
+ * "GATT Client"=>"ATT Layer" [label="bt_att_send(...)", URL="\ref bt_att_send", ID=1];
+ * "GATT Client"<<="ATT Layer" [label="mtu_cb(...)", URL="\ref mtu_cb", ID=2];
+ * \endmsc
+ *
+ * <OL>
+ * <LI> \ref bt_att_send is called with \ref BT_ATT_OP_MTU_REQ op code
+ * <LI> \ref mtu_cb call the user callback function
+ * </OL>
+ *
+ * @param att			pointer to bt_att data structure
+ * @param client_rx_mtu	mtu client size
+ * @param callback		user callback to call from mtu_cb (set in mtu_op internal data structure)
+ * @param user_data		pointer for user, set in the mtu_op internal data structure
+ * @param destroy		housekeeping data management function set in the mtu_op internal data structure
+ * @return				sequence number or 0 if error
+ */
 unsigned int bt_gatt_exchange_mtu(struct bt_att *att, uint16_t client_rx_mtu,
 					bt_gatt_result_callback_t callback,
 					void *user_data,
