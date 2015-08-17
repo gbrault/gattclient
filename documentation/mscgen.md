@@ -161,4 +161,6 @@ IbFandangoReq;
 </code>
 </pre>
 
-Please see rendering [there](http://www.mcternan.me.uk/mscgen/doxexample/html/ibt_8c.html#f000ba8452ed1a2bbcc561d8fbefa5f8")
+Rendering follows<br/>
+<img src="img/rendering.png" alt="Rendered Example">
+
