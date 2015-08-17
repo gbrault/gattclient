@@ -136,28 +136,24 @@ Message Sequence Chart doxygen addon [see](http://www.mcternan.me.uk/mscgen/) al
 
 <pre>
 <code>
-/** Request a fandango on core.
- * Sending this signal to the Iberian dance task will cause it to create a
- * wild pointer which is then used to corrupt the malloc arena leading to
- * mysterious failures later on in the program execution.
+/** @brief Fandango on core.
+ * The Iberian dance Module is the place to implement any destructive functionality.
+ * Currently the only supported dance is the "Fandango on core". but future enhancements
+ * may allow this task to support a larger number of stack smashing. bit-rubble producing hacks.
  *
  *\msc
- *  T,"Iberian Dance Task";
+ *  T,"Iberian Dance Module";
  *
- *  T->"Iberian Dance Task" [label="IbFandangoReq", URL="\ref IbFandangoReq"];
- *  T<<"Iberian Dance Task" [label="IbFandangoCnf", URL="\ref IbFandangoCnf", ID="1"];
+ *  T->"Iberian Dance Module" [label="IbFandango", URL="\ref IbFandango"];
+ *  T<<"Iberian Dance Module" [label="void *", ID="1"];
  *\endmsc
  *
  * <OL>
- * <LI>In some cases, the system may have failed before this signal is sent
- *     or received, in which case the confirm maybe lost.
+ * <LI>In some cases, the system may have failed before the pointer can be returned.
  * </OL>
+ * @returns The function is will attempt to return the corrupt pointer value although this cannot be guaranted
  */
-typedef struct IbFandangoReqTag
-{
-  TaskId reqTaskId;
-}
-IbFandangoReq;
+void * IbFandango()
 </code>
 </pre>
 
