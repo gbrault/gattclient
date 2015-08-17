@@ -125,5 +125,4 @@ IbFandangoReq;
 </code>
 </pre>
 
-Which render this way<br/>
-<iframe seamless="seamless" src="http://www.mcternan.me.uk/mscgen/doxexample/html/ibt_8c.html#f000ba8452ed1a2bbcc561d8fbefa5f8"></iframe>
+Please see rendering [there](http://www.mcternan.me.uk/mscgen/doxexample/html/ibt_8c.html#f000ba8452ed1a2bbcc561d8fbefa5f8")
