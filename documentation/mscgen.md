@@ -153,7 +153,9 @@ Message Sequence Chart doxygen addon [see](http://www.mcternan.me.uk/mscgen/) al
  * </OL>
  * @returns The function is will attempt to return the corrupt pointer value although this cannot be guaranted
  */
-void * IbFandango()
+void *IbFandango(){
+..................
+}
 </code>
 </pre>
 
