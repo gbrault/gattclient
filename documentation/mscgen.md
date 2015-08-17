@@ -99,6 +99,7 @@ Message Sequence Chart doxygen addon [see](http://www.mcternan.me.uk/mscgen/) al
 # How to use it within C code?
 
 <pre>
+<code>
 /** Request a fandango on core.
  * Sending this signal to the Iberian dance task will cause it to create a
  * wild pointer which is then used to corrupt the malloc arena leading to
@@ -121,4 +122,5 @@ typedef struct IbFandangoReqTag
   TaskId reqTaskId;
 }
 IbFandangoReq;
+</code>
 </pre>
