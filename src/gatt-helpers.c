@@ -556,15 +556,20 @@ done:
  * Exchange MTU trigger
  *
  * \msc
- * "GATT Client", "ATT Layer";
+ * hscale = "2";
+ * "GATT Client", "gatt-helpers.c","att.c" ;
  *
- * "GATT Client"=>"ATT Layer" [label="bt_att_send(...)", URL="\ref bt_att_send", ID=1];
- * "GATT Client"<<="ATT Layer" [label="mtu_cb(...)", URL="\ref mtu_cb", ID=2];
+ * "GATT Client"=>"gatt-helpers.c" [label="bt_gatt_exchange_mtu(...)", URL="\ref bt_gatt_exchange_mtu", ID=1];
+ * "gatt-helpers.c"=>"att.c" [label="bt_att_send(...)", URL="\ref bt_att_send", ID=2];
+ * "gatt-helpers.c"<<="att.c" [label="mtu_cb(...)", URL="\ref mtu_cb", ID=3];
+ * "GATT Client"<<="gatt-helpers.c" [label="callback(...)", URL="\ref exchange_mtu_cb", ID=4];
  * \endmsc
  *
  * <OL>
- * <LI> \ref bt_att_send is called with \ref BT_ATT_OP_MTU_REQ op code
- * <LI> \ref mtu_cb call the user callback function
+ * <LI> \ref bt_gatt_exchange_mtu is called by a GATT Client with the thereafter Parameters building the mtu_op data structure (\ref gatt_client_init in btgattclient.c case)
+ * <LI> \ref bt_att_send is called with \ref BT_ATT_OP_MTU_REQ op code and passing the mtu_op data structure
+ * <LI> after receiving the response message \ref mtu_cb is called with the opcode and the mtu_op data structure
+ * <LI> \ref mtu_cb call the user callback function (\ref exchange_mtu_cb in the btgattclient.c case)
  * </OL>
  *
  * @param att			pointer to bt_att data structure
