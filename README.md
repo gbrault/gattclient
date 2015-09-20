@@ -40,7 +40,7 @@ most of the files are in &lt;bluez&gt;/src/shared
 you can clone with git and there is an eclipse project
 
 # Code Documentation
-[A doxygen documentation is provided] (http://gbrault.github.io/gattclient/index.html)
+[A doxygen documentation is provided:](http://gbrault.github.io/gattclient/index.html)
 This is a work in progress with the intent of documenting all important functions and data structures
 
 
